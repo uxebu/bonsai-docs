@@ -1,8 +1,8 @@
 <!doctype html>
 
 <meta charset="utf-8" />
-<link rel="stylesheet" href="/assets/pygment.css" />
-<link rel="stylesheet" href="/assets/main.css" />
+<link rel="stylesheet" href="/bonsai-docs/assets/pygment.css" />
+<link rel="stylesheet" href="/bonsai-docs/assets/main.css" />
 
 <title>Bonsai documentation - {{page.title}}</title>
 
@@ -11,10 +11,10 @@
 	<div id="nav">
 		<h1>Bonsai</h1>
 		<ul>
-			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="/">Introduction</a></li>
+			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="/bonsai-docs/">Introduction</a></li>
 			{% for p in site.pages %}
 				{% unless p.title == 'Introduction' %}
-					<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{p.url}}">{{p.title}}</a></li>
+					<li><a {% if p.url == page.url %}class="active"{% endif %} href="/bonsai-docs{{p.url}}">{{p.title}}</a></li>
 				{% endunless %}
 			{% endfor %}
 		</ul>
