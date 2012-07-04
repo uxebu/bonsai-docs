@@ -5,7 +5,7 @@ layout: doc
 
 This is *test* documentation
 
-```js
+{% highlight javascript %}
 var a = 123;
-```
+{% endhighlight %}
 
