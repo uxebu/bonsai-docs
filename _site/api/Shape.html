@@ -1,0 +1,53 @@
+<!doctype html>
+
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/assets/pygment.css" />
+<link rel="stylesheet" href="/assets/main.css" />
+
+<title>Bonsai documentation - Shape</title>
+
+<body>
+
+	<div id="nav">
+		<h1>Bonsai</h1>
+		<ul>
+			<li><a  href="/">Introduction</a></li>
+			
+				
+					<li><a class="active" href="/api/Shape.html">Shape</a></li>
+				
+			
+				
+			
+		</ul>
+	</div>
+
+	<div id="content">
+		<h2>Shape</h2>
+		<p>Bonsai&#8217;s <code>new Shape()</code> constructor is used to create complex shapes by specifying every path segment used. For example, a simple square (<code>100x100 @ {0,0}</code>) would be:</p>
+<div class='highlight'><pre><code class='javascript'><span class='k'>new</span> <span class='nx'>Shape</span><span class='p'>(</span><span class='s1'>&#39;l 100,0 l 0,100 l -100,0 l 0,-100&#39;</span><span class='p'>);</span>
+</code></pre>
+</div>
+<p>Don&#8217;t worry though. For the simpler shapes bonsai provides convenience factories:</p>
+
+<ul>
+<li><code>Shape.rect(x, y, width, height, [cornerRadius])</code></li>
+
+<li><code>Shape.arc(x, y, radius, startAngle, endAngle, isAntiClockwise)</code></li>
+
+<li><code>Shape.circle(x, y, radius)</code></li>
+
+<li><code>Shape.ellipse(centerX, centerY, radiusX, radiusY)</code></li>
+
+<li><code>Shape.polygon(x, y, radius, sides)</code></li>
+
+<li><code>Shape.star(x, y, radius, rays, factor)</code></li>
+</ul>
+
+<h3 id='101_add_a_red_square__to_the_stage'>101: Add a red square (<code>100x100 @ {0,0}</code>) to the stage</h3>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>).</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;red&#39;</span><span class='p'>).</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>);</span>
+</code></pre>
+</div>
+	</div>
+
+</body>

@@ -1,12 +1,28 @@
 <!doctype html>
 
 <meta charset="utf-8" />
-<link rel="stylesheet" href="assets/pygment.css" />
+<link rel="stylesheet" href="/assets/pygment.css" />
+<link rel="stylesheet" href="/assets/main.css" />
 
-<title>{{page.title}}</title>
+<title>Bonsai documentation - {{page.title}}</title>
 
 <body>
 
-	{{content}}
+	<div id="nav">
+		<h1>Bonsai</h1>
+		<ul>
+			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="/">Introduction</a></li>
+			{% for p in site.pages %}
+				{% unless p.title == 'Introduction' %}
+					<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{p.url}}">{{p.title}}</a></li>
+				{% endunless %}
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div id="content">
+		<h2>{{page.title}}</h2>
+		{{content}}
+	</div>
 
 </body>
