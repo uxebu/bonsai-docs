@@ -29,14 +29,26 @@
 <p>Bonsai is a graphics library which includes an intuitive graphics API and an SVG renderer.</p>
 
 <p>What does Bonsai look like?</p>
-<div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>square</span> <span class='o'>=</span> <span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>);</span>
+<!--runnable--><div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>square</span> <span class='o'>=</span> <span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>);</span>
 
-<span class='nx'>square</span><span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;red&#39;</span><span class='p'>).</span><span class='nx'>animate</span><span class='p'>(</span><span class='s1'>&#39;1s&#39;</span><span class='p'>,</span> <span class='p'>{</span>
-	<span class='nx'>x</span><span class='o'>:</span> <span class='mi'>200</span><span class='p'>,</span>
-	<span class='nx'>y</span><span class='o'>:</span> <span class='mi'>200</span>
+<span class='nx'>square</span><span class='p'>.</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>);</span>
+<span class='nx'>square</span><span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;red&#39;</span><span class='p'>);</span>
+<span class='nx'>square</span><span class='p'>.</span><span class='nx'>animate</span><span class='p'>(</span><span class='s1'>&#39;1.5s&#39;</span><span class='p'>,</span> <span class='p'>{</span>
+  <span class='nx'>origin</span><span class='o'>:</span> <span class='p'>[</span><span class='mi'>50</span><span class='p'>,</span> <span class='mi'>50</span><span class='p'>],</span>
+  <span class='nx'>rotation</span><span class='o'>:</span> <span class='nb'>Math</span><span class='p'>.</span><span class='nx'>PI</span> <span class='o'>*</span> <span class='mi'>1</span><span class='p'>,</span>
+  <span class='nx'>x</span><span class='o'>:</span> <span class='mi'>700</span><span class='p'>,</span>
+  <span class='nx'>fillColor</span><span class='o'>:</span> <span class='s1'>&#39;green&#39;</span>
 <span class='p'>});</span>
 </code></pre>
 </div>
 	</div>
+
+	<script src="/bonsai-docs/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="/bonsai-docs/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="/bonsai-docs/assets/doc.js"></script>
+	<script>
+		doc.init();
+	</script>
 
 </body>

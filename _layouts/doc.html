@@ -1,8 +1,8 @@
 <!doctype html>
 
 <meta charset="utf-8" />
-<link rel="stylesheet" href="/bonsai-docs/assets/pygment.css" />
-<link rel="stylesheet" href="/bonsai-docs/assets/main.css" />
+<link rel="stylesheet" href="{{site.baseurl}}/assets/pygment.css" />
+<link rel="stylesheet" href="{{site.baseurl}}/assets/main.css" />
 
 <title>Bonsai documentation - {{page.title}}</title>
 
@@ -11,10 +11,10 @@
 	<div id="nav">
 		<h1>Bonsai</h1>
 		<ul>
-			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="/bonsai-docs/">Introduction</a></li>
+			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="{{site.baseurl}}/">Introduction</a></li>
 			{% for p in site.pages %}
 				{% unless p.title == 'Introduction' %}
-					<li><a {% if p.url == page.url %}class="active"{% endif %} href="/bonsai-docs{{p.url}}">{{p.title}}</a></li>
+					<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 				{% endunless %}
 			{% endfor %}
 		</ul>
@@ -24,5 +24,13 @@
 		<h2>{{page.title}}</h2>
 		{{content}}
 	</div>
+
+	<script src="{{site.baseurl}}/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="{{site.baseurl}}/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="{{site.baseurl}}/assets/doc.js"></script>
+	<script>
+		doc.init();
+	</script>
 
 </body>

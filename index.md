@@ -9,12 +9,17 @@ Bonsai is a graphics library which includes an intuitive graphics API and an SVG
 
 What does Bonsai look like?
 
+<!--runnable-->
 {% highlight javascript %}
 var square = Shape.rect(0, 0, 100, 100);
 
-square.attr('fillColor', 'red').animate('1s', {
-	x: 200,
-	y: 200
+square.addTo(stage);
+square.attr('fillColor', 'red');
+square.animate('1.5s', {
+  origin: [50, 50],
+  rotation: Math.PI * 1,
+  x: 700,
+  fillColor: 'green'
 });
 {% endhighlight %}
 

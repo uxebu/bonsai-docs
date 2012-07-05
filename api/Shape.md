@@ -3,6 +3,20 @@ title: Shape
 layout: doc
 ---
 
+### Try it out:
+
+<!--runnable-->
+{% highlight javascript %}
+var a = Shape.circle(100, -50, 50);
+a.attr('fillColor', 'lightblue').addTo(stage);
+
+a.animate('1s', {
+  scale: 1.5,
+  fillColor: 'darkblue',
+  y: 100
+}, { easing: 'bounceOut' });
+{% endhighlight %}
+
 ### Shape constructor
 
 The Shape constructor accepts three different argument signatures:

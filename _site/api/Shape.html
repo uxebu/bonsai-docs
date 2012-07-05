@@ -24,7 +24,18 @@
 
 	<div id="content">
 		<h2>Shape</h2>
-		<h3 id='shape_constructor'>Shape constructor</h3>
+		<h3 id='try_it_out'>Try it out:</h3>
+<!--runnable--><div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>a</span> <span class='o'>=</span> <span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>circle</span><span class='p'>(</span><span class='mi'>100</span><span class='p'>,</span> <span class='o'>-</span><span class='mi'>50</span><span class='p'>,</span> <span class='mi'>50</span><span class='p'>);</span>
+<span class='nx'>a</span><span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;lightblue&#39;</span><span class='p'>).</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>);</span>
+
+<span class='nx'>a</span><span class='p'>.</span><span class='nx'>animate</span><span class='p'>(</span><span class='s1'>&#39;1s&#39;</span><span class='p'>,</span> <span class='p'>{</span>
+  <span class='nx'>scale</span><span class='o'>:</span> <span class='mf'>1.5</span><span class='p'>,</span>
+  <span class='nx'>fillColor</span><span class='o'>:</span> <span class='s1'>&#39;darkblue&#39;</span><span class='p'>,</span>
+  <span class='nx'>y</span><span class='o'>:</span> <span class='mi'>100</span>
+<span class='p'>},</span> <span class='p'>{</span> <span class='nx'>easing</span><span class='o'>:</span> <span class='s1'>&#39;bounceOut&#39;</span> <span class='p'>});</span>
+</code></pre>
+</div>
+<h3 id='shape_constructor'>Shape constructor</h3>
 
 <p>The Shape constructor accepts three different argument signatures:</p>
 
@@ -75,5 +86,13 @@
 <li><code>Shape.star(x, y, radius, rays, factor)</code></li>
 </ul>
 	</div>
+
+	<script src="/bonsai-docs/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="/bonsai-docs/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="/bonsai-docs/assets/doc.js"></script>
+	<script>
+		doc.init();
+	</script>
 
 </body>
