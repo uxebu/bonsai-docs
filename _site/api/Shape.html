@@ -24,11 +24,42 @@
 
 	<div id="content">
 		<h2>Shape</h2>
-		<p>Bonsai&#8217;s <code>new Shape()</code> constructor is used to create complex shapes by specifying every path segment used. For example, a simple square (<code>100x100 @ {0,0}</code>) would be:</p>
+		<h3 id='shape_constructor'>Shape constructor</h3>
+
+<p>The Shape constructor accepts three different argument signatures:</p>
+
+<h4 id='string_svg_path'>String: SVG path</h4>
+
+<p>A <code>String</code> with space/comma separated path commands, as per the <a href='http://www.w3.org/TR/SVG/paths.html'>SVG Path spec</a>:</p>
 <div class='highlight'><pre><code class='javascript'><span class='k'>new</span> <span class='nx'>Shape</span><span class='p'>(</span><span class='s1'>&#39;l 100,0 l 0,100 l -100,0 l 0,-100&#39;</span><span class='p'>);</span>
 </code></pre>
 </div>
-<p>Don&#8217;t worry though. For the simpler shapes bonsai provides convenience factories:</p>
+<h4 id='array_path_commands'>Array: Path commands</h4>
+
+<p>An <code>Array</code> of arrays, each sub-array consistening of a command (e.g. <code>lineTo</code>) and its arguments:</p>
+<div class='highlight'><pre><code class='javascript'><span class='k'>new</span> <span class='nx'>Shape</span><span class='p'>([</span>
+  <span class='p'>[</span><span class='s1'>&#39;moveTo&#39;</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>],</span>
+  <span class='p'>[</span><span class='s1'>&#39;lineBy&#39;</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>],</span>
+  <span class='p'>[</span><span class='s1'>&#39;lineBy&#39;</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>],</span>
+  <span class='p'>[</span><span class='s1'>&#39;lineBy&#39;</span><span class='p'>,</span> <span class='o'>-</span><span class='mi'>100</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>],</span>
+  <span class='p'>[</span><span class='s1'>&#39;lineBy&#39;</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='o'>-</span><span class='mi'>100</span><span class='p'>]</span>
+<span class='p'>]);</span>
+</code></pre>
+</div>
+<h4 id='array_points_of_polygon'>Array: Points of polygon</h4>
+
+<p>The <code>x</code> and <code>y</code> position of each point. Each coordinate takes up two array slots:</p>
+<div class='highlight'><pre><code class='javascript'><span class='k'>new</span> <span class='nx'>Shape</span><span class='p'>([</span>
+  <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span>
+  <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span>
+  <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span>
+  <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span>
+<span class='p'>]);</span>
+</code></pre>
+</div>
+<h3 id='factorieshelpers'>Factories/Helpers</h3>
+
+<p>For the simpler shapes bonsai provides convenience factories:</p>
 
 <ul>
 <li><code>Shape.rect(x, y, width, height, [cornerRadius])</code></li>
@@ -43,11 +74,6 @@
 
 <li><code>Shape.star(x, y, radius, rays, factor)</code></li>
 </ul>
-
-<h3 id='101_add_a_red_square__to_the_stage'>101: Add a red square (<code>100x100 @ {0,0}</code>) to the stage</h3>
-<div class='highlight'><pre><code class='javascript'><span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>).</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;red&#39;</span><span class='p'>).</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>);</span>
-</code></pre>
-</div>
 	</div>
 
 </body>

@@ -70,3 +70,19 @@ code {
 	border-left: 5px solid #CCC;
 	margin: .7em 0;
 }
+
+/** Table data **/
+
+table {
+	border-collapse: collapse;
+}
+
+table td {
+	background: #FFF;
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+
+table td td {
+
+}
