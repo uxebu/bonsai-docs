@@ -1,4 +1,4 @@
 permalink: /:categories/:title.html
 auto: true
 pygments: true
-baseurl: /bonsai-docs
+baseurl: ./
