@@ -1,0 +1,96 @@
+<!doctype html>
+
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/assets/pygment.css" />
+<link rel="stylesheet" href="/assets/main.css" />
+
+<title>Bonsai documentation - Animation</title>
+
+<body>
+
+	<div id="nav">
+		<h1>Bonsai</h1>
+		<ul>
+			<li><a  href="/">Introduction</a></li>
+			
+				
+					<li><a class="active" href="/api/Animation.html">Animation</a></li>
+				
+			
+				
+					<li><a  href="/api/Easing.html">Easing</a></li>
+				
+			
+				
+					<li><a  href="/api/Shape.html">Shape</a></li>
+				
+			
+				
+			
+		</ul>
+	</div>
+
+	<script src="/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="/assets/doc.js"></script>
+
+	<div id="content">
+		<h2>Animation</h2>
+		<p>Bonsai provides an <code>Animation</code> class, a <code>KeyframeAnimation</code> class and a convenience <code>animate</code> method on all <code>DisplayObject</code> instances.</p>
+
+<p>Animating a red square to be blue, for example, is as simple as:</p>
+
+<h3 id='try_it_out'>Try it out:</h3>
+<!--runnable--><div class='highlight'><pre><code class='javascript'><span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>)</span>
+  <span class='p'>.</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>)</span>
+  <span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;red&#39;</span><span class='p'>)</span>
+  <span class='p'>.</span><span class='nx'>animate</span><span class='p'>(</span><span class='s1'>&#39;1s&#39;</span><span class='p'>,</span> <span class='p'>{</span>
+    <span class='nx'>fillColor</span><span class='o'>:</span> <span class='s1'>&#39;blue&#39;</span>
+  <span class='p'>});</span>
+</code></pre>
+</div>
+<h3 id='the__method'>The <code>animate</code> method</h3>
+
+<p>The <code>animate</code> method accepts three arguments:</p>
+
+<p><code>
+animate(duration, properties[, options])
+</code></p>
+
+<ul>
+<li>
+<p><code>duration</code> &#8211; The animation duration. Acceptable formats:</p>
+
+<ul>
+<li>Seconds: A string ending in <code>&quot;s&quot;</code> (e.g. <code>&quot;2s&quot;</code>)</li>
+
+<li>Milliseconds: A string ending in <code>&quot;ms&quot;</code> (e.g. <code>&quot;200ms&quot;</code>)</li>
+
+<li>Frames: A number (e.g. <code>30</code>)</li>
+
+<li>Percent of movie: A string ending in <code>&quot;%&quot;</code>. Note this will only work if the root timeline (typically the <code>stage</code>) has a defined frame length.</li>
+</ul>
+</li>
+
+<li>
+<p><code>properties</code> (<em><code>Object</code></em>) &#8211; The properties you&#8217;d like to animate, as a map: <code>{ propertyName: valueToAnimateTo }</code>.</p>
+</li>
+
+<li>
+<p><code>options</code> (<em><code>Object</code></em>) &#8211; Any additional options:</p>
+
+<ul>
+<li><code>easing</code> (<em><code>String</code></em>) &#8211; one of the easing function name</li>
+
+<li><code>repeat</code> (<em><code>Number</code></em>) &#8211; how many times you want the animation to repeat</li>
+</ul>
+</li>
+</ul>
+	</div>
+
+	<script>
+		doc.init();
+	</script>
+
+</body>

@@ -17,7 +17,7 @@ square.addTo(stage);
 square.attr('fillColor', 'red');
 square.animate('1.5s', {
   origin: [50, 50],
-  rotation: Math.PI * 1,
+  rotation: Math.PI,
   x: 700,
   fillColor: 'green'
 });

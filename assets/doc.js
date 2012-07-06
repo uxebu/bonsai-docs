@@ -20,35 +20,50 @@
 
   forEachRunnableCodeBlock: function(fn) {
     $('div.highlight').each(function(i, block) {
-      if (block.previousSibling.nodeType === 8 && block.previousSibling.data === 'runnable') {
-        fn(block, doc._innerText(block));
+      var data = block.previousSibling.data;
+      if (block.previousSibling.nodeType === 8 && /^runnable/.test(data)) {
+        if (/^runnable:\{/.test(data)) {
+          var extraOptions = Function('return ' + data.substring(9))();
+        }
+        fn(block, doc._innerText(block), extraOptions || {});
       }
     });
   },
 
-  makeRunnable: function(block, code) {
+  makeRunnable: function(block, code, options) {
 
     block = $(block);
 
-    var height = Math.max(200, block.height()),
-        width = 700;
+    options.height = options.height || Math.max(130, block.outerHeight());
+    options.width = options.width || 700;
 
-    var dom = $('<div class=runner />');
+    var r = new doc.Runnable(options);
+    r.setEditableCode(code);
+    r.dom.insertAfter(block);
+    block.remove();
+
+  },
+
+  Runnable: function(options) {
+
+    var height = options.height,
+        width = options.width;
+
+    var prepCode = options.prepCode;
+
+    var dom = this.dom = $('<div class=runner />');
     dom.nav = $('<div class=nav />').appendTo(dom);
     dom.nav.edit = $('<a href="javascript:void 0">edit</a>').appendTo(dom.nav);
     dom.nav.run = $('<a href="javascript:void 0">run</a>').appendTo(dom.nav);
     dom.editor = $('<div class=editor />').appendTo(dom);
+    dom.editor.code = $('<div class=editor_code />').appendTo(dom.editor);
     dom.stage = $('<div class=stage />').appendTo(dom);
-    dom.insertBefore(block);
-    block.appendTo(dom.editor);
 
-    block.removeClass('highlight');
-
-    block.css({ width: width, height: height });
+    dom.editor.code.css({ width: width, height: height });
     dom.editor.css({ width: width, height: height });
     dom.stage.css({ width: width, height: height });
 
-    var aceEditor = ace.edit(block[0]);
+    var aceEditor = ace.edit(dom.editor.code[0]);
     aceEditor.session.setMode("ace/mode/javascript");
     aceEditor.getSession().setTabSize(2);
     aceEditor.getSession().setUseSoftTabs(true);
@@ -62,6 +77,8 @@
       dom.nav.run.removeClass('active');
       dom.stage.hide();
       dom.editor.show();
+      // Ace doesn't update its editor: Force it:
+      aceEditor.getSession().setValue(aceEditor.getSession().getValue());
     });
     dom.nav.run.click(function() {
       dom.nav.edit.removeClass('active');
@@ -72,11 +89,34 @@
       bonsaiPlayer = bonsai.run(dom.stage[0], {
         height: height,
         width: width,
-        code: aceEditor.getSession().getValue(),
+        code: (prepCode || '') + ';\n' + aceEditor.getSession().getValue(),
         framerate: 40
       });
     });
-    dom.nav.edit.click();
+
+    if (options.onStartShow === 'run') {
+      dom.nav.run.click();
+    } else {
+      dom.nav.edit.click();
+    }
+
+    // METHODS
+
+    this.setEditableCode = function(code) {
+      aceEditor.getSession().setValue(code);
+    };
+
+    this.setPrepCode = function(code) {
+      prepCode = code;
+    };
+
+    this.run = function() {
+      dom.nav.run.click();
+    };
+
+    this.edit = function() {
+      dom.nav.edit.click();
+    };
 
   }
 

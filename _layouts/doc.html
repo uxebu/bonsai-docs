@@ -20,15 +20,16 @@
 		</ul>
 	</div>
 
+	<script src="{{site.baseurl}}/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="{{site.baseurl}}/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="{{site.baseurl}}/assets/doc.js"></script>
+
 	<div id="content">
 		<h2>{{page.title}}</h2>
 		{{content}}
 	</div>
 
-	<script src="{{site.baseurl}}/lib/ace/ace-noconflict.js"></script>
-	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
-	<script src="{{site.baseurl}}/lib/bonsai/bonsai.iframe.js"></script>
-	<script src="{{site.baseurl}}/assets/doc.js"></script>
 	<script>
 		doc.init();
 	</script>

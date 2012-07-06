@@ -1,8 +1,8 @@
 <!doctype html>
 
 <meta charset="utf-8" />
-<link rel="stylesheet" href="/bonsai-docs/assets/pygment.css" />
-<link rel="stylesheet" href="/bonsai-docs/assets/main.css" />
+<link rel="stylesheet" href="/assets/pygment.css" />
+<link rel="stylesheet" href="/assets/main.css" />
 
 <title>Bonsai documentation - Introduction</title>
 
@@ -11,16 +11,29 @@
 	<div id="nav">
 		<h1>Bonsai</h1>
 		<ul>
-			<li><a class="active" href="/bonsai-docs/">Introduction</a></li>
+			<li><a class="active" href="/">Introduction</a></li>
 			
 				
-					<li><a  href="/bonsai-docs/api/Shape.html">Shape</a></li>
+					<li><a  href="/api/Animation.html">Animation</a></li>
+				
+			
+				
+					<li><a  href="/api/Easing.html">Easing</a></li>
+				
+			
+				
+					<li><a  href="/api/Shape.html">Shape</a></li>
 				
 			
 				
 			
 		</ul>
 	</div>
+
+	<script src="/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="/assets/doc.js"></script>
 
 	<div id="content">
 		<h2>Introduction</h2>
@@ -35,7 +48,7 @@
 <span class='nx'>square</span><span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;red&#39;</span><span class='p'>);</span>
 <span class='nx'>square</span><span class='p'>.</span><span class='nx'>animate</span><span class='p'>(</span><span class='s1'>&#39;1.5s&#39;</span><span class='p'>,</span> <span class='p'>{</span>
   <span class='nx'>origin</span><span class='o'>:</span> <span class='p'>[</span><span class='mi'>50</span><span class='p'>,</span> <span class='mi'>50</span><span class='p'>],</span>
-  <span class='nx'>rotation</span><span class='o'>:</span> <span class='nb'>Math</span><span class='p'>.</span><span class='nx'>PI</span> <span class='o'>*</span> <span class='mi'>1</span><span class='p'>,</span>
+  <span class='nx'>rotation</span><span class='o'>:</span> <span class='nb'>Math</span><span class='p'>.</span><span class='nx'>PI</span><span class='p'>,</span>
   <span class='nx'>x</span><span class='o'>:</span> <span class='mi'>700</span><span class='p'>,</span>
   <span class='nx'>fillColor</span><span class='o'>:</span> <span class='s1'>&#39;green&#39;</span>
 <span class='p'>});</span>
@@ -43,10 +56,6 @@
 </div>
 	</div>
 
-	<script src="/bonsai-docs/lib/ace/ace-noconflict.js"></script>
-	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
-	<script src="/bonsai-docs/lib/bonsai/bonsai.iframe.js"></script>
-	<script src="/bonsai-docs/assets/doc.js"></script>
 	<script>
 		doc.init();
 	</script>
