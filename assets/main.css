@@ -7,10 +7,6 @@ body, pre, p, h1, h2, h3 {
 	padding: 0;
 }
 
-h1 {
-	padding: 20px;
-}
-
 h2, h3 {
 	padding: .7em 0;
 }
@@ -20,19 +16,31 @@ p {
 }
 
 #nav {
+	font-size: .8em;
 	float: left;
 	width: 200px;
 	background: #EEE;
 	border-right: 2px solid #CCC;
-	color: #000;
+	color: #222831;
 	height: 100%;
-	position: fixed;
 }
 
 #nav ul {
 	border-top: 1px solid #CCC;
 	padding: 0;
 	margin: 0;
+}
+
+#nav h2 {
+	text-transform: uppercase;
+	font-size: 1.2em;
+	background: #222831;
+	padding-left: 12px;
+	color: #FFF;
+}
+
+#nav h1 a {
+	padding: 20px;
 }
 
 #nav a {
@@ -46,14 +54,26 @@ p {
 }
 
 #nav a:focus, #nav a:hover, #nav a.active {
-	background: black;
+	background: #5AB45C;
 	color: white;
 }
 
 #content {
-	padding: 30px;
+	padding: 0 30px 30px;
 	padding-left: 230px;
 	width: 700px;
+}
+
+#content a {
+	color: #222831;
+	background: #DDD;
+	text-decoration: underline;
+	font-weight: 700;
+}
+
+#content a:hover, #content a:focus {
+	background: #222831;
+	color: #FFF;
 }
 
 /** code **/
@@ -72,38 +92,19 @@ code {
 	font-size: .8em;
 }
 
-/** Table data **/
-
-table {
-	border-collapse: collapse;
-}
-
-table td {
-	background: #FFF;
-	border: 1px solid #CCC;
-	padding: 5px;
-}
-
-table td td {
-
-}
-
 /** Players **/
 
 .runner {
 	margin-top: 1em;
 	border: 1px solid #CCC;
-	border-bottom: 5px solid #CCC;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
+	border-top: 2px solid #222831;
+	border-bottom: 2px solid #222831;
 }
 
 .runner .nav {
 	font-size: .7em;
 	height: 2.5em;
 	background: #EEE;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
 	border-bottom: 1px solid #CCC;
 }
 
@@ -120,10 +121,75 @@ table td td {
 }
 
 .runner .nav a:hover, .runner .nav a:focus, .runner .nav a.active {
-	background: #000;
+	background: #222831;
 	color: #FFF;
 }
 
 .runner .editor {
 
+}
+
+/** JSDoc processed pages **/
+
+#content.jsdoc {
+	width: auto;
+}
+
+.jsdoc header h2 {
+	background: #DDD;
+	color: #111;
+	text-transform: uppercase;
+	font-size: 1em;
+	padding: 10px;
+}
+
+
+.jsdoc header h2 a {
+	color: #222831;
+	background: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	text-decoration: none;
+	padding: .2em;
+	margin-right: 5px;
+}
+
+.jsdoc header h2 a:hover, .jsdoc header h2 a:active {
+	text-decoration: underline;
+}
+
+.jsdoc table {
+	border-collapse: collapse;
+}
+
+.jsdoc table td, .jsdoc table th {
+	background: #FFF;
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+
+#content.jsdoc dt a {
+	display: block;
+	color: #222831;
+	background: #DDD;
+	border: 1px solid #CCC;
+	border-left: 5px solid #5AB45C;
+	border-radius: 0px;
+	text-decoration: none;
+	padding: .4em;
+	margin-right: 5px;
+	width: 300px;
+}
+
+#content.jsdoc dt a:hover, #content.jsdoc dt a:active {
+	background: #5AB45C;
+	color: #FFF;
+	font-weight: 700;
+}
+
+.jsdoc dt h4.name {
+	background: #DDD;
+	border-bottom: 5px solid #5AB45C;
+	padding: 10px;
+	margin: 10px 0;
 }

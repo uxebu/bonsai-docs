@@ -1,0 +1,240 @@
+<!doctype html>
+
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/assets/pygment.css" />
+<link rel="stylesheet" href="/assets/main.css" />
+
+<title>Bonsai documentation - Color</title>
+
+<body>
+
+	<div id="nav">
+		<h1><a href="/">Bonsai</a></h1>
+		<h2>Overview</h2>
+		<ul>
+			<li><a  href="/">Introduction</a></li>
+			
+				
+			
+				
+					<li><a  href="/overview/Animation.html">Animation</a></li>
+				
+			
+				
+					<li><a class="active" href="/overview/Color.html">Color</a></li>
+				
+			
+				
+					<li><a  href="/overview/Easing.html">Easing</a></li>
+				
+			
+				
+					<li><a  href="/overview/Shape.html">Shape</a></li>
+				
+			
+		</ul>
+		<h2>API: Modules</h2>
+		<ul>
+			
+				<li><a  href="/module-tools.html">tools</a></li>
+			
+				<li><a  href="/module-filter.html">filter</a></li>
+			
+				<li><a  href="/module-color.html">color</a></li>
+			
+				<li><a  href="/module-animation.html">animation</a></li>
+			
+		</ul>
+		<h2>API: Classes</h2>
+		<ul>
+			
+				<li><a  href="/module-filter.filter.Sepia.html">filter.Sepia</a></li>
+			
+				<li><a  href="/module-filter.filter.Saturate.html">filter.Saturate</a></li>
+			
+				<li><a  href="/module-filter.filter.Opacity.html">filter.Opacity</a></li>
+			
+				<li><a  href="/module-filter.filter.Invert.html">filter.Invert</a></li>
+			
+				<li><a  href="/module-filter.filter.HueRotate.html">filter.HueRotate</a></li>
+			
+				<li><a  href="/module-filter.filter.Grayscale.html">filter.Grayscale</a></li>
+			
+				<li><a  href="/module-filter.filter.DropShadow.html">filter.DropShadow</a></li>
+			
+				<li><a  href="/module-filter.filter.Contrast.html">filter.Contrast</a></li>
+			
+				<li><a  href="/module-filter.filter.ColorMatrix.html">filter.ColorMatrix</a></li>
+			
+				<li><a  href="/module-filter.filter.Brightness.html">filter.Brightness</a></li>
+			
+				<li><a  href="/module-filter.filter.Blur.html">filter.Blur</a></li>
+			
+				<li><a  href="/module-filter.filter.BaseFilter.html">filter.BaseFilter</a></li>
+			
+				<li><a  href="/module-curve.CurvedPath.html">CurvedPath</a></li>
+			
+				<li><a  href="/module-color.RGBAColor.html">RGBAColor</a></li>
+			
+				<li><a  href="/module-animation.KeyframeAnimation.html">KeyframeAnimation</a></li>
+			
+				<li><a  href="/module-animation.Animation.html">Animation</a></li>
+			
+				<li><a  href="/Video.html">Video</a></li>
+			
+				<li><a  href="/TextSpan.html">TextSpan</a></li>
+			
+				<li><a  href="/Text.html">Text</a></li>
+			
+				<li><a  href="/Sprite.html">Sprite</a></li>
+			
+				<li><a  href="/Shape.html">Shape</a></li>
+			
+				<li><a  href="/Point.html">Point</a></li>
+			
+				<li><a  href="/Movie.html">Movie</a></li>
+			
+				<li><a  href="/Group.html">Group</a></li>
+			
+				<li><a  href="/DisplayObject.html">DisplayObject</a></li>
+			
+		</ul>
+		<h2>API: Mixins</h2>
+		<ul>
+			
+				<li><a  href="/Timeline.html">Timeline</a></li>
+			
+				<li><a  href="/EventEmitter.html">EventEmitter</a></li>
+			
+				<li><a  href="/DisplayList.html">DisplayList</a></li>
+			
+				<li><a  href="/AssetDisplayObject.html">AssetDisplayObject</a></li>
+			
+		</ul>
+	</div>
+
+	<script src="/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="/assets/doc.js"></script>
+
+	<div id="content" class="">
+		<h2>Color</h2>
+		<h3 id='playground'>Playground:</h3>
+<!--runnable--><div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>myHue</span> <span class='o'>=</span> <span class='nx'>color</span><span class='p'>(</span><span class='s1'>&#39;hsl(0,100%,50%)&#39;</span><span class='p'>);</span>
+<span class='kd'>var</span> <span class='nx'>rows</span> <span class='o'>=</span> <span class='mi'>6</span><span class='p'>,</span> <span class='nx'>cols</span> <span class='o'>=</span> <span class='mi'>30</span><span class='p'>,</span> <span class='nx'>steps</span> <span class='o'>=</span> <span class='nx'>cols</span> <span class='o'>*</span> <span class='nx'>rows</span><span class='p'>;</span>
+
+<span class='k'>for</span> <span class='p'>(</span><span class='kd'>var</span> <span class='nx'>r</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span> <span class='nx'>r</span> <span class='o'>&lt;</span> <span class='nx'>rows</span><span class='p'>;</span> <span class='o'>++</span><span class='nx'>r</span><span class='p'>)</span> <span class='p'>{</span>
+  <span class='k'>for</span> <span class='p'>(</span><span class='kd'>var</span> <span class='nx'>c</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span> <span class='nx'>c</span> <span class='o'>&lt;</span> <span class='nx'>cols</span><span class='p'>;</span> <span class='o'>++</span><span class='nx'>c</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='nx'>c</span><span class='o'>*</span><span class='mi'>20</span><span class='p'>,</span> <span class='nx'>r</span><span class='o'>*</span><span class='mi'>20</span><span class='p'>,</span> <span class='mi'>20</span><span class='p'>,</span> <span class='mi'>20</span><span class='p'>)</span>
+      <span class='c1'>// Increment hue slightly with each step:</span>
+      <span class='p'>.</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>).</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='nx'>myHue</span><span class='p'>.</span><span class='nx'>hue</span><span class='p'>(</span><span class='nx'>myHue</span><span class='p'>.</span><span class='nx'>hue</span><span class='p'>()</span> <span class='o'>+</span> <span class='mi'>1</span><span class='o'>/</span><span class='nx'>steps</span><span class='p'>));</span>
+  <span class='p'>}</span>
+<span class='p'>}</span>
+</code></pre>
+</div>
+<h3 id='intro'>Intro</h3>
+
+<p>Bonsai provides a helpful color API. With it you can parse and manipulate colors. To parse a color and get a fresh <code>color.RGBAColor</code> instance, simply call:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>color</span><span class='p'>(</span><span class='s1'>&#39;red&#39;</span><span class='p'>);</span>
+</code></pre>
+</div>
+<p>This gives you a <code>color.RGBAColor</code>.</p>
+
+<p>An <code>RGBAColor</code> instance allows you to set and get the <code>r</code>, <code>g</code>, <code>b</code> and <code>a</code> values of the color, in addition to <code>h</code> (hue), <code>s</code> (saturation) and <code>l</code> (lightness) values.</p>
+
+<p><strong>NOTE: <code>r</code>, <code>g</code> and <code>b</code> are <code>0..255</code>, while <code>h</code>, <code>s</code>, <code>l</code> and <code>a</code> (alpha) are <code>0..1</code>.</strong></p>
+
+<p>E.g.</p>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>myColor</span> <span class='o'>=</span> <span class='nx'>color</span><span class='p'>(</span><span class='s1'>&#39;red&#39;</span><span class='p'>);</span> <span class='c1'>// or `new color.RGBAColor(255,0,0)`</span>
+<span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>hue</span><span class='p'>(</span><span class='mf'>0.5</span><span class='p'>);</span> <span class='c1'>// change to cyan</span>
+</code></pre>
+</div>
+<p>You can also use the more verbose <code>set</code> and <code>get</code> methods:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>set</span><span class='p'>(</span><span class='s1'>&#39;hue&#39;</span><span class='p'>,</span> <span class='mf'>0.5</span><span class='p'>);</span>
+<span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>set</span><span class='p'>(</span><span class='s1'>&#39;green&#39;</span><span class='p'>,</span> <span class='mi'>255</span><span class='p'>);</span>
+</code></pre>
+</div>
+<p>For getting string representations of colors, <code>RGBAColor</code> implements three methods:</p>
+
+<ul>
+<li><code>.rgba()</code>: outputs <code>&quot;rgba(r,g,b,a)&quot;</code></li>
+
+<li><code>.rgb()</code>: outputs <code>&quot;rgb(r,g,b)&quot;</code></li>
+
+<li><code>.hsla()</code>: outputs <code>&quot;hsla(h,s,l,a)&quot;</code></li>
+</ul>
+
+<h2 id='color_spawning_methods'>Color spawning methods</h2>
+
+<p>The <code>color.RGBAColor</code> class contains a number of color-spawning methods, i.e. methods that return various colors, mostly variations of the instance color:</p>
+<div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>myColor</span> <span class='o'>=</span> <span class='k'>new</span> <span class='nx'>color</span><span class='p'>.</span><span class='nx'>RGBAColor</span><span class='p'>(</span><span class='s1'>&#39;red&#39;</span><span class='p'>);</span>
+
+<span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>lighter</span><span class='p'>();</span>      <span class='c1'>// -&gt; color with lightness increased by 0.01</span>
+<span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>lighter</span><span class='p'>(.</span><span class='mi'>2</span><span class='p'>);</span>    <span class='c1'>// -&gt; color with lightness increased by 0.2</span>
+<span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>darker</span><span class='p'>()</span>        <span class='c1'>// -&gt; color with lightness decreased by 0.01</span>
+<span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>lighter</span><span class='p'>(.</span><span class='mi'>2</span><span class='p'>);</span>    <span class='c1'>// -&gt; color with lightness decreased by 0.2</span>
+<span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>midpoint</span><span class='p'>(</span><span class='nx'>x</span><span class='p'>);</span>    <span class='c1'>// -&gt; color between `color` and `x`</span>
+</code></pre>
+</div>
+<p>Example usage of <code>midpoint</code>:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>color</span><span class='p'>(</span><span class='s1'>&#39;red&#39;</span><span class='p'>).</span><span class='nx'>midpoint</span><span class='p'>(</span><span class='s1'>&#39;white&#39;</span><span class='p'>);</span> <span class='c1'>// -&gt; pink</span>
+</code></pre>
+</div>
+<p>There is also a generic <code>randomize</code> method which accepts two arguments, a string or array specifying propert(y|ies) to randomize and a <code>range</code> argument to specify to what degree they should be randomized. Both arguments are optional though:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>myColor</span><span class='p'>.</span><span class='nx'>randomize</span><span class='p'>();</span> <span class='c1'>// -&gt; default is randomizing by &#39;r&#39;, &#39;g&#39;, and &#39;b&#39; (100% random color)</span>
+</code></pre>
+</div>
+<p>Examples using the available arguments:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>color</span><span class='p'>(</span><span class='s1'>&#39;red&#39;</span><span class='p'>).</span><span class='nx'>randomize</span><span class='p'>(</span><span class='s1'>&#39;hue&#39;</span><span class='p'>);</span> <span class='c1'>// -&gt; randomize by hue, leaving saturation/lightness as-is</span>
+</code></pre>
+</div>
+<p>Available properties to animate include: <code>hue</code>, <code>saturation</code>, <code>lightness</code>, <code>alpha</code>, <code>red</code>, <code>green</code>, <code>blue</code> (aliases work too, <code>h</code>, <code>s</code>, <code>l</code>, <code>a</code>, <code>r</code>, <code>g</code>, <code>b</code>&#8230;)</p>
+
+<p>The range argument, if passed, will ensure the randomization occurs around the current value. So, if you wanted to randomize by <code>hue</code> (which can be from <code>0</code> to <code>1</code>), but you only wanted a slight change from the current value, you could do this:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>color</span><span class='p'>(</span><span class='s1'>&#39;yellow&#39;</span><span class='p'>).</span><span class='nx'>randomize</span><span class='p'>(</span><span class='s1'>&#39;hue&#39;</span><span class='p'>,</span> <span class='mf'>0.2</span><span class='p'>);</span>
+</code></pre>
+</div>
+<p>The <code>hue</code> of yellow is <code>0.16</code> (or 60 degrees). Passing a range of <code>0.2</code> will ensure that the random <code>hue</code> produced is no smaller than <code>0.06</code> and no bigger than <code>0.26</code> (i.e. <code>0.1</code> in each direction from the original hue, a full range of <code>0.2</code>).</p>
+
+<h3 id='id9'><code>color.parse</code>:</h3>
+
+<p>Internally we are using a 32-bit number to represent colors (including alpha). The format is:</p>
+<div class='highlight'><pre><code class='javascript'><span class='mi'>0</span><span class='nx'>x</span><span class='o'>&lt;</span><span class='nx'>rr</span><span class='o'>&gt;&lt;</span><span class='nx'>gg</span><span class='o'>&gt;&lt;</span><span class='nx'>bb</span><span class='o'>&gt;&lt;</span><span class='nx'>aa</span><span class='o'>&gt;</span>
+</code></pre>
+</div>
+<p><em>i.e. the first eight bits are red, the second eight bits are green &#8230;</em></p>
+
+<p>The <code>color.parse</code> function can accept any of the following formats:</p>
+
+<ul>
+<li><strong>hex</strong> (e.g. <code>#FFF</code> or <code>#FFFFFF</code>)</li>
+
+<li><strong>hex</strong> <em>with alpha</em> (e.g. <code>#112233FF</code>)</li>
+
+<li><strong>rgba</strong> (e.g. <code>rgba(255,255,255,1)</code>)</li>
+
+<li><strong>rgb</strong> (e.g. <code>rgb(255,255,255)</code>)</li>
+
+<li><strong>hsla</strong> (e.g. <code>hsla(180,50%,50%,0.5)</code>)</li>
+
+<li><strong>hsl</strong> (e.g. <code>hsl(180,50%,50%)</code>)</li>
+
+<li><strong>Named colors</strong> (e.g. <code>yellow</code>, <code>red</code>) - <em>specified in <code>color_map.js</code></em></li>
+
+<li><strong>Numerical 32-bit representation</strong> (<code>0x&lt;rr&gt;&lt;gg&gt;&lt;bb&gt;&lt;aa&gt;</code>)</li>
+</ul>
+
+<p><em>Where alpha isn&#8217;t specified, it is assumed to be <code>1</code>.</em></p>
+
+<p>So, <code>color.parse</code> just returns a number:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>color</span><span class='p'>.</span><span class='nx'>parse</span><span class='p'>(</span><span class='s1'>&#39;red&#39;</span><span class='p'>);</span> <span class='c1'>// 0xff0000ff</span>
+</code></pre>
+</div>
+	</div>
+
+	<script>
+		doc.init();
+	</script>
+
+</body>

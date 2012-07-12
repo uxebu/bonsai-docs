@@ -1,0 +1,1121 @@
+<!doctype html>
+
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/assets/pygment.css" />
+<link rel="stylesheet" href="/assets/main.css" />
+
+<title>Bonsai documentation - Timeline</title>
+
+<body>
+
+	<div id="nav">
+		<h1><a href="/">Bonsai</a></h1>
+		<h2>Overview</h2>
+		<ul>
+			<li><a  href="/">Introduction</a></li>
+			
+				
+			
+				
+					<li><a  href="/overview/Animation.html">Animation</a></li>
+				
+			
+				
+					<li><a  href="/overview/Color.html">Color</a></li>
+				
+			
+				
+					<li><a  href="/overview/Easing.html">Easing</a></li>
+				
+			
+				
+					<li><a  href="/overview/Shape.html">Shape</a></li>
+				
+			
+		</ul>
+		<h2>API: Modules</h2>
+		<ul>
+			
+				<li><a  href="/module-tools.html">tools</a></li>
+			
+				<li><a  href="/module-filter.html">filter</a></li>
+			
+				<li><a  href="/module-color.html">color</a></li>
+			
+				<li><a  href="/module-animation.html">animation</a></li>
+			
+		</ul>
+		<h2>API: Classes</h2>
+		<ul>
+			
+				<li><a  href="/module-filter.filter.Sepia.html">filter.Sepia</a></li>
+			
+				<li><a  href="/module-filter.filter.Saturate.html">filter.Saturate</a></li>
+			
+				<li><a  href="/module-filter.filter.Opacity.html">filter.Opacity</a></li>
+			
+				<li><a  href="/module-filter.filter.Invert.html">filter.Invert</a></li>
+			
+				<li><a  href="/module-filter.filter.HueRotate.html">filter.HueRotate</a></li>
+			
+				<li><a  href="/module-filter.filter.Grayscale.html">filter.Grayscale</a></li>
+			
+				<li><a  href="/module-filter.filter.DropShadow.html">filter.DropShadow</a></li>
+			
+				<li><a  href="/module-filter.filter.Contrast.html">filter.Contrast</a></li>
+			
+				<li><a  href="/module-filter.filter.ColorMatrix.html">filter.ColorMatrix</a></li>
+			
+				<li><a  href="/module-filter.filter.Brightness.html">filter.Brightness</a></li>
+			
+				<li><a  href="/module-filter.filter.Blur.html">filter.Blur</a></li>
+			
+				<li><a  href="/module-filter.filter.BaseFilter.html">filter.BaseFilter</a></li>
+			
+				<li><a  href="/module-curve.CurvedPath.html">CurvedPath</a></li>
+			
+				<li><a  href="/module-color.RGBAColor.html">RGBAColor</a></li>
+			
+				<li><a  href="/module-animation.KeyframeAnimation.html">KeyframeAnimation</a></li>
+			
+				<li><a  href="/module-animation.Animation.html">Animation</a></li>
+			
+				<li><a  href="/Video.html">Video</a></li>
+			
+				<li><a  href="/TextSpan.html">TextSpan</a></li>
+			
+				<li><a  href="/Text.html">Text</a></li>
+			
+				<li><a  href="/Sprite.html">Sprite</a></li>
+			
+				<li><a  href="/Shape.html">Shape</a></li>
+			
+				<li><a  href="/Point.html">Point</a></li>
+			
+				<li><a  href="/Movie.html">Movie</a></li>
+			
+				<li><a  href="/Group.html">Group</a></li>
+			
+				<li><a  href="/DisplayObject.html">DisplayObject</a></li>
+			
+		</ul>
+		<h2>API: Mixins</h2>
+		<ul>
+			
+				<li><a class="active" href="/Timeline.html">Timeline</a></li>
+			
+				<li><a  href="/EventEmitter.html">EventEmitter</a></li>
+			
+				<li><a  href="/DisplayList.html">DisplayList</a></li>
+			
+				<li><a  href="/AssetDisplayObject.html">AssetDisplayObject</a></li>
+			
+		</ul>
+	</div>
+
+	<script src="/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="/assets/doc.js"></script>
+
+	<div id="content" class="jsdoc">
+		<h2>Timeline</h2>
+		<div id="main">
+    
+    
+    
+    
+
+
+
+<section>
+    
+<header>
+    <h2>
+    Timeline
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+            <div class="description"><p>The Timeline mixin. It contains timeline functionality (controls a series
+of frames).</p></div>
+        
+        
+        
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+        
+        
+    
+    </div>
+    
+    
+    
+    
+        <h3 class="subsection-title">Mixes In</h3>
+        
+        <ul>
+            <li>event_emitter</li>
+        </ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Members</h3>
+        
+        <dl>
+            
+<dt>
+    <h4 class="name" id="currentFrame"><span class="type-signature">&lt;static> </span>currentFrame<span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The number of the current frame. Zero-indexed.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="isPlaying"><span class="type-signature">&lt;static> </span>isPlaying<span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether the timeline is playing</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+        <h3 class="subsection-title">Methods</h3>
+        
+        <dl>
+            
+<dt>
+    <h4 class="name" id="emitFrame"><span class="type-signature">&lt;static> </span>emitFrame</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Emits events for the current frame</p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="frames"><span class="type-signature">&lt;static> </span>frames</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Adds frames to the timeline. Each frame is a function. Existing frames
+are overwritten.</p>
+
+<p>The <code>newFrames</code> parameter can be an array where each index represents a
+frame, or an object, where keys may be a number plus a unit seconds,
+percents), e.g. <code>25</code>, <code>5s</code>, <code>30%</code>. Percentages relate to the current
+length of the timeline.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>frames</code></td>
+            
+            
+            <td class="type">
+            
+                        Array
+                         | 
+                    
+                        Object
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The frames to add</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">this</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="incrementFrame"><span class="type-signature">&lt;static> </span>incrementFrame</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Increments the frame</p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="length"><span class="type-signature">&lt;static> </span>length</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Gets or sets the number of frames in the movie.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>numFrames</code></td>
+            
+            
+            <td class="type">
+            
+                        number
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">number</span> |
+		
+		<span class="param-type">this</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="play"><span class="type-signature">&lt;static> </span>play</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Continues playback. If frame is passed, jump to that frame before.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>frame</code></td>
+            
+            
+            <td class="type">
+            
+                        number
+                         | 
+                    
+                        string
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"><p>A frame number or time expression.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">this</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="stop"><span class="type-signature">&lt;static> </span>stop</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Stops playback. If frame is passed, go to that frame before.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>frame</code></td>
+            
+            
+            <td class="type">
+            
+                        number
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"><p>A frame number or time expression.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">this</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="toFrameNumber"><span class="type-signature">&lt;static> </span>toFrameNumber</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Converts a seconds or percentages to a frame number.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>A duration in seconds (e.g. '5s') or a percentage
+ (e.g. 15%). To parse percentages, the timeline needs to have a length;</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A frame number</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">number</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+</div>
+
+
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Thu Jul 12 2012 22:53:57 GMT+0100 (BST)
+</footer>
+
+
+
+
+
+	</div>
+
+	<script>
+		doc.init();
+	</script>
+
+</body>

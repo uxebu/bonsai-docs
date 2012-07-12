@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/assets/pygment.css" />
 <link rel="stylesheet" href="/assets/main.css" />
 
-<title>Bonsai documentation - Introduction</title>
+<title>Bonsai documentation - AssetDisplayObject</title>
 
 <body>
 
@@ -12,7 +12,7 @@
 		<h1><a href="/">Bonsai</a></h1>
 		<h2>Overview</h2>
 		<ul>
-			<li><a class="active" href="/">Introduction</a></li>
+			<li><a  href="/">Introduction</a></li>
 			
 				
 			
@@ -108,7 +108,7 @@
 			
 				<li><a  href="/DisplayList.html">DisplayList</a></li>
 			
-				<li><a  href="/AssetDisplayObject.html">AssetDisplayObject</a></li>
+				<li><a class="active" href="/AssetDisplayObject.html">AssetDisplayObject</a></li>
 			
 		</ul>
 	</div>
@@ -118,25 +118,235 @@
 	<script src="/lib/bonsai/bonsai.iframe.js"></script>
 	<script src="/assets/doc.js"></script>
 
-	<div id="content" class="">
-		<h2>Introduction</h2>
-		<p>You&#8217;ve found the Bonsai API documentation site. Welcome!</p>
+	<div id="content" class="jsdoc">
+		<h2>AssetDisplayObject</h2>
+		<div id="main">
+    
+    
+    
+    
 
-<p>Bonsai is a graphics library which includes an intuitive graphics API and an SVG renderer.</p>
 
-<p>What does Bonsai look like?</p>
-<!--runnable--><div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>square</span> <span class='o'>=</span> <span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>);</span>
 
-<span class='nx'>square</span><span class='p'>.</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>);</span>
-<span class='nx'>square</span><span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;red&#39;</span><span class='p'>);</span>
-<span class='nx'>square</span><span class='p'>.</span><span class='nx'>animate</span><span class='p'>(</span><span class='s1'>&#39;1.5s&#39;</span><span class='p'>,</span> <span class='p'>{</span>
-  <span class='nx'>origin</span><span class='o'>:</span> <span class='p'>[</span><span class='mi'>50</span><span class='p'>,</span> <span class='mi'>50</span><span class='p'>],</span>
-  <span class='nx'>rotation</span><span class='o'>:</span> <span class='nb'>Math</span><span class='p'>.</span><span class='nx'>PI</span><span class='p'>,</span>
-  <span class='nx'>x</span><span class='o'>:</span> <span class='mi'>700</span><span class='p'>,</span>
-  <span class='nx'>fillColor</span><span class='o'>:</span> <span class='s1'>&#39;green&#39;</span>
-<span class='p'>});</span>
-</code></pre>
+<section>
+    
+<header>
+    <h2>
+    AssetDisplayObject
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+            <div class="description"><p>The AssetDisplayObject mixin</p></div>
+        
+        
+        
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+        
+        
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Methods</h3>
+        
+        <dl>
+            
+<dt>
+    <h4 class="name" id="bindAssetCallback"><span class="type-signature">&lt;static> </span>bindAssetCallback</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Registers events for a callback function which'll be triggered for both
+<code>error</code> and <code>load</code> events (i.e. node-style callback, <code>function(err, data) {}</code>)</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+            
+            <td class="type">
+            
+                        Function
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The function to be triggered upon <code>load</code> or <code>error</code></p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">this</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
 </div>
+
+
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Thu Jul 12 2012 22:53:56 GMT+0100 (BST)
+</footer>
+
+
+
+
+
 	</div>
 
 	<script>

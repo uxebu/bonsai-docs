@@ -1,0 +1,1638 @@
+<!doctype html>
+
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/assets/pygment.css" />
+<link rel="stylesheet" href="/assets/main.css" />
+
+<title>Bonsai documentation - EventEmitter</title>
+
+<body>
+
+	<div id="nav">
+		<h1><a href="/">Bonsai</a></h1>
+		<h2>Overview</h2>
+		<ul>
+			<li><a  href="/">Introduction</a></li>
+			
+				
+			
+				
+					<li><a  href="/overview/Animation.html">Animation</a></li>
+				
+			
+				
+					<li><a  href="/overview/Color.html">Color</a></li>
+				
+			
+				
+					<li><a  href="/overview/Easing.html">Easing</a></li>
+				
+			
+				
+					<li><a  href="/overview/Shape.html">Shape</a></li>
+				
+			
+		</ul>
+		<h2>API: Modules</h2>
+		<ul>
+			
+				<li><a  href="/module-tools.html">tools</a></li>
+			
+				<li><a  href="/module-filter.html">filter</a></li>
+			
+				<li><a  href="/module-color.html">color</a></li>
+			
+				<li><a  href="/module-animation.html">animation</a></li>
+			
+		</ul>
+		<h2>API: Classes</h2>
+		<ul>
+			
+				<li><a  href="/module-filter.filter.Sepia.html">filter.Sepia</a></li>
+			
+				<li><a  href="/module-filter.filter.Saturate.html">filter.Saturate</a></li>
+			
+				<li><a  href="/module-filter.filter.Opacity.html">filter.Opacity</a></li>
+			
+				<li><a  href="/module-filter.filter.Invert.html">filter.Invert</a></li>
+			
+				<li><a  href="/module-filter.filter.HueRotate.html">filter.HueRotate</a></li>
+			
+				<li><a  href="/module-filter.filter.Grayscale.html">filter.Grayscale</a></li>
+			
+				<li><a  href="/module-filter.filter.DropShadow.html">filter.DropShadow</a></li>
+			
+				<li><a  href="/module-filter.filter.Contrast.html">filter.Contrast</a></li>
+			
+				<li><a  href="/module-filter.filter.ColorMatrix.html">filter.ColorMatrix</a></li>
+			
+				<li><a  href="/module-filter.filter.Brightness.html">filter.Brightness</a></li>
+			
+				<li><a  href="/module-filter.filter.Blur.html">filter.Blur</a></li>
+			
+				<li><a  href="/module-filter.filter.BaseFilter.html">filter.BaseFilter</a></li>
+			
+				<li><a  href="/module-curve.CurvedPath.html">CurvedPath</a></li>
+			
+				<li><a  href="/module-color.RGBAColor.html">RGBAColor</a></li>
+			
+				<li><a  href="/module-animation.KeyframeAnimation.html">KeyframeAnimation</a></li>
+			
+				<li><a  href="/module-animation.Animation.html">Animation</a></li>
+			
+				<li><a  href="/Video.html">Video</a></li>
+			
+				<li><a  href="/TextSpan.html">TextSpan</a></li>
+			
+				<li><a  href="/Text.html">Text</a></li>
+			
+				<li><a  href="/Sprite.html">Sprite</a></li>
+			
+				<li><a  href="/Shape.html">Shape</a></li>
+			
+				<li><a  href="/Point.html">Point</a></li>
+			
+				<li><a  href="/Movie.html">Movie</a></li>
+			
+				<li><a  href="/Group.html">Group</a></li>
+			
+				<li><a  href="/DisplayObject.html">DisplayObject</a></li>
+			
+		</ul>
+		<h2>API: Mixins</h2>
+		<ul>
+			
+				<li><a  href="/Timeline.html">Timeline</a></li>
+			
+				<li><a class="active" href="/EventEmitter.html">EventEmitter</a></li>
+			
+				<li><a  href="/DisplayList.html">DisplayList</a></li>
+			
+				<li><a  href="/AssetDisplayObject.html">AssetDisplayObject</a></li>
+			
+		</ul>
+	</div>
+
+	<script src="/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="/assets/doc.js"></script>
+
+	<div id="content" class="jsdoc">
+		<h2>EventEmitter</h2>
+		<div id="main">
+    
+    
+    
+    
+
+
+
+<section>
+    
+<header>
+    <h2>
+    EventEmitter
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+            <div class="description"><p>This module contains mixin methods for handling events.</p></div>
+        
+        
+        
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+        
+        
+            <h3>Example</h3>
+            
+    <div class="highlight"><pre><code class="javascript"><span class="c1">// assign `EventEmitter` methods to `MyClass.prototype`</span>
+<span class="nx">tools</span><span class="p">.</span><span class="nx">mixin</span><span class="p">(</span><span class="nx">MyClass</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="nx">EventEmitter</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+        
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Methods</h3>
+        
+        <dl>
+            
+<dt>
+    <h4 class="name" id="addListener"><span class="type-signature">&lt;static> </span>addListener</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Registers a single listener for the specified event type(s).
+Listeners are executed with the <code>this</code> binding of the host object.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		<th>Default</th>
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last"><p>The event type.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+            
+            <td class="type">
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+            
+            <td class="description last"><p>The context to call the listener in.
+ Defaults to the event emitter itself.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+            
+            <td class="type">
+            
+                        Function
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last"><p>The function called when the event occurs.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The host object.</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Object</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <div class="highlight"><pre><code class="javascript"><span class="c1">// register a listener for an event type</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s1">&#39;blur&#39;</span><span class="p">,</span> <span class="nx">listener</span><span class="p">);</span>
+
+<span class="c1">// register a listener for multiple event types</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s1">&#39;blur focus&#39;</span><span class="p">,</span> <span class="nx">listener</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="emit"><span class="type-signature">&lt;static> </span>emit</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Executes all registered listeners of the specified event type.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"><p>The event type.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>args1, ...</code></td>
+            
+            
+            <td class="type">
+            
+                        Mixed
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"><p>Any number of arguments to pass to the listener.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The host object.</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Object</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="emitAsync"><span class="type-signature">&lt;static> </span>emitAsync</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Executes all registered listeners of the specified event type after
+the current execution block completes (i.e. asynchronously)</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"><p>The event type.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>args1, ...</code></td>
+            
+            
+            <td class="type">
+            
+                        Mixed
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"><p>Any number of arguments to pass to the listener.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The host object.</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Object</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="listeners"><span class="type-signature">&lt;static> </span>listeners</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns an array of event listeners for a given type that can be
+manipulated to add or remove listeners.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The event type.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The listeners array.</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Array</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="on"><span class="type-signature">&lt;static> </span>on</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>An alias for <code>addListener</code>.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The event type.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+            
+            <td class="type">
+            
+                        Function
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The function called when the event occurs.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The host object.</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Object</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="once"><span class="type-signature">&lt;static> </span>once</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Registers a listener that will only be executed one time.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		<th>Default</th>
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last"><p>The event type.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+            
+            <td class="type">
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+            
+            <td class="description last"><p>The context to call the listener in.
+ Defaults to the event emitter itself.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+            
+            <td class="type">
+            
+                        Function
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last"><p>The function called when the event occurs.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The host object.</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Object</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="removeAllListeners"><span class="type-signature">&lt;static> </span>removeAllListeners</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Unregisters all listeners or those for the specified event type(s).</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+            
+            <td class="description last"><p>The event type. Unregisters all listeners if no
+ event type is given.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The host object.</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Object</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <div class="highlight"><pre><code class="javascript"><span class="c1">// unregister all listeners</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">removeAllListeners</span><span class="p">();</span>
+
+<span class="c1">// unregister all listeners for an event type</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">removeAllListeners</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">);</span>
+
+<span class="c1">// unregister all listeners for multiple event types</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">removeAllListeners</span><span class="p">(</span><span class="s1">&#39;click mousedown touch&#39;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="removeListener"><span class="type-signature">&lt;static> </span>removeListener</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Unregisters a single listener for the specified event type(s).</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		<th>Default</th>
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last"><p>The event type.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+            
+            <td class="type">
+            
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+            
+            <td class="description last"><p>The context the listener was registered with.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+            
+            <td class="type">
+            
+                        Function
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last"><p>The function to unregister.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The host object.</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Object</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <div class="highlight"><pre><code class="javascript"><span class="c1">// unregister a listener for an event type</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s1">&#39;blur&#39;</span><span class="p">,</span> <span class="nx">listener</span><span class="p">);</span>
+
+<span class="c1">// unregister a listener for multiple event types</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s1">&#39;blur focus&#39;</span><span class="p">,</span> <span class="nx">listener</span><span class="p">);</span>
+</code></pre>
+</div>
+
+
+    
+</dd>
+
+        </dl>
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+</div>
+
+
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Thu Jul 12 2012 22:53:56 GMT+0100 (BST)
+</footer>
+
+
+
+
+
+	</div>
+
+	<script>
+		doc.init();
+	</script>
+
+</body>

@@ -1,0 +1,551 @@
+---
+title: 'TextSpan'
+layout: doc
+categories: jsdoc Class
+---
+
+
+
+<div id="main">
+    
+    
+    
+    
+
+
+
+<section>
+    
+<header>
+    <h2>
+    TextSpan
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <h4 class="name" id="TextSpan"><span class="type-signature"></span>new TextSpan</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The TextSpan constructor</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>text</code></td>
+            
+            
+            <td class="type">
+            
+                        String
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The text content</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code><p><strong>supportedAttributes</strong></code></td>
+            
+            
+            <td class="type">
+            
+                        __list__
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">List of supported attribute names.
+   In addition to the property names listed for DisplayObject,
+   these are the attribute names you can pass to the attr() method. Note
+   that this property is not available in your code, it's just here for
+   documentation purposes.</p>
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>text</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The text content.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>fontSize</code></td>
+            
+            
+            <td class="type">
+            
+                        number
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The font size. Default: 16</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>fontFamily</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The font family Default: 'monospace'</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>fontStyle</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The font style. Can be one of 'normal' or 'italic'. Default: 'normal'</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>fontWeight</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The font weight. Can be one of 'normal' or 'bold'. Default: 'normal'</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>glyphx</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">An array of x offsets mapped to each individual glyph position</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>glyphy</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">An array of y offsets mapped to each individual glyph position</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>cap</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The shape to be used at the end of open Path items, when they have a stroke. Can be one of 'round', 'square', 'butt'. Default: 'butt'</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>textFillColor</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The fill color. Default: black.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>join</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The shape to be used at the corners of paths. Can be one of 'miter', 'round', 'bevel'. Default: 'miter'</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>textLineColor</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The line color. Default: transparent</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>textLineWidth</code></td>
+            
+            
+            <td class="type">
+            
+                        number
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The line width. Default: 0</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>miterLimit</code></td>
+            
+            
+            <td class="type">
+            
+                        number
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">The miter limit of the stroke. Default: 4</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>selectable</code></td>
+            
+            
+            <td class="type">
+            
+                        number
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">Boolean indicates whether the text is selectable or not</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+            </td>
+        </tr>
+	
+	
+	</tbody>
+</table></dl>
+        
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+    
+    </div>
+    
+    
+        <h3 class="subsection-title">Extends</h3>
+        
+        <ul>
+            <li><a href="DisplayObject.html">DisplayObject</a></li>
+        </ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+</div>
+
+
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Thu Jul 12 2012 22:53:57 GMT+0100 (BST)
+</footer>
+
+
+
+

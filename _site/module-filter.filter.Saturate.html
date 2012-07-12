@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/assets/pygment.css" />
 <link rel="stylesheet" href="/assets/main.css" />
 
-<title>Bonsai documentation - Introduction</title>
+<title>Bonsai documentation - filter.Saturate</title>
 
 <body>
 
@@ -12,7 +12,7 @@
 		<h1><a href="/">Bonsai</a></h1>
 		<h2>Overview</h2>
 		<ul>
-			<li><a class="active" href="/">Introduction</a></li>
+			<li><a  href="/">Introduction</a></li>
 			
 				
 			
@@ -50,7 +50,7 @@
 			
 				<li><a  href="/module-filter.filter.Sepia.html">filter.Sepia</a></li>
 			
-				<li><a  href="/module-filter.filter.Saturate.html">filter.Saturate</a></li>
+				<li><a class="active" href="/module-filter.filter.Saturate.html">filter.Saturate</a></li>
 			
 				<li><a  href="/module-filter.filter.Opacity.html">filter.Opacity</a></li>
 			
@@ -118,25 +118,187 @@
 	<script src="/lib/bonsai/bonsai.iframe.js"></script>
 	<script src="/assets/doc.js"></script>
 
-	<div id="content" class="">
-		<h2>Introduction</h2>
-		<p>You&#8217;ve found the Bonsai API documentation site. Welcome!</p>
+	<div id="content" class="jsdoc">
+		<h2>filter.Saturate</h2>
+		<div id="main">
+    
+    
+    
+    
 
-<p>Bonsai is a graphics library which includes an intuitive graphics API and an SVG renderer.</p>
 
-<p>What does Bonsai look like?</p>
-<!--runnable--><div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>square</span> <span class='o'>=</span> <span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>);</span>
 
-<span class='nx'>square</span><span class='p'>.</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>);</span>
-<span class='nx'>square</span><span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;red&#39;</span><span class='p'>);</span>
-<span class='nx'>square</span><span class='p'>.</span><span class='nx'>animate</span><span class='p'>(</span><span class='s1'>&#39;1.5s&#39;</span><span class='p'>,</span> <span class='p'>{</span>
-  <span class='nx'>origin</span><span class='o'>:</span> <span class='p'>[</span><span class='mi'>50</span><span class='p'>,</span> <span class='mi'>50</span><span class='p'>],</span>
-  <span class='nx'>rotation</span><span class='o'>:</span> <span class='nb'>Math</span><span class='p'>.</span><span class='nx'>PI</span><span class='p'>,</span>
-  <span class='nx'>x</span><span class='o'>:</span> <span class='mi'>700</span><span class='p'>,</span>
-  <span class='nx'>fillColor</span><span class='o'>:</span> <span class='s1'>&#39;green&#39;</span>
-<span class='p'>});</span>
+<section>
+    
+<header>
+    <h2>
+        <span class="ancestors"><a href="module-filter.html">filter</a>.</span>
+    
+    filter.Saturate
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <h4 class="name" id="filter.Saturate"><span class="type-signature"></span>new filter.Saturate</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Saturate filter.</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>saturationValue,</code></td>
+            
+            
+            <td class="type">
+            
+                        mixed
+                        
+                    
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>number, 0 - Infinity. If omitted,
+   defaultValue is 5.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <div class="highlight"><pre><code class="javascript">   <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">filter</span><span class="p">.</span><span class="nx">Saturate</span><span class="p">();</span>
+   <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">filter</span><span class="p">.</span><span class="nx">Saturate</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </code></pre>
 </div>
+
+
+    
+</dd>
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+</div>
+
+
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Thu Jul 12 2012 22:53:56 GMT+0100 (BST)
+</footer>
+
+
+
+
+
 	</div>
 
 	<script>

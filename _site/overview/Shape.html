@@ -1,0 +1,190 @@
+<!doctype html>
+
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/assets/pygment.css" />
+<link rel="stylesheet" href="/assets/main.css" />
+
+<title>Bonsai documentation - Shape</title>
+
+<body>
+
+	<div id="nav">
+		<h1><a href="/">Bonsai</a></h1>
+		<h2>Overview</h2>
+		<ul>
+			<li><a  href="/">Introduction</a></li>
+			
+				
+			
+				
+					<li><a  href="/overview/Animation.html">Animation</a></li>
+				
+			
+				
+					<li><a  href="/overview/Color.html">Color</a></li>
+				
+			
+				
+					<li><a  href="/overview/Easing.html">Easing</a></li>
+				
+			
+				
+					<li><a class="active" href="/overview/Shape.html">Shape</a></li>
+				
+			
+		</ul>
+		<h2>API: Modules</h2>
+		<ul>
+			
+				<li><a  href="/module-tools.html">tools</a></li>
+			
+				<li><a  href="/module-filter.html">filter</a></li>
+			
+				<li><a  href="/module-color.html">color</a></li>
+			
+				<li><a  href="/module-animation.html">animation</a></li>
+			
+		</ul>
+		<h2>API: Classes</h2>
+		<ul>
+			
+				<li><a  href="/module-filter.filter.Sepia.html">filter.Sepia</a></li>
+			
+				<li><a  href="/module-filter.filter.Saturate.html">filter.Saturate</a></li>
+			
+				<li><a  href="/module-filter.filter.Opacity.html">filter.Opacity</a></li>
+			
+				<li><a  href="/module-filter.filter.Invert.html">filter.Invert</a></li>
+			
+				<li><a  href="/module-filter.filter.HueRotate.html">filter.HueRotate</a></li>
+			
+				<li><a  href="/module-filter.filter.Grayscale.html">filter.Grayscale</a></li>
+			
+				<li><a  href="/module-filter.filter.DropShadow.html">filter.DropShadow</a></li>
+			
+				<li><a  href="/module-filter.filter.Contrast.html">filter.Contrast</a></li>
+			
+				<li><a  href="/module-filter.filter.ColorMatrix.html">filter.ColorMatrix</a></li>
+			
+				<li><a  href="/module-filter.filter.Brightness.html">filter.Brightness</a></li>
+			
+				<li><a  href="/module-filter.filter.Blur.html">filter.Blur</a></li>
+			
+				<li><a  href="/module-filter.filter.BaseFilter.html">filter.BaseFilter</a></li>
+			
+				<li><a  href="/module-curve.CurvedPath.html">CurvedPath</a></li>
+			
+				<li><a  href="/module-color.RGBAColor.html">RGBAColor</a></li>
+			
+				<li><a  href="/module-animation.KeyframeAnimation.html">KeyframeAnimation</a></li>
+			
+				<li><a  href="/module-animation.Animation.html">Animation</a></li>
+			
+				<li><a  href="/Video.html">Video</a></li>
+			
+				<li><a  href="/TextSpan.html">TextSpan</a></li>
+			
+				<li><a  href="/Text.html">Text</a></li>
+			
+				<li><a  href="/Sprite.html">Sprite</a></li>
+			
+				<li><a  href="/Shape.html">Shape</a></li>
+			
+				<li><a  href="/Point.html">Point</a></li>
+			
+				<li><a  href="/Movie.html">Movie</a></li>
+			
+				<li><a  href="/Group.html">Group</a></li>
+			
+				<li><a  href="/DisplayObject.html">DisplayObject</a></li>
+			
+		</ul>
+		<h2>API: Mixins</h2>
+		<ul>
+			
+				<li><a  href="/Timeline.html">Timeline</a></li>
+			
+				<li><a  href="/EventEmitter.html">EventEmitter</a></li>
+			
+				<li><a  href="/DisplayList.html">DisplayList</a></li>
+			
+				<li><a  href="/AssetDisplayObject.html">AssetDisplayObject</a></li>
+			
+		</ul>
+	</div>
+
+	<script src="/lib/ace/ace-noconflict.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="/assets/doc.js"></script>
+
+	<div id="content" class="">
+		<h2>Shape</h2>
+		<h3 id='try_it_out'>Try it out:</h3>
+<!--runnable--><div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>a</span> <span class='o'>=</span> <span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>circle</span><span class='p'>(</span><span class='mi'>100</span><span class='p'>,</span> <span class='o'>-</span><span class='mi'>50</span><span class='p'>,</span> <span class='mi'>50</span><span class='p'>);</span>
+<span class='nx'>a</span><span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span><span class='s1'>&#39;fillColor&#39;</span><span class='p'>,</span> <span class='s1'>&#39;lightblue&#39;</span><span class='p'>).</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>);</span>
+
+<span class='nx'>a</span><span class='p'>.</span><span class='nx'>animate</span><span class='p'>(</span><span class='s1'>&#39;1s&#39;</span><span class='p'>,</span> <span class='p'>{</span>
+  <span class='nx'>scale</span><span class='o'>:</span> <span class='mf'>1.5</span><span class='p'>,</span>
+  <span class='nx'>fillColor</span><span class='o'>:</span> <span class='s1'>&#39;darkblue&#39;</span><span class='p'>,</span>
+  <span class='nx'>y</span><span class='o'>:</span> <span class='mi'>100</span>
+<span class='p'>},</span> <span class='p'>{</span> <span class='nx'>easing</span><span class='o'>:</span> <span class='s1'>&#39;bounceOut&#39;</span> <span class='p'>});</span>
+</code></pre>
+</div>
+<h3 id='shape_constructor'>Shape constructor</h3>
+
+<p>The Shape constructor accepts three different argument signatures:</p>
+
+<h4 id='string_svg_path'>String: SVG path</h4>
+
+<p>A <code>String</code> with space/comma separated path commands, as per the <a href='http://www.w3.org/TR/SVG/paths.html'>SVG Path spec</a>:</p>
+<div class='highlight'><pre><code class='javascript'><span class='k'>new</span> <span class='nx'>Shape</span><span class='p'>(</span><span class='s1'>&#39;l 100,0 l 0,100 l -100,0 l 0,-100&#39;</span><span class='p'>);</span>
+</code></pre>
+</div>
+<h4 id='array_path_commands'>Array: Path commands</h4>
+
+<p>An <code>Array</code> of arrays, each sub-array consistening of a command (e.g. <code>lineTo</code>) and its arguments:</p>
+<div class='highlight'><pre><code class='javascript'><span class='k'>new</span> <span class='nx'>Shape</span><span class='p'>([</span>
+  <span class='p'>[</span><span class='s1'>&#39;moveTo&#39;</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>],</span>
+  <span class='p'>[</span><span class='s1'>&#39;lineBy&#39;</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>],</span>
+  <span class='p'>[</span><span class='s1'>&#39;lineBy&#39;</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>],</span>
+  <span class='p'>[</span><span class='s1'>&#39;lineBy&#39;</span><span class='p'>,</span> <span class='o'>-</span><span class='mi'>100</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>],</span>
+  <span class='p'>[</span><span class='s1'>&#39;lineBy&#39;</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='o'>-</span><span class='mi'>100</span><span class='p'>]</span>
+<span class='p'>]);</span>
+</code></pre>
+</div>
+<h4 id='array_points_of_polygon'>Array: Points of polygon</h4>
+
+<p>The <code>x</code> and <code>y</code> position of each point. Each coordinate takes up two array slots:</p>
+<div class='highlight'><pre><code class='javascript'><span class='k'>new</span> <span class='nx'>Shape</span><span class='p'>([</span>
+  <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span>
+  <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span>
+  <span class='mi'>100</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>,</span>
+  <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span>
+<span class='p'>]);</span>
+</code></pre>
+</div>
+<h3 id='factorieshelpers'>Factories/Helpers</h3>
+
+<p>For the simpler shapes bonsai provides convenience factories:</p>
+
+<ul>
+<li><code>Shape.rect(x, y, width, height, [cornerRadius])</code></li>
+
+<li><code>Shape.arc(x, y, radius, startAngle, endAngle, isAntiClockwise)</code></li>
+
+<li><code>Shape.circle(x, y, radius)</code></li>
+
+<li><code>Shape.ellipse(centerX, centerY, radiusX, radiusY)</code></li>
+
+<li><code>Shape.polygon(x, y, radius, sides)</code></li>
+
+<li><code>Shape.star(x, y, radius, rays, factor)</code></li>
+</ul>
+	</div>
+
+	<script>
+		doc.init();
+	</script>
+
+</body>

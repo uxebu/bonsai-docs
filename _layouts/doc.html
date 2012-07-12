@@ -9,13 +9,32 @@
 <body>
 
 	<div id="nav">
-		<h1>Bonsai</h1>
+		<h1><a href="/">Bonsai</a></h1>
+		<h2>Overview</h2>
 		<ul>
 			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="{{site.baseurl}}/">Introduction</a></li>
 			{% for p in site.pages %}
 				{% unless p.title == 'Introduction' %}
 					<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 				{% endunless %}
+			{% endfor %}
+		</ul>
+		<h2>API: Modules</h2>
+		<ul>
+			{% for p in site.categories.Module %}
+				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
+			{% endfor %}
+		</ul>
+		<h2>API: Classes</h2>
+		<ul>
+			{% for p in site.categories.Class %}
+				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
+			{% endfor %}
+		</ul>
+		<h2>API: Mixins</h2>
+		<ul>
+			{% for p in site.categories.Mixin %}
+				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
@@ -25,7 +44,7 @@
 	<script src="{{site.baseurl}}/lib/bonsai/bonsai.iframe.js"></script>
 	<script src="{{site.baseurl}}/assets/doc.js"></script>
 
-	<div id="content">
+	<div id="content" class="{% if page.categories contains 'jsdoc' %}jsdoc{% endif %}">
 		<h2>{{page.title}}</h2>
 		{{content}}
 	</div>
