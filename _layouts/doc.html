@@ -45,7 +45,12 @@
 	<script src="{{site.baseurl}}/assets/doc.js"></script>
 
 	<div id="content" class="{% if page.categories contains 'jsdoc' %}jsdoc{% endif %}">
-		<h2>{{page.title}}</h2>
+		<h2>
+			{{page.title}}
+			{% if page.overview and page.overview != '' %}
+				(<a class="overview" href="{{page.overview}}">Overview / Examples &raquo;</a>)
+			{% endif %}
+		</h2>
 		{{content}}
 	</div>
 
