@@ -67,3 +67,14 @@ For the simpler shapes bonsai provides convenience factories:
  * `Shape.polygon(x, y, radius, sides)`
  * `Shape.star(x, y, radius, rays, factor)`
 
+### Filling a Shape {#filling}
+
+Shape instances support the following fill attributes:
+
+ * fillColor: A [`color.RGBAColor`](/module-color.RGBAColor.html) instance or anything that can be parsed by [`color.parse`](/overview/Color.html#color_parse).
+ * fillGradient: A [`gradient.LinearGradient`](/module-gradient.LinearGradient.html) or [`gradient.RadialGradient`](/module-gradient.RadialGradient.html) instance. See [the Gradient overview](/overview/Gradient.html) for more details on how to create gradients.
+ * fillImage: A [`Bitmap`](/Bitmap.html) instance.
+
+
+
+

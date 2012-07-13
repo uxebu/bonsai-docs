@@ -95,7 +95,7 @@ color('yellow').randomize('hue', 0.2);
 
 The `hue` of yellow is `0.16` (or 60 degrees). Passing a range of `0.2` will ensure that the random `hue` produced is no smaller than `0.06` and no bigger than `0.26` (i.e. `0.1` in each direction from the original hue, a full range of `0.2`).
 
-### `color.parse`:
+### `color.parse`: {#color_parse}
 
 Internally we are using a 32-bit number to represent colors (including alpha). The format is:
 
