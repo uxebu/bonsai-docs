@@ -1,5 +1,5 @@
 body {
-	font: 1em sans-serif;
+	font: .8em sans-serif;
 }
 
 body, pre, p, h1, h2, h3 {
@@ -16,7 +16,6 @@ p {
 }
 
 #nav {
-	font-size: .8em;
 	float: left;
 	width: 200px;
 	background: #EEE;
@@ -74,6 +73,22 @@ p {
 #content a:hover, #content a:focus {
 	background: #222831;
 	color: #FFF;
+}
+
+/** Within-content **/
+
+#content a.overview {
+	padding: 5px 10px;
+	margin: 0 3px;
+	border-radius: 3px;
+	background: #5AB45C;
+	color: #FFF;
+	text-decoration: none;
+	font-size: .8em;
+}
+
+#content a.overview:hover, #content a.overview:focus {
+	background: #222831;
 }
 
 /** code **/
@@ -192,4 +207,9 @@ code {
 	border-bottom: 5px solid #5AB45C;
 	padding: 10px;
 	margin: 10px 0;
+}
+
+.jsdoc .class-description {
+	font-size: 1.2em;
+	font-style: italic;
 }

@@ -29,6 +29,10 @@
 				
 			
 				
+					<li><a  href="/overview/Gradient.html">Gradient</a></li>
+				
+			
+				
 					<li><a  href="/overview/Shape.html">Shape</a></li>
 				
 			
@@ -37,6 +41,8 @@
 		<ul>
 			
 				<li><a  href="/module-tools.html">tools</a></li>
+			
+				<li><a  href="/module-gradient.html">gradient</a></li>
 			
 				<li><a  href="/module-filter.html">filter</a></li>
 			
@@ -47,6 +53,10 @@
 		</ul>
 		<h2>API: Classes</h2>
 		<ul>
+			
+				<li><a  href="/module-gradient.RadialGradient.html">RadialGradient</a></li>
+			
+				<li><a  href="/module-gradient.LinearGradient.html">LinearGradient</a></li>
 			
 				<li><a  href="/module-filter.filter.Sepia.html">filter.Sepia</a></li>
 			
@@ -86,6 +96,8 @@
 			
 				<li><a  href="/Text.html">Text</a></li>
 			
+				<li><a  href="/Stage.html">Stage</a></li>
+			
 				<li><a  href="/Sprite.html">Sprite</a></li>
 			
 				<li><a  href="/Shape.html">Shape</a></li>
@@ -97,6 +109,8 @@
 				<li><a  href="/Group.html">Group</a></li>
 			
 				<li><a  href="/DisplayObject.html">DisplayObject</a></li>
+			
+				<li><a  href="/Bitmap.html">Bitmap</a></li>
 			
 		</ul>
 		<h2>API: Mixins</h2>
@@ -119,7 +133,10 @@
 	<script src="/assets/doc.js"></script>
 
 	<div id="content" class="">
-		<h2>Color</h2>
+		<h2>
+			Color
+			
+		</h2>
 		<h3 id='playground'>Playground:</h3>
 <!--runnable--><div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>myHue</span> <span class='o'>=</span> <span class='nx'>color</span><span class='p'>(</span><span class='s1'>&#39;hsl(0,100%,50%)&#39;</span><span class='p'>);</span>
 <span class='kd'>var</span> <span class='nx'>rows</span> <span class='o'>=</span> <span class='mi'>6</span><span class='p'>,</span> <span class='nx'>cols</span> <span class='o'>=</span> <span class='mi'>30</span><span class='p'>,</span> <span class='nx'>steps</span> <span class='o'>=</span> <span class='nx'>cols</span> <span class='o'>*</span> <span class='nx'>rows</span><span class='p'>;</span>
@@ -197,7 +214,7 @@
 </div>
 <p>The <code>hue</code> of yellow is <code>0.16</code> (or 60 degrees). Passing a range of <code>0.2</code> will ensure that the random <code>hue</code> produced is no smaller than <code>0.06</code> and no bigger than <code>0.26</code> (i.e. <code>0.1</code> in each direction from the original hue, a full range of <code>0.2</code>).</p>
 
-<h3 id='id9'><code>color.parse</code>:</h3>
+<h3 id='color_parse'><code>color.parse</code>:</h3>
 
 <p>Internally we are using a 32-bit number to represent colors (including alpha). The format is:</p>
 <div class='highlight'><pre><code class='javascript'><span class='mi'>0</span><span class='nx'>x</span><span class='o'>&lt;</span><span class='nx'>rr</span><span class='o'>&gt;&lt;</span><span class='nx'>gg</span><span class='o'>&gt;&lt;</span><span class='nx'>bb</span><span class='o'>&gt;&lt;</span><span class='nx'>aa</span><span class='o'>&gt;</span>

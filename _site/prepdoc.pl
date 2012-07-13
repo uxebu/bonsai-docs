@@ -17,16 +17,24 @@ use warnings;
 use File::Slurp;
 use File::Basename;
 
+my %keywords = (
+  'color' => '/overview/Color.html',
+  'easing' => '/overview/Easing.html',
+  'shape' => '/overview/Shape.html',
+  'animat(e|ion)' => '/overview/Animation.html'
+);
+
 my $destination = $ARGV[1];
 $destination =~ s|[^/]$|$&\/|; # add slash if needed
 
-my $text = read_file($ARGV[0]);
+my $html = read_file($ARGV[0]);
 my $name = fileparse($ARGV[0]);
 my $title;
+my $relatedOverview = '';
 my @categories = ('jsdoc');
 
 # Extract title
-if ($text =~ /<title>(.+?)<\/title>/) {
+if ($html =~ /<title>(.+?)<\/title>/) {
   $title = $1;
 } else {
   die "No title found (<title>...</title>) in ${name}";
@@ -44,32 +52,40 @@ if ($title =~ /Mixin/) { push @categories, 'Mixin'; }
 
 $title =~ s/JSDoc: (?:Class|Mixin|Module): //;
 
+# Add keyword URL to page config
+while ( my ($keyword, $keywordUrl) = each(%keywords) ) {
+  if ($title =~ m/$keyword/i) {
+    $relatedOverview = $keywordUrl;
+  }
+}
+
 # Remove everything that's not inside <body>...</body>
-$text =~ s/[\s\S]+<body>//;
-$text =~ s/<\/body>[\s\S]+//;
-$text =~ s/<nav>[\s\S]+?<\/nav>//; # remove navigation
-$text =~ s/<h1[\s\S]+?<\/h1>//; # remove h1 title. h2 is sufficient (they're identical)
-$text =~ s/<script[\s\S]+?<\/script>//g; # remove scripts
-$text =~ s/<d[dt] class="tag-source">.+?<\/d[dt]>//g; # remove source/line-number detail
+$html =~ s/[\s\S]+<body>//;
+$html =~ s/<\/body>[\s\S]+//;
+$html =~ s/<nav>[\s\S]+?<\/nav>//; # remove navigation
+$html =~ s/<h1[\s\S]+?<\/h1>//; # remove h1 title. h2 is sufficient (they're identical)
+$html =~ s/<script[\s\S]+?<\/script>//g; # remove scripts
+$html =~ s/<d[dt] class="tag-source">.+?<\/d[dt]>//g; # remove source/line-number detail
 
 # Highlight code the "jekyll way":
-$text =~ s/<pre class="sh_javascript"><code>/{% highlight javascript %}/g;
-$text =~ s/<\/code><\/pre>/{% endhighlight %}/g;
+$html =~ s/<pre class="sh_javascript"><code>/{% highlight javascript %}/g;
+$html =~ s/<\/code><\/pre>/{% endhighlight %}/g;
 
 # Add YAML Front matter config to the top of the file:
-$text = <<END;
+$html = <<END;
 ---
 title: '$title'
 layout: doc
 categories: @categories
+overview: '$relatedOverview'
 ---
 
-$text
+$html
 
 END
 ;
 
 # Overwrite file with new content
 open my $out, ">${destination}2012-01-01-$name" or die '$1';
-print $out $text;
+print $out $html;
 close $out;

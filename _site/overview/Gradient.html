@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/assets/pygment.css" />
 <link rel="stylesheet" href="/assets/main.css" />
 
-<title>Bonsai documentation - Easing</title>
+<title>Bonsai documentation - Gradient</title>
 
 <body>
 
@@ -25,11 +25,11 @@
 				
 			
 				
-					<li><a class="active" href="/overview/Easing.html">Easing</a></li>
+					<li><a  href="/overview/Easing.html">Easing</a></li>
 				
 			
 				
-					<li><a  href="/overview/Gradient.html">Gradient</a></li>
+					<li><a class="active" href="/overview/Gradient.html">Gradient</a></li>
 				
 			
 				
@@ -134,83 +134,30 @@
 
 	<div id="content" class="">
 		<h2>
-			Easing
+			Gradient
 			
 		</h2>
-		<style>
-#easing_functions {
-  line-height: 2em;
-}
-#easing_functions a {
-  padding: 3px 5px;
-  background: #EEE;
-  font-weight: 700;
-  cursor: pointer;
-  color: #000;
-  text-decoration: none;
-  box-shadow: 0 0 3px #000;
-}
-#easing_functions a:hover, #easing_functions a:focus, #easing_functions a.active {
-  background: #000;
-  color: #FFF;
-}
-</style>
-<h3 id='try_it_out'>Try it out</h3>
-<script>
+		<p>Bonsai provides four factories for making linear or radial gradients:</p>
 
-var prepCode = "something = Shape.circle(150, 50, 30).attr({fillColor:'red', fillGradient: gradient.radial(['rgba(0,0,0,0)', 'rgba(0,0,0,0.3)'])}).addTo(stage);";
+<ul>
+<li><a href='/module-gradient.html#linear'><code>gradient.linear</code></a></li>
 
-var runnable = new doc.Runnable({ height: 100, width: 700 });
+<li><a href='/module-gradient.html#radial'><code>gradient.radial</code></a></li>
 
-runnable.dom.insertAfter('h3:first');
-runnable.setPrepCode(prepCode);
+<li><a href='/module-gradient.html#advancedLinear'><code>gradient.advancedLinear</code></a></li>
 
-function setEasing(easing) {
-  runnable.setEditableCode("something.animate('1s', { x: 500 }, { easing: '"+easing+"' });");
-  runnable.run();
-}
+<li><a href='/module-gradient.html#advancedRadial'><code>gradient.advancedRadial</code></a></li>
+</ul>
 
-</script><p id='easing_functions'>
-  <a>linear</a>
-  <a>quadIn</a>
-  <a>quadOut</a>
-  <a>quadInOut</a>
-  <a>cubicIn</a>
-  <a>cubicOut</a>
-  <a>cubicInOut</a>
-  <a>quartIn</a>
-  <a>quartOut</a>
-  <a>quartInOut</a>
-  <a>quintIn</a>
-  <a>quintOut</a>
-  <a>quintInOut</a>
-  <a>sineIn</a>
-  <a>sineOut</a>
-  <a>sineInOut</a>
-  <a>expoIn</a>
-  <a>expoOut</a>
-  <a>expoInOut</a>
-  <a>circIn</a>
-  <a>circOut</a>
-  <a>circInOut</a>
-  <a>backIn</a>
-  <a>backOut</a>
-  <a>backInOut</a>
-  <a>elasticIn</a>
-  <a>elasticOut</a>
-  <a>elasticInOut</a>
-  <a>bounceIn</a>
-  <a>bounceOut</a>
-  <a>bounceInOut</a>
-</p><script>
-var easingAnchors = $('#easing_functions a').attr('href', 'javascript:void 0;').click(function() {
-  setEasing($(this).text());
-  easingAnchors.removeClass('active');
-  $(this).addClass('active');
-});
-
-easingAnchors.first().click();
-</script>
+<h3 id='try_it_out'>Try it out:</h3>
+<!--runnable--><div class='highlight'><pre><code class='javascript'><span class='kd'>var</span> <span class='nx'>s</span> <span class='o'>=</span> <span class='nx'>Shape</span><span class='p'>.</span><span class='nx'>rect</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>200</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>);</span>
+<span class='nx'>s</span><span class='p'>.</span><span class='nx'>addTo</span><span class='p'>(</span><span class='nx'>stage</span><span class='p'>);</span>
+<span class='nx'>s</span><span class='p'>.</span><span class='nx'>attr</span><span class='p'>(</span>
+  <span class='s1'>&#39;fillGradient&#39;</span><span class='p'>,</span>
+  <span class='nx'>gradient</span><span class='p'>.</span><span class='nx'>linear</span><span class='p'>(</span><span class='s1'>&#39;top right&#39;</span><span class='p'>,</span> <span class='p'>[</span><span class='s1'>&#39;red&#39;</span><span class='p'>,</span> <span class='p'>[</span><span class='s1'>&#39;yellow&#39;</span><span class='p'>,</span> <span class='mi'>80</span><span class='p'>],</span> <span class='s1'>&#39;blue&#39;</span><span class='p'>])</span>
+<span class='p'>);</span>
+</code></pre>
+</div>
 	</div>
 
 	<script>

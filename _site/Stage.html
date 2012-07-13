@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/assets/pygment.css" />
 <link rel="stylesheet" href="/assets/main.css" />
 
-<title>Bonsai documentation - Point</title>
+<title>Bonsai documentation - Stage</title>
 
 <body>
 
@@ -96,13 +96,13 @@
 			
 				<li><a  href="/Text.html">Text</a></li>
 			
-				<li><a  href="/Stage.html">Stage</a></li>
+				<li><a class="active" href="/Stage.html">Stage</a></li>
 			
 				<li><a  href="/Sprite.html">Sprite</a></li>
 			
 				<li><a  href="/Shape.html">Shape</a></li>
 			
-				<li><a class="active" href="/Point.html">Point</a></li>
+				<li><a  href="/Point.html">Point</a></li>
 			
 				<li><a  href="/Movie.html">Movie</a></li>
 			
@@ -134,7 +134,7 @@
 
 	<div id="content" class="jsdoc">
 		<h2>
-			Point
+			Stage
 			
 		</h2>
 		<div id="main">
@@ -149,8 +149,11 @@
     
 <header>
     <h2>
-    Point
+    Stage
     </h2>
+    
+        <div class="class-description"><p>A Stage instance is the root of your movie. There should never
+ be a need to instantiate a new Stage from within a movie.</p></div>
     
 </header>  
 
@@ -161,7 +164,7 @@
     
         
 <dt>
-    <h4 class="name" id="Point"><span class="type-signature"></span>new Point</h4>
+    <h4 class="name" id="Stage"><span class="type-signature"></span>new Stage</h4>
     
     
 </dt>
@@ -169,7 +172,7 @@
     
     
     <div class="description">
-        <p>The Point constructor</p>
+        <p>Constructs the movie root, i.e. the global <code>stage</code>.</p>
     </div>
     
     
@@ -201,12 +204,12 @@
 	
         <tr>
             
-                <td class="name"><code>x</code></td>
+                <td class="name"><code>messageChannel</code></td>
             
             
             <td class="type">
             
-                        Number
+                        Object
                         
                     
             </td>
@@ -215,28 +218,8 @@
             
             
             
-            <td class="description last"><p>The x value</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>y</code></td>
-            
-            
-            <td class="type">
-            
-                        Number
-                        
-                    
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"><p>The y value</p></td>
+            <td class="description last"><p>The messageChannel object used to
+ communicate with the renderer</p></td>
         </tr>
 	
 	
@@ -289,6 +272,14 @@
     
     
     
+    
+        <h3 class="subsection-title">Mixes In</h3>
+        
+        <ul>
+            <li><a href="EventEmitter.html">EventEmitter</a></li>
+        
+            <li><a href="Timeline.html">Timeline</a></li>
+        </ul>
     
     
     
@@ -305,7 +296,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="add"><span class="type-signature"></span>add</h4>
+    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy</h4>
     
     
 </dt>
@@ -313,7 +304,148 @@
     
     
     <div class="description">
-        <p>Adds a vector to the point.</p>
+        <p>Destroys the stage</p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The instance</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">this</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="freeze"><span class="type-signature"></span>freeze</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Freeze/destroy the loop</p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="loadSubMovie"><span class="type-signature"></span>loadSubMovie</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Loads a sub movie and runs it in the context of a new Movie object
+(should be provided by RunnerContext bootstrap)</p>
     </div>
     
     
@@ -345,15 +477,30 @@
 	
         <tr>
             
-                <td class="name"><code>v</code></td>
+                <td class="name"><code>movieUrl</code></td>
             
             
             <td class="type">
             
-                        object
-                         | 
-                    
-                        <a href="Point.html">Point</a>
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>URL of sub-movie (will use the dirname of the submovie as asset path)</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+            
+            <td class="type">
+            
+                        Function
                         
                     
             </td>
@@ -362,8 +509,10 @@
             
             
             
-            <td class="description last"><p>The vector to add. Must contain an x and
- a y property.</p></td>
+            <td class="description last"><p>A callback to be called when your movie has
+ loaded. The callback will be called with it's first argument signifying
+ an error. So, if the first argument is <code>null</code> you can assume the movie
+ was loaded successfully.</p></td>
         </tr>
 	
 	
@@ -407,28 +556,6 @@
     
     
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>The Point instance</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Point</span> 
-		
-	</dd>
-</dl>
-
-        
     
     
 </dd>
@@ -436,7 +563,7 @@
         
             
 <dt>
-    <h4 class="name" id="clone"><span class="type-signature"></span>clone</h4>
+    <h4 class="name" id="post"><span class="type-signature"></span>post</h4>
     
     
 </dt>
@@ -444,88 +571,7 @@
     
     
     <div class="description">
-        <p>Creates and returns a clone of the given instance.</p>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>The cloned Point</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Point</span> 
-		
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="distance"><span class="type-signature"></span>distance</h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Returns the distance between pt1 and pt2.</p>
+        <p>Sends data to the client.</p>
     </div>
     
     
@@ -557,14 +603,11 @@
 	
         <tr>
             
-                <td class="name"><code>toPoint</code></td>
+                <td class="name"><code>data</code></td>
             
             
             <td class="type">
             
-                        <a href="Point.html">Point</a>
-                        
-                    
             </td>
             
             
@@ -619,7 +662,7 @@
     
             
 <div class="param-desc">
-    <p>distance</p>
+    <p>The instance</p>
 </div>
 
 
@@ -631,7 +674,7 @@
 	</dt>
 	<dd>
 		
-		<span class="param-type">Number</span> 
+		<span class="param-type">this</span> 
 		
 	</dd>
 </dl>
@@ -644,7 +687,7 @@
         
             
 <dt>
-    <h4 class="name" id="divide"><span class="type-signature"></span>divide</h4>
+    <h4 class="name" id="sendMessage"><span class="type-signature"></span>sendMessage</h4>
     
     
 </dt>
@@ -652,7 +695,7 @@
     
     
     <div class="description">
-        <p>Divides the point's coords by f</p>
+        <p>Sends a message to the renderer / stage controller</p>
     </div>
     
     
@@ -684,7 +727,190 @@
 	
         <tr>
             
-                <td class="name"><code>f</code></td>
+                <td class="name"><code>messageData</code></td>
+            
+            
+            <td class="type">
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The instance</p>
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">this</span> 
+		
+	</dd>
+</dl>
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="setBackgroundColor"><span class="type-signature"></span>setBackgroundColor</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set the background color of the stage</p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="setFramerate"><span class="type-signature"></span>setFramerate</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set the framerate of the movie</p>
+    </div>
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>framerate</code></td>
             
             
             <td class="type">
@@ -698,7 +924,7 @@
             
             
             
-            <td class="description last"><p>Divisor</p></td>
+            <td class="description last"><p>frames per second</p></td>
         </tr>
 	
 	
@@ -742,28 +968,6 @@
     
     
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>The current Point instance</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Point</span> 
-		
-	</dd>
-</dl>
-
-        
     
     
 </dd>
@@ -771,7 +975,7 @@
         
             
 <dt>
-    <h4 class="name" id="equals"><span class="type-signature"></span>equals</h4>
+    <h4 class="name" id="setOptions"><span class="type-signature"></span>setOptions</h4>
     
     
 </dt>
@@ -779,7 +983,7 @@
     
     
     <div class="description">
-        <p>Checks equality of current instance to another Point instance.</p>
+        <p>Sets options on the stage</p>
     </div>
     
     
@@ -811,15 +1015,12 @@
 	
         <tr>
             
-                <td class="name"><code>toCompare</code></td>
+                <td class="name"><code>options</code></td>
             
             
             <td class="type">
             
-                        object
-                         | 
-                    
-                        <a href="Point.html">Point</a>
+                        Object
                         
                     
             </td>
@@ -828,7 +1029,174 @@
             
             
             
-            <td class="description last"><p>The object or point instance to compare</p></td>
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Argument</th>
+		
+		
+		
+		<th>Default</th>
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>framerate</code></td>
+            
+            
+            <td class="type">
+            
+                        number
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    30
+                
+                </td>
+            
+            
+            <td class="description last"><p>Playback speed of the movie</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>baseUrl</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    '.'
+                
+                </td>
+            
+            
+            <td class="description last"><p>The base URL to use to resolve urls.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>pluginUrl</code></td>
+            
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                    '.'
+                
+                </td>
+            
+            
+            <td class="description last"><p>The base URL to use to resolve plugin location.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>plugins</code></td>
+            
+            
+            <td class="type">
+            
+                        Array
+                        
+                    
+            </td>
+            
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+                    
+                
+                </td>
+            
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last"><p>A list of plugin names to load.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+            </td>
         </tr>
 	
 	
@@ -875,6 +1243,10 @@
     <h5>Returns:</h5>
     
             
+<div class="param-desc">
+    <p>the stage intance.</p>
+</div>
+
 
 
 
@@ -884,7 +1256,7 @@
 	</dt>
 	<dd>
 		
-		<span class="param-type">Boolean</span> 
+		<span class="param-type">this</span> 
 		
 	</dd>
 </dl>
@@ -897,7 +1269,7 @@
         
             
 <dt>
-    <h4 class="name" id="multiply"><span class="type-signature"></span>multiply</h4>
+    <h4 class="name" id="setRendering"><span class="type-signature"></span>setRendering</h4>
     
     
 </dt>
@@ -905,7 +1277,7 @@
     
     
     <div class="description">
-        <p>Multiplies the point's coords by f</p>
+        <p>Set the technique for rendering, currently only supporting value, 'crispEdges'.</p>
     </div>
     
     
@@ -937,12 +1309,12 @@
 	
         <tr>
             
-                <td class="name"><code>f</code></td>
+                <td class="name"><code>renderingType</code></td>
             
             
             <td class="type">
             
-                        Number
+                        String
                         
                     
             </td>
@@ -951,7 +1323,7 @@
             
             
             
-            <td class="description last"><p>Multiplier</p></td>
+            <td class="description last"><p>'crispEdges'</p></td>
         </tr>
 	
 	
@@ -995,28 +1367,6 @@
     
     
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>The current Point instance</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Point</span> 
-		
-	</dd>
-</dl>
-
-        
     
     
 </dd>
@@ -1024,7 +1374,7 @@
         
             
 <dt>
-    <h4 class="name" id="normalize"><span class="type-signature"></span>normalize</h4>
+    <h4 class="name" id="unfreeze"><span class="type-signature"></span>unfreeze</h4>
     
     
 </dt>
@@ -1032,413 +1382,7 @@
     
     
     <div class="description">
-        <p>Scales the line segment between (0,0) and the current point to a set length.</p>
-    </div>
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>length</code></td>
-            
-            
-            <td class="type">
-            
-                        Number
-                        
-                    
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"><p>The scaling value</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>The current Point instance</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Point</span> 
-		
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="offset"><span class="type-signature"></span>offset</h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Offsets the Point object by the specified amount.
-The value of dx is added to the original value of x
-to create the new x value. The value of dy is added
-to the original value of y to create the new y value.</p>
-    </div>
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>dx</code></td>
-            
-            
-            <td class="type">
-            
-                        Number
-                        
-                    
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"><p>The amount by which to offset the horizontal coordinate, x.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>dy</code></td>
-            
-            
-            <td class="type">
-            
-                        Number
-                        
-                    
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"><p>The amount by which to offset the vertical coordinate, y.</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>The current Point instance</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Point</span> 
-		
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="subtract"><span class="type-signature"></span>subtract</h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Subtracts the coordinates of another point from the
-coordinates of this point to create a new point.</p>
-    </div>
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>newPoint</code></td>
-            
-            
-            <td class="type">
-            
-                        <a href="Point.html">Point</a>
-                        
-                    
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"><p>The new point.</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>The current Point instance</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Point</span> 
-		
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="toArray"><span class="type-signature"></span>toArray</h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Returns a plain array with x and y.</p>
+        <p>Unfreeze/initiate the loop</p>
     </div>
     
     
@@ -1482,190 +1426,6 @@ coordinates of this point to create a new point.</p>
     
     
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>an array</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Array</span> 
-		
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="toObject"><span class="type-signature"></span>toObject</h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Returns a plain object with x and y.</p>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>an object</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">Object</span> 
-		
-	</dd>
-</dl>
-
-        
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="toString"><span class="type-signature"></span>toString</h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Returns a csv (comma seperated values).</p>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-<dl class="details">
-    
-        
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-    
-	
-	
-	
-	
-</dl>
-
-    
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>a csv</p>
-</div>
-
-
-
-
-<dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
-		<span class="param-type">String</span> 
-		
-	</dd>
-</dl>
-
-        
     
     
 </dd>
