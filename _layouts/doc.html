@@ -10,7 +10,7 @@
 
 	<div id="nav">
 		<h1><a href="/">Bonsai</a></h1>
-		<h2>Overview</h2>
+		<h2 class="menuHeading">Overview</h2>
 		<ul>
 			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="{{site.baseurl}}/">Introduction</a></li>
 			{% for p in site.pages %}
@@ -19,19 +19,19 @@
 				{% endunless %}
 			{% endfor %}
 		</ul>
-		<h2>API: Modules</h2>
+		<h2 class="menuHeading">API: Modules</h2>
 		<ul>
 			{% for p in site.categories.Module %}
 				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
-		<h2>API: Classes</h2>
+		<h2 class="menuHeading">API: Classes</h2>
 		<ul>
 			{% for p in site.categories.Class %}
 				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
-		<h2>API: Mixins</h2>
+		<h2 class="menuHeading">API: Mixins</h2>
 		<ul>
 			{% for p in site.categories.Mixin %}
 				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
@@ -39,10 +39,49 @@
 		</ul>
 	</div>
 
-	<script src="{{site.baseurl}}/lib/ace/ace-noconflict.js"></script>
-	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
-	<script src="{{site.baseurl}}/lib/bonsai/bonsai.iframe.js"></script>
-	<script src="{{site.baseurl}}/assets/doc.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script>
+	(function() {
+    // Make collapsible menu sections:
+    $('#nav .menuHeading').each(function() {
+
+      var h2 = $(this),
+          arrow = $('<span>'),
+          link = $('<a class="menuHeading" href="javascript:void 0">'),
+          collapsed = true,
+          menu = $(this).next(),
+          menuHeight = menu.height();
+
+      link.append(arrow).append(h2.html());
+
+      arrow.text('▶ ');
+      h2.replaceWith(link);
+      menu.css({height: 0});
+      link.click(function() { toggle(false); });
+
+      var hasCurrentAnchor = !!menu.find('a').filter(function() {
+        return this.pathname === window.location.pathname;
+      }).length;
+
+      if (hasCurrentAnchor) {
+        // If the current page's anchor is within the menu, then open it:
+        toggle(true);
+      }
+
+      function toggle(immediate) {
+        menu.stop();
+        if (collapsed) {
+          arrow.text('▼ ');
+          menu[immediate ? 'css' : 'animate']({height:menuHeight});
+        } else {
+          arrow.text('▶ ');
+          menu[immediate ? 'css' : 'animate']({height:0});
+        }
+        collapsed = !collapsed;
+      }
+    });
+	}());
+	</script>
 
 	<div id="content" class="{% if page.categories contains 'jsdoc' %}jsdoc{% endif %}">
 		<h2>
@@ -52,7 +91,12 @@
 			{% endif %}
 		</h2>
 		{{content}}
+		<br style="clear:both;"/>
 	</div>
+
+	<script src="{{site.baseurl}}/lib/ace/ace-noconflict.js"></script>
+	<script src="{{site.baseurl}}/lib/bonsai/bonsai.iframe.js"></script>
+	<script src="{{site.baseurl}}/assets/doc.js"></script>
 
 	<script>
 		doc.init();

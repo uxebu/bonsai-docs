@@ -72,6 +72,9 @@ $html =~ s/<d[dt] class="tag-source">.+?<\/d[dt]>//g; # remove source/line-numbe
 $html =~ s/<pre class="sh_javascript"><code>/{% highlight javascript %}/g;
 $html =~ s/<\/code><\/pre>/{% endhighlight %}/g;
 
+# Remove blank lines:
+$html =~ s/\n\s*(?=\n)//g;
+
 # Add YAML Front matter config to the top of the file:
 $html = <<END;
 ---

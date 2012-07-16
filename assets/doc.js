@@ -1,6 +1,7 @@
  var doc = {
 
   init: function() {
+    // Create runnable blocks:
     doc.forEachRunnableCodeBlock(doc.makeRunnable);
   },
 
@@ -78,6 +79,7 @@
       dom.stage.hide();
       dom.editor.show();
       // Ace doesn't update its editor: Force it:
+      aceEditor.resize();
       aceEditor.getSession().setValue(aceEditor.getSession().getValue());
     });
     dom.nav.run.click(function() {

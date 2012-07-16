@@ -27,7 +27,7 @@ Bonsai provides a helpful color API. With it you can parse and manipulate colors
 color('red');
 {% endhighlight %}
 
-This gives you a `color.RGBAColor`.
+This gives you a `color.RGBAColor` instance.
 
 An `RGBAColor` instance allows you to set and get the `r`, `g`, `b` and `a` values of the color, in addition to `h` (hue), `s` (saturation) and `l` (lightness) values.
 

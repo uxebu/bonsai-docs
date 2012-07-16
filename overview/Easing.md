@@ -26,17 +26,29 @@ layout: doc
 
 <script>
 
-var prepCode = "something = Shape.circle(150, 50, 30).attr({fillColor:'red', fillGradient: gradient.radial(['rgba(0,0,0,0)', 'rgba(0,0,0,0.3)'])}).addTo(stage);";
+$(document).ready(function() {
 
-var runnable = new doc.Runnable({ height: 100, width: 700 });
+  var prepCode = "something = Shape.circle(150, 50, 30).attr({fillColor:'red', fillGradient: gradient.radial(['rgba(0,0,0,0)', 'rgba(0,0,0,0.3)'])}).addTo(stage);";
 
-runnable.dom.insertAfter('h3:first');
-runnable.setPrepCode(prepCode);
+  window.runnableEasing = new doc.Runnable({ height: 100, width: 700 });
 
-function setEasing(easing) {
-  runnable.setEditableCode("something.animate('1s', { x: 500 }, { easing: '"+easing+"' });");
-  runnable.run();
-}
+  runnableEasing.dom.insertAfter('h3:first');
+  runnableEasing.setPrepCode(prepCode);
+
+  function setEasing(easing) {
+    runnableEasing.setEditableCode("something.animate('1s', { x: 500 }, { easing: '"+easing+"' });");
+    runnableEasing.run();
+  }
+
+  var easingAnchors = $('#easing_functions a').attr('href', 'javascript:void 0;').click(function() {
+    setEasing($(this).text());
+    easingAnchors.removeClass('active');
+    $(this).addClass('active');
+  });
+
+  easingAnchors.first().click();
+
+});
 
 </script>
 
@@ -73,13 +85,3 @@ function setEasing(easing) {
   <a>bounceOut</a>
   <a>bounceInOut</a>
 </p>
-
-<script>
-var easingAnchors = $('#easing_functions a').attr('href', 'javascript:void 0;').click(function() {
-  setEasing($(this).text());
-  easingAnchors.removeClass('active');
-  $(this).addClass('active');
-});
-
-easingAnchors.first().click();
-</script>
