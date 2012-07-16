@@ -32,6 +32,7 @@ my $name = fileparse($ARGV[0]);
 my $title;
 my $relatedOverview = '';
 my @categories = ('jsdoc');
+my $alpha = join '', ('A'..'Z');
 
 # Extract title
 if ($html =~ /<title>(.+?)<\/title>/) {
@@ -85,7 +86,12 @@ $html
 END
 ;
 
+# Get title's index in alphabet and apply that to the date
+# in the filename. Jekyll uses the date to determine ordering.
+my $alphaIndex = 26 - index $alpha, uc substr $title, 0, 1;
+$alphaIndex = $alphaIndex < 10 ? '0' . $alphaIndex : '' . $alphaIndex;
+
 # Overwrite file with new content
-open my $out, ">${destination}2012-01-01-$name" or die '$1';
+open my $out, ">${destination}2012-01-$alphaIndex-$name" or die '$1';
 print $out $html;
 close $out;
