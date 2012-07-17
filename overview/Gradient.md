@@ -16,8 +16,7 @@ Bonsai provides four factories for making linear or radial gradients:
 {% highlight javascript %}
 var s = Shape.rect(0, 0, 200, 100);
 s.addTo(stage);
-s.attr(
-  'fillGradient',
+s.fill(
   gradient.linear('top right', ['red', ['yellow', 80], 'blue'])
 );
 {% endhighlight %}
@@ -41,7 +40,7 @@ $(document).ready(function() {
 
   for (var i = 0, l = gradients.length; i < l; ++i) {
     var runnable = new doc.Runnable({ height: 100, width: 340 });
-    runnable.setEditableCode("Shape.rect(0, 0, 340, 100)\n  .attr(\n    'fillGradient',\n    " + gradients[i] + "\n  )\n  .addTo(stage);");
+    runnable.setEditableCode("Shape.rect(0, 0, 340, 100)\n  .fill(\n    " + gradients[i] + "\n  )\n  .addTo(stage);");
     runnable.dom.appendTo(samples);
     runnable.dom.width(340).css({
       'float': 'left',

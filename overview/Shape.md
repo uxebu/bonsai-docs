@@ -7,8 +7,7 @@ layout: doc
 
 <!--runnable-->
 {% highlight javascript %}
-var a = Shape.circle(100, -50, 50);
-a.attr('fillColor', 'lightblue').addTo(stage);
+var a = Shape.circle(100, -50, 50).fill('lightblue').addTo(stage);
 
 a.animate('1s', {
   scale: 1.5,
@@ -74,6 +73,34 @@ Shape instances support the following fill attributes:
  * fillColor: A [`color.RGBAColor`](/module-color.RGBAColor.html) instance or anything that can be parsed by [`color.parse`](/overview/Color.html#color_parse).
  * fillGradient: A [`gradient.LinearGradient`](/module-gradient.LinearGradient.html) or [`gradient.RadialGradient`](/module-gradient.RadialGradient.html) instance. See [the Gradient overview](/overview/Gradient.html) for more details on how to create gradients.
  * fillImage: A [`Bitmap`](/Bitmap.html) instance.
+
+The quickest way to fill a shape is via the [`fill` method](/Shape.html#fill):
+
+<!--runnable-->
+{% highlight javascript %}
+var s = Shape.circle(50, 50, 50);
+s.fill('red').addTo(stage);
+
+// You can add a fillGradient on top of a fillColor too:
+s.fill(gradient.linear(0, ['white', 'transparent']))
+{% endhighlight %}
+
+### Stroking a Shape {#stroking}
+
+Shape instances support the following line attributes:
+
+ * lineWidth: A number (pixel width)
+ * lineColor: A [`color.RGBAColor`](/module-color.RGBAColor.html) instance or anything that can be parsed by [`color.parse`](/overview/Color.html#color_parse).
+ * lineGradient: A [`gradient.LinearGradient`](/module-gradient.LinearGradient.html) or [`gradient.RadialGradient`](/module-gradient.RadialGradient.html) instance. See [the Gradient overview](/overview/Gradient.html) for more details on how to create gradients.
+
+The quickest way to apply a line to a shape is via the [`line` method](/Shape.html#line):
+
+<!--runnable-->
+{% highlight javascript %}
+Shape.circle(50, 50, 50)
+  .line('red', 5)
+  .addTo(stage);
+{% endhighlight %}
 
 
 

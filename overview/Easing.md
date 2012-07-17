@@ -22,6 +22,18 @@ layout: doc
 }
 </style>
 
+Bonsai's animations can utilise one of many easing functions. Usually, the easing
+function's name will be passed as an option, like so:
+
+{% highlight javascript %}
+myDisplayObject.animate('650ms', {
+  x: 100,
+  y: 900
+}, {
+  easing: 'bounceIn'
+})
+{% endhighlight %}
+
 ### Try it out
 
 <script>
