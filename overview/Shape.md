@@ -66,7 +66,7 @@ For the simpler shapes bonsai provides convenience factories:
  * `Shape.polygon(x, y, radius, sides)`
  * `Shape.star(x, y, radius, rays, factor)`
 
-### Filling a Shape {#filling}
+### Applying a fill to a shape {#filling}
 
 Shape instances support the following fill attributes:
 
@@ -85,7 +85,7 @@ s.fill('red').addTo(stage);
 s.fill(gradient.linear(0, ['white', 'transparent']))
 {% endhighlight %}
 
-### Stroking a Shape {#stroking}
+### Applying a line to a Shape {#stroking}
 
 Shape instances support the following line attributes:
 
