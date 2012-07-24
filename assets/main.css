@@ -66,10 +66,29 @@ p {
 	color: white;
 }
 
+#relatedLinks {
+	position: fixed;
+	top: 20px;
+	right: 30px;
+	padding: 10px;
+	background: #EEE;
+	border-radius: 5px;
+}
+
+#relatedLinks h3 {
+	font-size: 1em;
+	display: inline;
+}
+
 #content {
 	padding: 0 30px 30px;
 	padding-left: 230px;
 	width: 700px;
+}
+
+#content h1 {
+	margin: 0;
+	padding: 20px 0;
 }
 
 #content a {

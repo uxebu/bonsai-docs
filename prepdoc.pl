@@ -17,11 +17,21 @@ use warnings;
 use File::Slurp;
 use File::Basename;
 
+# Define keywords and their associated pages so that we can build a
+# list of related links to display in the page:
 my %keywords = (
-  'color' => '/overview/Color.html',
-  'easing' => '/overview/Easing.html',
-  'shape' => '/overview/Shape.html',
-  'animat(e|ion)' => '/overview/Animation.html'
+  'color' =>
+    ['Color', '/overview/Color.html'],
+  'easing' =>
+    ['Easing', '/overview/Easing.html'],
+  'shape' =>
+    ['Shape', '/overview/Shape.html'],
+  'animat(e|ion)' =>
+    ['Animation', '/overview/Animation.html'],
+  'new Path|Path\.(rect|star|ellipse|circle|polygon|arc)' =>
+    ['Path', '/overview/Path.html'],
+  'new (Rect|Star|Ellipse|Circle|Polygon|Arc)' =>
+    ['Simple Shapes', '/overview/SimpleShapes.html']
 );
 
 my $destination = $ARGV[1];
@@ -30,7 +40,8 @@ $destination =~ s|[^/]$|$&\/|; # add slash if needed
 my $html = read_file($ARGV[0]);
 my $name = fileparse($ARGV[0]);
 my $title;
-my $relatedOverview = '';
+my @relatedLinks = ();
+my @relatedNames = ();
 my @categories = ('jsdoc');
 my $alpha = join '', ('A'..'Z');
 
@@ -53,13 +64,6 @@ if ($title =~ /Mixin/) { push @categories, 'Mixin'; }
 
 $title =~ s/JSDoc: (?:Class|Mixin|Module): //;
 
-# Add keyword URL to page config
-while ( my ($keyword, $keywordUrl) = each(%keywords) ) {
-  if ($title =~ m/$keyword/i) {
-    $relatedOverview = $keywordUrl;
-  }
-}
-
 # Remove everything that's not inside <body>...</body>
 $html =~ s/[\s\S]+<body>//;
 $html =~ s/<\/body>[\s\S]+//;
@@ -75,13 +79,34 @@ $html =~ s/<\/code><\/pre>/{% endhighlight %}/g;
 # Remove blank lines:
 $html =~ s/\n\s*(?=\n)//g;
 
+# Match against the entire HTML to find any keywords.
+# If we find matches, then we can add to the relatedLinks.
+foreach my $keyword (keys %keywords) {
+  if ($html =~ m/$keyword/i) {
+    my @keywordLink = @{$keywords{$keyword}};
+    push @relatedNames, $keywordLink[0];
+    push @relatedLinks, $keywordLink[1];
+  }
+}
+
+# Create 'YAML Front Matter' List:
+my $relatedLinksString = '';
+my $relatedNamesString = '';
+if (@relatedLinks) {
+  $relatedLinksString = ' - ' . (join "\n - ", @relatedLinks);
+  $relatedNamesString = ' - ' . (join "\n - ", @relatedNames);
+}
+
 # Add YAML Front matter config to the top of the file:
 $html = <<END;
 ---
 title: '$title'
 layout: doc
 categories: @categories
-overview: '$relatedOverview'
+relatedLinks:
+$relatedLinksString
+relatedNames:
+$relatedNamesString
 ---
 
 $html
