@@ -11,7 +11,7 @@ Animating a red square to be blue, for example, is as simple as:
 
 <!--runnable-->
 {% highlight javascript %}
-Shape.rect(0, 0, 100, 100)
+new Rect(0, 0, 100, 100)
   .addTo(stage)
   .attr('fillColor', 'red')
   .animate('1s', {
@@ -73,8 +73,8 @@ can have multiple subjects, and you can set them manually. For example:
 
 <!--runnable-->
 {% highlight javascript %}
-var myShapeA = Shape.rect(0, 0, 50, 50).addTo(stage).attr('fillColor', 'red');
-var myShapeB = Shape.rect(0, 50, 50, 50).addTo(stage).attr('fillColor', 'blue');
+var myShapeA = new Rect(0, 0, 50, 50).addTo(stage).attr('fillColor', 'red');
+var myShapeB = new Rect(0, 50, 50, 50).addTo(stage).attr('fillColor', 'blue');
 var myAnimation = new Animation('1s', {
   x: 100,
   fillColor: 'green'
