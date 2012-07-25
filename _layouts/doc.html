@@ -84,12 +84,20 @@
 	</script>
 
 	<div id="content" class="{% if page.categories contains 'jsdoc' %}jsdoc{% endif %}">
-		<h2>
+
+		<h1>
 			{{page.title}}
-			{% if page.overview and page.overview != '' %}
-				(<a class="overview" href="{{page.overview}}">Overview / Examples &raquo;</a>)
-			{% endif %}
-		</h2>
+		</h1>
+
+    {% if page.relatedLinks and page.relatedLinks != empty %}
+      <div id="relatedLinks">
+        <h3>Related:</h3>
+        {% for link in page.relatedLinks %}
+            <a class="overview" href="{{link}}">{{page.relatedNames[forloop.index0]}} &raquo;</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
 		{{content}}
 		<br style="clear:both;"/>
 	</div>

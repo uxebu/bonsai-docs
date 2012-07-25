@@ -12,7 +12,7 @@ var rows = 6, cols = 30, steps = cols * rows;
 
 for (var r = 0; r < rows; ++r) {
   for (var c = 0; c < cols; ++c) {
-    Shape.rect(c*20, r*20, 20, 20)
+    new Rect(c*20, r*20, 20, 20)
       // Increment hue slightly with each step:
       .addTo(stage).attr('fillColor', myHue.hue(myHue.hue() + 1/steps));
   }

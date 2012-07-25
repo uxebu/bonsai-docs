@@ -40,15 +40,14 @@ myDisplayObject.animate('650ms', {
 
 $(document).ready(function() {
 
-  var prepCode = "something = Shape.circle(150, 50, 30).attr({fillColor:'red', fillGradient: gradient.radial(['rgba(0,0,0,0)', 'rgba(0,0,0,0.3)'])}).addTo(stage);";
+  var code = "new Circle(150, 50, 30)\n  .fill('red')\n  .fill(gradient.radial(['rgba(0,0,0,0)', 'rgba(0,0,0,0.3)']))\n  .addTo(stage)\n  ";
 
   window.runnableEasing = new doc.Runnable({ height: 100, width: 700 });
 
   runnableEasing.dom.insertAfter('h3:first');
-  runnableEasing.setPrepCode(prepCode);
 
   function setEasing(easing) {
-    runnableEasing.setEditableCode("something.animate('1s', { x: 500 }, { easing: '"+easing+"' });");
+    runnableEasing.setEditableCode(code + ".animate('1s', { x: 500 }, { easing: '"+easing+"' });");
     runnableEasing.run();
   }
 

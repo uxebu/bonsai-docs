@@ -11,7 +11,7 @@ Here's an example of applying a DropShadow filter to a circle shape:
 
 <!--runnable-->
 {% highlight javascript %}
-Shape.circle(50, 50, 30).addTo(stage)
+new Circle(50, 50, 30).addTo(stage)
   .fill(gradient.linear(0, ['red', 'yellow']))
   .attr('filters', new filter.DropShadow(1, 1, 5, 0x000000FF));
 {% endhighlight %}

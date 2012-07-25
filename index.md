@@ -11,12 +11,11 @@ What does Bonsai look like?
 
 <!--runnable:{height:200}-->
 {% highlight javascript %}
-var square = Shape.rect(0, 0, 100, 100);
+var square = new Rect(0, 0, 100, 100);
 
 square.addTo(stage);
-square.attr('fillColor', 'red');
+square.fill('red');
 square.animate('1.5s', {
-  origin: [50, 50],
   rotation: Math.PI,
   x: 700,
   fillColor: 'green'
