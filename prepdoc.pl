@@ -31,7 +31,9 @@ my %keywords = (
   'new Path|Path\.(rect|star|ellipse|circle|polygon|arc)' =>
     ['Path', '/overview/Path.html'],
   'new (Rect|Star|Ellipse|Circle|Polygon|Arc)' =>
-    ['Simple Shapes', '/overview/SimpleShapes.html']
+    ['Simple Shapes', '/overview/SimpleShapes.html'],
+  'new Group|Group' =>
+    ['Groups', '/overview/Groups.html']
 );
 
 my $destination = $ARGV[1];
@@ -82,7 +84,7 @@ $html =~ s/\n\s*(?=\n)//g;
 # Match against the entire HTML to find any keywords.
 # If we find matches, then we can add to the relatedLinks.
 foreach my $keyword (keys %keywords) {
-  if ($html =~ m/$keyword/i) {
+  if ($html =~ m/$keyword/) {
     my @keywordLink = @{$keywords{$keyword}};
     push @relatedNames, $keywordLink[0];
     push @relatedLinks, $keywordLink[1];
