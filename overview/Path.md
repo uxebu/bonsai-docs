@@ -91,16 +91,16 @@ c.fill(gradient.linear(0, ['white', 'transparent']));
 
 Path instances support the following line attributes:
 
- * `lineWidth`: A number (pixel width)
- * `lineColor`: A [`color.RGBAColor`](/module-color.RGBAColor.html) instance or anything that can be parsed by [`color.parse`](/overview/Color.html#color_parse).
- * `lineGradient`: A [`gradient.LinearGradient`](/module-gradient.LinearGradient.html) or [`gradient.RadialGradient`](/module-gradient.RadialGradient.html) instance. See [the Gradient overview](/overview/Gradient.html) for more details on how to create gradients.
+ * `strokeWidth`: A number (pixel width)
+ * `strokeColor`: A [`color.RGBAColor`](/module-color.RGBAColor.html) instance or anything that can be parsed by [`color.parse`](/overview/Color.html#color_parse).
+ * `strokeGradient`: A [`gradient.LinearGradient`](/module-gradient.LinearGradient.html) or [`gradient.RadialGradient`](/module-gradient.RadialGradient.html) instance. See [the Gradient overview](/overview/Gradient.html) for more details on how to create gradients.
 
 The quickest way to apply a line to a shape is via the [`line` method](/module-path.Path.html#line):
 
 <!--runnable-->
 {% highlight javascript %}
 new Circle(60, 60, 50)
-  .line('red', 5)
+  .stroke('red', 5)
   .addTo(stage);
 {% endhighlight %}
 

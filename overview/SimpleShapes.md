@@ -18,7 +18,7 @@ Within Bonsai's path module are a selection of shape classes. Note that these ar
 var myShape = new Rect(10, 10, 100, 100);
 
 myShape.fill('yellow');
-myShape.line('#f00', 2);
+myShape.stroke('#f00', 2);
 myShape.addTo(stage);
 {% endhighlight %}
 

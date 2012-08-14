@@ -97,9 +97,9 @@ class will automatically translate these values and mutate the real attribute ap
 The following unique attributes can be animated in bonsai:
 
  * `fillColor`
- * `lineColor`
+ * `strokeColor`
  * `fillGradient`
- * `lineGradient`
+ * `strokeGradient`
  * `filter`
  * `segments`
 
