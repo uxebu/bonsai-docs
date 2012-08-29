@@ -79,7 +79,7 @@ var myAnimation = new Animation('1s', {
   x: 100,
   fillColor: 'green'
 });
-myAnimation.setSubjects([myShapeA, myShapeB]);
+myAnimation.addSubjects([myShapeA, myShapeB]);
 myAnimation.play();
 {% endhighlight %}
 
