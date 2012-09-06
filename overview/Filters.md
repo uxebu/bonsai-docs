@@ -31,7 +31,7 @@ new Circle(50, 50, 30).addTo(stage)
  * [filter.Saturate](/module-filter.filter.Saturate.html)
  * [filter.Sepia](/module-filter.filter.Sepia.html)
 
-See the [filter module &raquo;](http://localhost:4000/module-filter.html)
+See the [filter module &raquo;](/module-filter.html)
 
 
 
