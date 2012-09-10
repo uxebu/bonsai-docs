@@ -9,7 +9,7 @@
 <body>
 
 	<div id="nav">
-		<h1><a href="/">Bonsai</a></h1>
+		<h1 id="logo"><a href="/">Bonsai</a></h1>
 		<h2 class="menuHeading">Overview</h2>
 		<ul>
 			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="{{site.baseurl}}/">Introduction</a></li>
@@ -46,15 +46,13 @@
     $('#nav .menuHeading').each(function() {
 
       var h2 = $(this),
-          arrow = $('<span>'),
           link = $('<a class="menuHeading" href="javascript:void 0">'),
           collapsed = true,
           menu = $(this).next(),
           menuHeight = menu.height();
 
-      link.append(arrow).append(h2.html());
+      link.append(h2.html());
 
-      arrow.text('▶ ');
       h2.replaceWith(link);
       menu.css({height: 0});
       link.click(function() { toggle(false); });
@@ -71,15 +69,16 @@
       function toggle(immediate) {
         menu.stop();
         if (collapsed) {
-          arrow.text('▼ ');
+          link.addClass('open');
           menu[immediate ? 'css' : 'animate']({height:menuHeight});
         } else {
-          arrow.text('▶ ');
+          link.removeClass('open');
           menu[immediate ? 'css' : 'animate']({height:0});
         }
         collapsed = !collapsed;
       }
     });
+
 	}());
 	</script>
 

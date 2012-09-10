@@ -3,6 +3,22 @@
   init: function() {
     // Create runnable blocks:
     doc.forEachRunnableCodeBlock(doc.makeRunnable);
+    // Ensure nav block is full height of document
+    var nav = $('#nav');
+    var d = document;
+    $(window).resize(function() {
+      nav.height(
+          Math.max(
+            d.body.scrollHeight, d.documentElement.scrollHeight,
+            d.body.offsetHeight, d.documentElement.offsetHeight,
+            d.body.clientHeight, d.documentElement.clientHeight
+          )
+      );
+    });
+
+    $(document).ready(function() {
+      $(window).resize();
+    });
   },
 
   /**

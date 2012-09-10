@@ -39,7 +39,7 @@ All pointer events will include the following properties in the passed Event obj
  * `x`or `stageX`: X coordinate of the pointer event within the stage
  * `y`or `stageY`: X coordinate of the pointer event within the stage
  * `clientX`: X coordinate of the pointer event within the parent window
- * `clientY`: Y coordinate of the pointer event within the parent window
+ * `clientY`: Y coordinate of the pointer event within the parent window 
 
 ## Key Events
 
