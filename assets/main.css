@@ -1,3 +1,7 @@
+html, body {
+	height: 100%; /* make sure #side can be full viewport height */
+}
+
 body {
 	font: .8em sans-serif;
 }
@@ -33,17 +37,22 @@ p {
 	height: 180px;
 }
 
-#nav {
+#side {
+	background: #111926;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 250px;
-	background: #111926;
+	height: 100%;
+}
+
+#nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
 	border-right: 2px solid #CCC;
 	color: #FFF;
-	border-bottom: 2px solid #CCC;
-	overflow: auto;
-	overflow-x: none;
 }
 
 #nav ul {
