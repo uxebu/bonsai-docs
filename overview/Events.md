@@ -16,7 +16,7 @@ new Circle(50, 50, 30).addTo(stage)
   });
 {% endhighlight %}
 
-## Pointer Events
+### Pointer Events
 
 Bonsai's DisplayObjects support the following pointer events:
 
@@ -27,13 +27,6 @@ Bonsai's DisplayObjects support the following pointer events:
  * `doubleclick`: fires on a dblclick event.
  * `drag`: fires on subsequent pointermove events after a pointerdown event.
 
-To support multiple touches (i.e. multiple fingers at once) on touch devices, you can use:
-
- * `multi:pointerup`
- * `multi:pointerdown`
- * `multi:pointermove`
- * `multi:drag`
-
 All pointer events will include the following properties in the passed Event object which is passed to your event handlers:
 
  * `x`or `stageX`: X coordinate of the pointer event within the stage
@@ -41,7 +34,28 @@ All pointer events will include the following properties in the passed Event obj
  * `clientX`: X coordinate of the pointer event within the parent window
  * `clientY`: Y coordinate of the pointer event within the parent window 
 
-## Key Events
+### Touch Events
+
+By default, you can bind the above pointer events and they should work as you would
+for single-finger interactions.
+
+For multitiple-finger interactions, you should bind to the following prefixxed events:
+
+ * `multi:pointerup`
+ * `multi:pointerdown`
+ * `multi:pointermove`
+ * `multi:drag`
+
+All `multi:` events will have a `touchId` in the passed event object, so you can
+keep track of the fingers currently on screen. i.e.
+
+{% highlight javascript %}
+stage.on('multi:pointerdown', function(e) {
+  e.touchId; // unique identifier for the current finger
+});
+{% endhighlight %}
+
+### Key Events
 
 The stage object supports key events:
 
@@ -65,7 +79,7 @@ stage.on('key', function(e) {
 });
 {% endhighlight %}
 
-## Meta Events
+### Meta Events
 
 DisplayObjects emit the following meta events:
 

@@ -34,4 +34,32 @@ new Circle(50, 50, 30).addTo(stage)
 See the [filter module &raquo;](/module-filter.html)
 
 
+### Remove filters
 
+To remove filters from an object, you need to set the `filters` attribute to `null`:
+
+{% highlight javascript %}
+thing.attr('filters', null);
+{% endhighlight %}
+
+To remove individual filters you'll want to retrieve the filters array (`thing.attr('filters')`)
+and then mutate as you wish, and then re-set filters, with `thing.attr('filters', ...)`.
+
+For example, here I add two filters (blur and saturate) and then remove the second one:
+
+{% highlight javascript %}
+var c = new Circle(50, 50, 30).addTo(stage);
+
+// Add blur and saturate
+c.attr(
+  'filters',
+  [filter.blur(4), filter.saturate(5)]
+);
+
+// Re-set filters, but this time JUST the blur filter
+// (removing the saturate filter)
+c.attr(
+  'filters',
+  c.attr('filters').slice(0, 1)
+);
+{% endhighlight %}
