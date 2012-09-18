@@ -109,12 +109,14 @@ h3.inverted {
 	text-transform: none;
 	margin-bottom:3%;
 	font-family:'freight-sans-pro';
-	font-style:normal;font-weight:400;
+	font-style:normal;
+	font-weight:400;
 }
 
 li, p {
 	font-family:'freight-sans-pro';
-	font-style:normal;font-weight:400;
+	font-style:normal;
+	font-weight:400;
 }
 
 .reveal h1 {
