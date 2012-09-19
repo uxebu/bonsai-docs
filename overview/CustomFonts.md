@@ -27,4 +27,4 @@ new Text('Just testing my font').attr({
 {% endhighlight %}
 
 For more information on loading various assets please see the
-[Assets overview]()
+[Assets overview](/overview/Assets.html)
