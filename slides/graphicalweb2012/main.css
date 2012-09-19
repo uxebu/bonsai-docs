@@ -91,6 +91,14 @@ h3.inverted {
 	background:none;
 }
 
+.runner-front .state-background {
+	background: rgb(97,177,66);
+}
+
+.renderer-front .state-background {
+	background: rgb(253,100,69);
+}
+
 .reveal section img {
 	background: none;
 	border:none;
