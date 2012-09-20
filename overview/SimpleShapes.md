@@ -6,11 +6,11 @@ layout: doc
 Within Bonsai's path module are a selection of shape classes. Note that these are globally exposed and inherit from the `Path` class.
 
  * `new Rect(x, y, width, height, [cornerRadius])` ([docs](/module-path.Rect.html))
- * `new Arc(x, y, radius, startAngle, endAngle, isAntiClockwise)` ([docs](/module-path.Arc.html))
- * `new Circle(x, y, radius)` ([docs](/module-path.Circle.html))
+ * `new Arc(centerX, centerY, radius, startAngle, endAngle, isAntiClockwise)` ([docs](/module-path.Arc.html))
+ * `new Circle(centerX, centerY, radius)` ([docs](/module-path.Circle.html))
  * `new Ellipse(centerX, centerY, radiusX, radiusY)` ([docs](/module-path.Ellipse.html))
- * `new Polygon(x, y, radius, sides)` ([docs](/module-path.Polygon.html))
- * `new Star(x, y, radius, rays, factor)` ([docs](/module-path.Star.html))
+ * `new Polygon(centerX, centerY, radius, sides)` ([docs](/module-path.Polygon.html))
+ * `new Star(centerX, centerY, radius, rays, factor)` ([docs](/module-path.Star.html))
 
 
 <!--runnable-->
