@@ -44,8 +44,8 @@ Loading and playing an audio track:
 
 {% highlight javascript %}
 var audio = new bonsai.Audio([
-  {src: 'path/to/audio.m4a', type:'m4a'},
-  {src: 'path/to/audio.ogg', type:'ogg'}
+  {src: 'path/to/audio.m4a'},
+  {src: 'path/to/audio.ogg'}
 ]);
 
 audio.on('load', function(){
