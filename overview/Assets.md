@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Assets (Multimedia)
 layout: doc
 ---
 
@@ -35,6 +35,35 @@ Loading and displaying a Bitmap:
 {% highlight javascript %}
 new Bitmap('path/to/image.png').on('load', function() {
   this.addTo(stage);
+});
+{% endhighlight %}
+
+### Audio
+
+Loading and playing an audio track:
+
+{% highlight javascript %}
+var audio = new bonsai.Audio([
+  {src: 'path/to/audio.m4a', type:'m4a'},
+  {src: 'path/to/audio.ogg', type:'ogg'}
+]);
+
+audio.on('load', function(){
+  audio.play();
+});
+
+stage.addChild(audio);
+{% endhighlight %}
+
+**Note:** On iOS devices, Audio can only be played in reaction to a user event.
+To make this work with bonsai's inherently asynchronous architecture you'll need 
+to call `audio.prepareUserEvent()`. And then you can freely bind to user-events
+and play the audio in reaction, like so:
+
+{% highlight javascript %}
+audio.prepareUserEvent(); // Needed for iOS devices
+someButton.on('click', function() {
+  audio.play();
 });
 {% endhighlight %}
 
