@@ -1,5 +1,5 @@
 ---
-title: 'Video'
+title: 'Audio'
 layout: doc
 categories: jsdoc Class
 relatedLinks:
@@ -13,17 +13,17 @@ relatedNames:
 <section>
 <header>
     <h2>
-    Video
+    Audio
     </h2>
 </header>  
 <article>
     <div class="container-overview">
 <dt>
-    <h4 class="name" id="Video"><span class="type-signature"></span>new Video</h4>
+    <h4 class="name" id="Audio"><span class="type-signature"></span>new Audio</h4>
 </dt>
 <dd>
     <div class="description">
-        <p>The Video constructor</p>
+        <p>The Audio constructor</p>
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -59,60 +59,6 @@ relatedNames:
  loaded (only called if you passed a <code>aRequest</code>). The callback will be called
  with it's first argument signifying an error. So, if the first argument
  is <code>null</code> you can assume the movie was loaded successfully.</p></td>
-        </tr>
-        <tr>
-                <td class="name"><code>options</code></td>
-            <td class="type">
-                        Object
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-            <td class="description last">
-                <h6>Properties</h6>
-<table class="params">
-    <thead>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Argument</th>
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	<tbody>
-        <tr>
-                <td class="name"><code>width</code></td>
-            <td class="type">
-                        Number
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-            <td class="description last"><p>Width of the video</p></td>
-        </tr>
-        <tr>
-                <td class="name"><code>height</code></td>
-            <td class="type">
-                        Number
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-            <td class="description last"><p>Height of the video</p></td>
-        </tr>
-        <tr>
-                <td class="name"><code>autoplay</code></td>
-            <td class="type">
-                        Boolean
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-            <td class="description last"><p>Whether the video should auto-play</p></td>
-        </tr>
-	</tbody>
-</table>
-            </td>
         </tr>
 	</tbody>
 </table>
@@ -153,21 +99,15 @@ relatedNames:
             <td class="type">
                         string
             </td>
-            <td class="description last">The source of the video.</p></td>
+            <td class="description last">The source of the audio.</p></td>
         </tr>
         <tr>
-                <td class="name"><code>height</code></td>
+                <td class="name"><code>volume</code></td>
             <td class="type">
-                        number
+                        string
             </td>
-            <td class="description last">The height of the video.</p></td>
-        </tr>
-        <tr>
-                <td class="name"><code>width</code></td>
-            <td class="type">
-                        number
-            </td>
-            <td class="description last">The width of the video.</p></td>
+            <td class="description last">The volume of the audio
+ (between 0 and 1 inclusive)</p></td>
         </tr>
 	</tbody>
 </table>
@@ -202,7 +142,7 @@ relatedNames:
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Video</span> 
+		<span class="param-type">Audio</span> 
 	</dd>
 </dl>
 </dd>
@@ -213,7 +153,7 @@ relatedNames:
     <div class="description">
         <p>Destroys the DisplayObject and removes any references to the
 asset, including data held by the renderer's assetController about the
-source of the video</p>
+source of the audio</p>
     </div>
 <dl class="details">
 </dl>
@@ -227,13 +167,125 @@ source of the video</p>
 	</dd>
 </dl>
 </dd>
+<dt>
+    <h4 class="name" id="pause"><span class="type-signature"></span>pause</h4>
+</dt>
+<dd>
+    <div class="description">
+        <p>Pause the audio</p>
+    </div>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    <p>this</p>
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Audio</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="play"><span class="type-signature"></span>play</h4>
+</dt>
+<dd>
+    <div class="description">
+        <p>Play the audio</p>
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Argument</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>time</code></td>
+            <td class="type">
+                        Number
+            </td>
+                <td class="attributes">
+                    &lt;optional><br>
+                </td>
+            <td class="description last"><p>Time to seek playhead to (in seconds)</p></td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    <p>this</p>
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Audio</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="prepareUserEvent"><span class="type-signature"></span>prepareUserEvent</h4>
+</dt>
+<dd>
+    <div class="description">
+        <p>Prepare the Audio object for a user-event. 
+(currently this is for iOS devices, see drawAudio method in svg.js)</p>
+    </div>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    <p>this</p>
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Audio</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="stop"><span class="type-signature"></span>stop</h4>
+</dt>
+<dd>
+    <div class="description">
+        <p>Stop/pause the audio</p>
+    </div>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    <p>this</p>
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Audio</span> 
+	</dd>
+</dl>
+</dd>
         </dl>
 </article>
 </section>  
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Thu Sep 27 2012 15:52:21 GMT+0100 (BST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Thu Sep 27 2012 15:52:20 GMT+0100 (BST)
 </footer>
 
 
