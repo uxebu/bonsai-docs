@@ -30,7 +30,6 @@ Bonsai in its current form comes packaged with an SVG renderer. The following br
  * Chrome >= 20
  * Firefox >= 18
  * IE >= 9
- * 
 
 ### How to run a Bonsai movie
 
