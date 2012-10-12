@@ -12,19 +12,59 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+		<!-- online //-->
 		<script src="//use.typekit.net/vdv4wzo.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
+		<!--
+		<script type="text/javascript" src="http://cloud.github.com/downloads/uxebu/bonsai/bonsai-0.4.0.min.js"></script>
+		//-->
+		<!-- offline //-->
+		<script src="js/bonsai-0.4.0.min.js"></script>
 
 		<link rel="stylesheet" href="reveal.js/css/reset.css">
 		<link rel="stylesheet" href="reveal.js/css/main.css">
 		<link rel="stylesheet" href="main.css">
 
 		<script>
+			window.currentMovie;
+			window.lastMovie;
+			//bonsai.setup({
+			//	runnerContext: bonsai.IframeRunnerContext
+			//});
+			// special `bonsai.run` that uses a globel `movie` variable for
+			// all movies and makes sure to destroy all previously created
+			// movies
+			bonsai.slideRun = function(domNode, codeFunc, plugins) {
+
+				plugins = plugins || [];
+
+				var movie;
+
+				if (domNode.childNodes.length) {
+					domNode.innerText = '';
+				}
+
+				if (typeof codeFunc === 'function') {
+					// got just the code
+					movie = bonsai.run(domNode, {
+						width: 440, height: 470, framerate: 60, code: codeFunc,
+						plugins: plugins
+					});
+				} else {
+					// got all options
+					movie = bonsai.run.apply(bonsai, arguments);
+				}
+
+				window.lastMovie = window.currentMovie;
+				window.currentMovie = movie;
+
+				return movie;
+			};
+
+
 			// If the query includes print-pdf we'll use the fancy print CSS
 			document.write( '<link rel="stylesheet" href="reveal.js/css/' + (window.location.search.match( /print-pdf/gi ) ? 'print-pdf.css' : 'print.css') + '" type="text/css" media="print">' );
 		</script>
-
-		<script src="js/bonsai.iframe-0.3.4.min.js"></script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -68,13 +108,10 @@
 					<h2>Agenda</h2>
 					<ul>
 						<li>Introduction</li>
+						<li>Pong</li>
 						<li>API</li>
 						<li>Architecture</li>
 					</ul>
-				</section>
-
-				<section>
-					<h1>Introduction</h1>
 				</section>
 
 				<section>
@@ -91,13 +128,11 @@
 				<section>
 					<h2>Essential Features</h2>
 					<ul>
-						<li>Vector graphics, Bitmaps, Text</li>
-						<li>Animations (keyframe and time based)</li>
-						<li>Filters, Mask</li>
-						<li>Reusable Movies</li>
-						<li>Load Fonts, (Sub-)Movies, Audio, Video</li>
+						<li>Path primitives (Rect, Circle, ...), Text</li>
+						<li>Groups, Movieclips, Plugins</li>
+						<li>Animations, Filters, Mask</li>
+						<li>Load Fonts, Bitmaps, (Sub-)Movies, Audio, Video</li>
 						<li>Architecturally decoupled renderer and runner</li>
-						<li>Plugins</li>
 					</ul>
 				</section>
 
@@ -115,9 +150,256 @@
 					</ul>
 				</section>
 
+				<!-- PONG //-->
+
 				<section>
-					<h2>Demo</h2>
-					<p>in Orbit - a realtime Bonsai Editor</p>
+					<h2>Let's play!</h2>
+					<div class="movie pong">
+						&nbsp;
+					</div>
+					<div class="listedCode">
+						/* Pong */
+					</div>
+				</section>
+
+				<section data-state="draw-a-bitmap">
+					<h2>Draw a Bitmap</h2>
+					<div class="movie" style="background:white;"></div>
+					<div class="listedCode">
+						new Bitmap('bg.jpg')<br>
+						&nbsp;.addTo(stage);
+					</div>
+				</section>
+
+				<section>
+					<section data-state="apply-a-filter">
+						<h2>Apply a Filter</h2>
+						<div class="movie pong"></div>
+						<div class="listedCode">
+							new Bitmap('bg.jpg')
+							&nbsp;.addTo(stage)<br>
+							&nbsp;.attr('filters', [<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;filter.opacity(0.13),<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;filter.grayscale(1)<br>
+							&nbsp;&nbsp;]);
+						</div>
+					</section>
+					<section data-state="apply-a-blur-filter">
+						<h2>Blur</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							filter.blur(3)
+						</div>
+					</section>
+					<section data-state="apply-a-sepia-filter">
+						<h2>Sepia</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							filter.sepia(1)
+						</div>
+					</section>
+					<section data-state="apply-a-brightness-filter">
+						<h2>Birghtness</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							filter.brightness(20)
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-state="draw-a-simple-shapes">
+						<h2>Draw simple shapes</h2>
+						<div class="movie pong"></div>
+						<div class="listedCode">
+							<span class="comment">// top paddle</span><br>
+							new Rect(0, 0, 100, 30, 10)
+							<br>&nbsp;.fill('#0077FF')
+							<br>&nbsp;.addTo(stage);
+							<br><br>
+							<span class="comment">// ball</span><br>
+							new Circle(210, 210, 20)
+							<br>&nbsp;.fill('white')
+							<br>&nbsp;.addTo(stage);
+						</div>
+					</section>
+					<section data-state="draw-a-star">
+						<h2>More simple shapes</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							new Star(120, 120, 40, 6, 3)
+							<br><br>
+							new Ellipse(50, 50, 100, 50)
+							<br><br>
+							new Polygon(330, 330, 80, 6)
+						</div>
+					</section>
+					<section data-state="draw-a-path">
+						<h2>Path</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							<span class="comment">// SVG like syntax</span>
+							<br>new Path('M21,20...z')
+							<br><br>
+							<span class="comment">// PostScript like operators</span>
+							<br>new Path()
+							<br>&nbsp;.moveTo(21, 20)
+							<br>&nbsp;.curveBy(…)
+							<br>&nbsp;.closePath();
+							<br><span class="comment" style="font-size:13px">// http://thenounproject.com/noun/cloud-upload/#icon-No2633</span>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-state="apply-colors">
+						<h2>Apply colors</h2>
+						<div class="movie pong"></div>
+						<div class="listedCode">
+							<span class="comment">// key name</span>
+							<br>.fill('white')
+							<br><br>
+							<span class="comment">// hex</span>
+							<br>.fill('#fff')
+							<br><br>
+							<span class="comment">// rgb</span>
+							<br>.fill('rgb(255, 255, 255)')
+						</div>
+					</section>
+					<section data-state="color-function">
+						<h2>color function</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							color('red')
+							<br>color('#F00')
+							<br>color('#FF0000')
+							<br>color('#FF0000FF')
+							<br>color('rgb(255,0,0)')
+							<br>color('rgba(255,0,0,1)')
+							<br>color('hsl(0,100%,50%)')
+							<br>color('hsla(0,100%,50%,1)')
+						</div>
+					</section>
+					<section data-state="color-manipulation">
+						<h2>manipulate colors</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							var red = color('red');
+							<br>red.lighter(0.2)
+							<br>red.darker(0.2)
+							<br>red.midpoint('blue')
+							<br>red.randomize(['hue'])
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-state="apply-gradient">
+						<h2>Apply gradients</h2>
+						<div class="movie pong"></div>
+						<div class="listedCode">
+							var blue = color('#0077FF');
+							<br>var g = gradient.linear(180, [
+							<br>&nbsp;&nbsp;blue,
+							<br>&nbsp;&nbsp;blue.darker(0.3)
+							<br>]);
+							<br>paddle.fill(g);
+						</div>
+					</section>
+					<section data-state="color-function">
+						<h2>color function</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							color('red')
+							<br>color('#F00')
+							<br>color('#FF0000')
+							<br>color('#FF0000FF')
+							<br>color('rgb(255,0,0)')
+							<br>color('rgba(255,0,0,1)')
+							<br>color('hsl(0,100%,50%)')
+							<br>color('hsla(0,100%,50%,1)')
+						</div>
+					</section>
+					<section data-state="color-manipulation">
+						<h2>manipulate colors</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							var red = color('red');
+							<br>red.lighter(0.2)
+							<br>red.darker(0.2)
+							<br>red.midpoint('blue')
+							<br>red.randomize(['hue'])
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-state="change-position">
+						<h2>Change the position</h2>
+						<div class="movie pong"></div>
+						<div class="listedCode">
+							<span class="comment">// the blue paddle</span>
+							<br>cpPaddle.attr('x', 200);
+							<br><span class="comment">// the yellow paddle</span>
+							<br>myPaddle.attr('x', 200);
+						</div>
+					</section>
+					<section data-state="apply-other-transformations">
+						<h2>Scale &amp; Rotate</h2>
+						<div class="movie"></div>
+						<div class="listedCode">
+							attr('scale', 2)
+							<br>attr('rotate', Math.PI)
+						</div>
+					</section>
+				</section>
+
+				<section data-state="pointer-events">
+					<h2>Listen to pointer events</h2>
+					<div class="movie pong"></div>
+					<div class="listedCode">
+						var f = function(e) {
+						<br>&nbsp;&nbsp;myPaddle.attr({
+						<br>&nbsp;&nbsp;&nbsp;x: e.stageX
+						<br>&nbsp;&nbsp;});
+						<br>};
+						<br>stage.on('pointermove', f);
+					</div>
+				</section>
+
+				<section data-state="tick-event">
+					<h2>Update screen every 16ms </h2>
+					<div class="movie pong"></div>
+					<div class="listedCode">
+						stage.on('tick', function() {
+						<br>&nbsp;ball.attr({x: tx, y: ty});
+						<br>&nbsp;// plugin
+						<br>&nbsp;walls.on('hit', updBall);
+						<br>&nbsp;paddles.on('hit', updBall);
+						<br>});
+					</div>
+				</section>
+
+				<section data-state="apply-audio">
+					<h2>Apply audio</h2>
+					<div class="movie pong"></div>
+					<div class="listedCode">
+						var a = new Audio('pong.mp3')
+						<br>&nbsp;.addTo(stage);
+						<br>
+						<br><span class="comment">// on hit</span>
+						<br>a.play();
+					</div>
+				</section>
+
+				<section data-state="custom-messages">
+					<h2>Custom messages</h2>
+					<div class="movie pong"></div>
+					<div class="listedCode">
+						blaaaaa
+						<br>&nbsp;.addTo(stage);
+						<br>
+					</div>
 				</section>
 
 				<section>
@@ -416,20 +698,231 @@
 		<script src="reveal.js/lib/js/head.min.js"></script>
 
 		<script>
+			function getStageFromDataState(id) {
+				return document.querySelector('[data-state=' + id + '] .movie');
+			}
+
 			head.ready( function() {
 
-				Reveal.addEventListener('thegraphicalweblogo', function() {
-					thegraphicalweblogoMovie.unfreeze();
-				});
+				Reveal.addEventListener('draw-a-bitmap', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg').addTo(stage);
+					});
+				}, false);
 
-				Reveal.addEventListener('stop-thegraphicalweblogo', function() {
-					thegraphicalweblogoMovie.freeze();
-				});
+				Reveal.addEventListener('apply-a-filter', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('apply-a-blur-filter', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', filter.blur(3))
+							.addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('apply-a-sepia-filter', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', filter.sepia(1))
+							.addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('apply-a-brightness-filter', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', filter.brightness(20))
+							.addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('draw-a-simple-shapes', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+						// top paddle
+						new Rect(0, 0, 100, 30, 10).fill('#0077FF').addTo(stage);
+						// bottom paddle
+						new Rect(0, 410, 100, 30, 10).fill('#FF9500').addTo(stage);
+						// ball
+						new Circle(210, 210, 15).fill('white').addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('draw-a-star', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Star(120, 120, 40, 6, 3).fill('yellow').addTo(stage);
+						new Ellipse(350, 120, 100, 50).fill('orange').addTo(stage);
+						new Polygon(320, 320, 80, 6).fill('purple').addTo(stage);
+						//new Star(320, 320, 80, 6, 1).fill('yellow').addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('draw-a-path', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Path('M72.732,72.73c-1.892,0-5.283,0-9.278,0c0.058-0.498,0.148-0.981,0.148-1.492v-7.601c3.82,0,7.11,0,9.13,0c10.042,0,18.18-8.142,18.18-18.18c0-10.042-8.138-18.184-18.18-18.184c-2.797,0-5.43,0.657-7.791,1.792l-3.681-3.678C57.042,15.803,47.514,9.092,36.366,9.092c-15.063,0-27.272,12.209-27.272,27.272c0,15.051,12.191,27.25,27.237,27.273v7.601c0,0.513,0.095,0.997,0.15,1.492c-0.037,0-0.08,0-0.117,0C16.28,72.73,0,56.45,0,36.365C0,16.282,16.28,0,36.364,0c13.648,0,25.524,7.528,31.744,18.648c1.51-0.26,3.039-0.466,4.619-0.466C87.791,18.182,100,30.394,100,45.458C100.004,60.517,87.795,72.73,72.732,72.73zM33.898,49.449c-1.774-1.771-1.774-4.652,0-6.424l12.857-12.859c1.772-1.776,4.654-1.776,6.427,0l12.855,12.859c1.775,1.771,1.775,4.652,0,6.424c-1.774,1.775-4.653,1.775-6.427,0l-5.099-5.097v26.886c0,2.509-2.036,4.546-4.543,4.546c-2.512,0-4.546-2.037-4.546-4.546V44.353l-5.097,5.097C38.552,51.225,35.674,51.225,33.898,49.449z').fill('white').attr({
+							 x: 130,
+							 y: 120,
+							 scale: 2
+						}).addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('apply-colors', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+						// top paddle
+						new Rect(0, 0, 100, 30, 10).fill('#0077FF').addTo(stage);
+						// bottom paddle
+						new Rect(0, 410, 100, 30, 10).fill('#FF9500').addTo(stage);
+						// ball
+						new Circle(210, 210, 15).fill('white').addTo(stage);
+						/*
+						// top paddle
+						var mov = new Movie().addTo(stage);
+						var aRect = new Rect(0, 0, 100, 30, 10).addTo(mov);
+						var bRect = aRect.clone().attr('y', 410).addTo(mov);
+						mov.length(60*2).frames({
+							0: function() {
+								aRect.animate('0.5s', { fillColor: 'random' });
+								bRect.animate('0.5s', { fillColor: 'random' });
+							}
+						});*/
+					});
+				}, false);
+
+				Reveal.addEventListener('color-function', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						var aRect = new Rect(110, 110, 110, 110).fill('red').addTo(stage);
+						aRect.clone().attr({x: 222, y:110}).fill('red').addTo(stage);
+						aRect.clone().attr({x: 110, y:222}).fill('red').addTo(stage);
+						aRect.clone().attr({x: 222, y:222}).fill('red').addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('color-manipulation', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						var red = color('red');
+						var aRect = new Rect(110, 110, 110, 110)
+							.fill(red.lighter(0.2))
+							.addTo(stage);
+						aRect.clone().attr({x: 222, y:110})
+							.fill(red.darker(0.2)).addTo(stage);
+						aRect.clone().attr({x: 110, y:222})
+							.fill(red.midpoint('blue')).addTo(stage);
+						aRect.clone().attr({x: 222, y:222})
+							.fill(red.randomize(['hue'])).addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('apply-gradient', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+						// top paddle
+						var aGradient = gradient.linear(180, [
+							'#0077FF',
+							color('#0077FF').darker(0.3)
+						]);
+						new Rect(0, 0, 100, 30, 10).addTo(stage).fill(aGradient);
+						// bottom paddle
+						new Rect(0, 410, 100, 30, 10).addTo(stage).fill(gradient.linear(180, ['#FF9500', color('#FF9500').darker(0.3)]));
+						// ball
+						new Circle(210, 210, 15).fill('white').addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('change-position', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+						// top paddle
+						new Rect(160, 0, 100, 30, 10).addTo(stage).fill(gradient.linear(180, ['#0077FF', color('#0077FF').darker(0.3)]));
+						// bottom paddle
+						new Rect(160, 410, 100, 30, 10).addTo(stage).fill(gradient.linear(180, ['#FF9500', color('#FF9500').darker(0.3)]));
+						// ball
+						new Circle(210, 210, 15).fill('white').addTo(stage);
+					});
+				}, false);
+
+				Reveal.addEventListener('apply-other-transformations', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						var aGradient = gradient.linear(180,
+							['#FF9500', color('#FF9500').darker(0.3)]);
+						new Rect(160, 210, 100, 30, 10).addTo(stage).fill(aGradient).attr({
+							scale: 2,
+							rotation: Math.PI/6
+						});
+					});
+				}, false);
+
+				Reveal.addEventListener('pointer-events', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+						// top paddle
+						new Rect(160, 0, 100, 30, 10).addTo(stage).fill(gradient.linear(180, ['#0077FF', color('#0077FF').darker(0.3)]));
+						// bottom paddle
+						var userPaddle = new Rect(160, 410, 100, 30, 10).addTo(stage).fill(gradient.linear(180, ['#FF9500', color('#FF9500').darker(0.3)]));
+						// ball
+						new Circle(210, 210, 15).fill('white').addTo(stage);
+						var paddleWidth = userPaddle.attr('width');
+						stage.on('pointermove', function(e) {
+							userPaddle.attr('x', Math.max(0, Math.min(stage.width-paddleWidth, e.stageX - paddleWidth/2)));
+						});
+					});
+				}, false);
+
+				Reveal.addEventListener('tick-event', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+						new Pong().start();
+					}, ['js/pong.js']);
+				}, false);
+
+				Reveal.addEventListener('apply-audio', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+						Pong.sound();
+						new Pong().start();
+					}, ['js/pong.js']);
+				}, false);
+
+				Reveal.addEventListener('custom-messages', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {
+						new Bitmap('img/webconf-background-440.jpg')
+							.attr('filters', [filter.opacity(0.13), filter.grayscale(1)])
+							.addTo(stage);
+						//Pong.sound();
+						new Pong().start();
+					}, ['js/pong.js']);
+				}, false);
 
 				Reveal.addEventListener('slidechanged', function() {
-						if (typeof movieKeyframeAnimations !== 'undefined') {
-							movieKeyframeAnimations.stop();
-						}
+
+					if (window.lastMovie) {
+						window.lastMovie.freeze();
+					}
+
+					if (typeof movieKeyframeAnimations !== 'undefined') {
+						movieKeyframeAnimations.stop();
+					}
 				});
 
 				// Full list of configuration options available here:
@@ -438,11 +931,14 @@
 					controls: false,
 					progress: true,
 					history: true,
+					overview: false,
+					rollingLinks: false,
 
 					theme: Reveal.getQueryHash().theme || 'default', // default/neon/beige
 					transition: Reveal.getQueryHash().transition || 'default' // default/cube/page/concave/linear(2d)
 				});
-			} );
+
+			});
 
 			// Scripts that should be loaded before initializing
 			var scripts = [];
