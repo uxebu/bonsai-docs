@@ -22,14 +22,19 @@ square.animate('1.5s', {
 });
 {% endhighlight %}
 
+### Bonsai playground
+
+If you want to try out the features of Bonsai, go ahead and [try out Orbit](http://orbit.bonsaijs.org/ "Orbit"), the editor for Bonsai.
+
 ### Browser support
 
 Bonsai in its current form comes packaged with an SVG renderer. The following browsers/platforms are supported:
 
- * Safari 5
- * Chrome 20
- * Firefox 18
- * 
+ * Safari >= 5
+ * Chrome >= 20
+ * Firefox >= 18
+ * Opera >= 12
+ * IE >= 9
 
 ### How to run a Bonsai movie
 
