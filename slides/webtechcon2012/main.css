@@ -230,6 +230,9 @@ li, p {
 .listedCode .aString {
 	color:rgb(255, 95, 76);
 }
+.listedCode .attr {
+	color:rgb(255, 95, 76);
+}
 .listedCode .stage {
 	color:rgb(130, 200, 95);
 }

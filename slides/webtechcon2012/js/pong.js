@@ -54,6 +54,12 @@ Pong = (function() {
     this.paddleSpeed = this.config.paddleSpeed;
     this.ballSpeed = this.config.ballSpeed;
 
+    this.backgroundImage = new Bitmap('img/webconf-logo-white.png').attr('filters', [
+        filter.opacity(0.13), filter.grayscale(1)
+      ]).addTo(stage);
+
+    this.movie = new Group().addTo(stage);
+
     this.newGame();
 
   }
@@ -123,7 +129,7 @@ Pong = (function() {
     this.config = config;
     this.width = config.width;
     this.height = config.height;
-    this.bs = new Rect(0, 0, this.width, this.height, 10).attr(config.attr).addTo(stage);
+    this.bs = new Rect(-100, -100, this.width, this.height, 10).attr(config.attr).addTo(pong.movie);
     this.x = position.x;
     this.y = position.y;
     this.pong = pong;
@@ -137,13 +143,16 @@ Pong = (function() {
    * a speed of 5, then we must make sure that:
    * Math.abs(deltaX) + Math.abs(deltaY) === 5
    */
-  function Ball(pong, config, position){
+  function Ball(pong, config, position) {
 
     this.config = config;
     this.width = config.width;
     this.height = config.height;
 
-    this.bs = new Rect(0, 0, this.width, this.height, this.width/2).attr(config.attr);
+    if (!this.bs) {
+      this.bs = new Rect(0, 0, this.width, this.height, this.width/2)
+                  .attr(config.attr).addTo(pong.movie);
+    }
 
     this.deltaY = Math.floor(Math.random() * pong.ballSpeed) + 1;
     this.deltaX = pong.ballSpeed - this.deltaY;
@@ -166,7 +175,6 @@ Pong = (function() {
     this.isInitiated = false;
 
     this.setLocation(this.x, this.y);
-    this.bs.addTo(stage);
 
   }
 
@@ -191,6 +199,10 @@ Pong = (function() {
      */
     newGame: function() {
 
+      // ball
+      this.newRound();
+
+      // paddles
       this.topPaddle = new Paddle(this, true, this.config.topPaddle, {
         x: this.width /  2,
         y: this.config.topPaddle.height/2
@@ -206,7 +218,10 @@ Pong = (function() {
         userPaddle.x = Math.max(paddleWidthHalf, Math.min(stage.width-paddleWidthHalf, e.stageX));
       });
 
-      this.newRound();
+      stage.on('message', function(data) {
+        var paddleWidthHalf = userPaddle.width/2;
+        userPaddle.x = Math.max(paddleWidthHalf, Math.min(stage.width-paddleWidthHalf, data));
+      });
 
     },
 
@@ -222,22 +237,25 @@ Pong = (function() {
         var oldBall = this.ball;
         oldBall.bs.animate('.5s', {
           opacity: 0
-        }, {
-          onEnd: function() {
-            oldBall.bs.remove(); // clear old ball
-          }
+        });
+
+        Ball.apply(oldBall, [this, this.config.ball, {
+          x: this.width /  2,
+          y: this.height / 2
+        }]);
+      } else {
+        this.ball = new Ball(this, this.config.ball, {
+          x: this.width /  2,
+          y: this.height / 2
         });
       }
 
-      this.ball = new Ball(this, this.config.ball, {
-        x: this.width /  2,
-        y: this.height / 2
-      });
-
       var ball = this.ball;
-      ball.bs.attr({ opacity: 0 }).animate('.5s', {
-        opacity: 1
+      ball.bs.attr({ opacity: 0, scale:0.2 }).animate('.8s', {
+        opacity: 1,
+        scale: 1
       }, {
+        easing: 'elasticOut',
         onEnd: function() {
           setTimeout(function() {
             ball.start();
