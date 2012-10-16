@@ -112,22 +112,6 @@ relatedNames:
    the keyframe-animation</p></td>
         </tr>
         <tr>
-                <td class="name"><code>strategy</code></td>
-            <td class="type">
-                        string
-                         | 
-                        Object
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-                <td class="default">
-                    'attr'
-                </td>
-            <td class="description last"><p>The strategy to use to
-   get and set properties on the subjects.</p></td>
-        </tr>
-        <tr>
                 <td class="name"><code>delay</code></td>
             <td class="type">
                         Number
@@ -176,7 +160,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Adds a subject with given strategy to the keyframe-animation</p>
+        <p>Adds a subject to the keyframe-animation</p>
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -184,8 +168,6 @@ relatedNames:
 	<tr>
 		<th>Name</th>
 		<th>Type</th>
-		<th>Argument</th>
-		<th>Default</th>
 		<th class="last">Description</th>
 	</tr>
 	</thead>
@@ -195,28 +177,7 @@ relatedNames:
             <td class="type">
                         Object
             </td>
-                <td class="attributes">
-                </td>
-                <td class="default">
-                </td>
             <td class="description last"><p>The subject (usually a DisplayObject)</p></td>
-        </tr>
-        <tr>
-                <td class="name"><code>strategy</code></td>
-            <td class="type">
-                        mixed
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-                <td class="default">
-                    'attr'
-                </td>
-            <td class="description last"><p>The set/get strategy to use
-  - 'attr': The 'attr' method of the object is used (for DisplayObjects)
-  - 'prop': Normal property setting and getting is used
-  - Object with 'set(subject, values)' and 'get(subject)'
-    methods.</p></td>
         </tr>
 	</tbody>
 </table>
@@ -228,7 +189,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Adds multiple subjects with given strategy to the animation</p>
+        <p>Adds multiple subjects to the animation</p>
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -236,8 +197,6 @@ relatedNames:
 	<tr>
 		<th>Name</th>
 		<th>Type</th>
-		<th>Argument</th>
-		<th>Default</th>
 		<th class="last">Description</th>
 	</tr>
 	</thead>
@@ -247,28 +206,7 @@ relatedNames:
             <td class="type">
                         Array
             </td>
-                <td class="attributes">
-                </td>
-                <td class="default">
-                </td>
             <td class="description last"><p>Array of subjects to add</p></td>
-        </tr>
-        <tr>
-                <td class="name"><code>strategy</code></td>
-            <td class="type">
-                        mixed
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-                <td class="default">
-                    'attr'
-                </td>
-            <td class="description last"><p>The set/get strategy to use
-  - 'attr': The 'attr' method of the object is used (for DisplayObjects)
-  - 'prop': Normal property setting and getting is used
-  - Object with 'set(subject, values)' and 'get(subject)'
-    methods.</p></td>
         </tr>
 	</tbody>
 </table>
@@ -276,13 +214,25 @@ relatedNames:
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="begin"><span class="type-signature"></span>begin</h4>
+    <h4 class="name" id="clone"><span class="type-signature"></span>clone</h4>
 </dt>
 <dd>
     <div class="description">
-        <p>Begins the animation</p>
+        <p>Clones the KeyframeAnimation instance.</p>
     </div>
 <dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    <p>The clone</p>
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Animation</span> 
+	</dd>
 </dl>
 </dd>
 <dt>
@@ -310,7 +260,6 @@ relatedNames:
 		<th>Name</th>
 		<th>Type</th>
 		<th>Argument</th>
-		<th>Default</th>
 		<th class="last">Description</th>
 	</tr>
 	</thead>
@@ -323,26 +272,7 @@ relatedNames:
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-                <td class="default">
-                </td>
             <td class="description last"></td>
-        </tr>
-        <tr>
-                <td class="name"><code>strategy</code></td>
-            <td class="type">
-                        mixed
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-                <td class="default">
-                    'attr'
-                </td>
-            <td class="description last"><p>The set/get strategy to use
-  - 'attr': The 'attr' method of the object is used (for DisplayObjects)
-  - 'prop': Normal property setting and getting is used
-  - Object with 'set(subject, values)' and 'get(subject, propertyNames)'
-    methods.</p></td>
         </tr>
 	</tbody>
 </table>
@@ -354,7 +284,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Removes a subject with given strategy to the animation</p>
+        <p>Removes a subject from the animation</p>
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -383,7 +313,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Removes a subject with given strategy to the animation</p>
+        <p>Removes a subject from the animation</p>
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -412,7 +342,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Resets an animation (so it's ready to begin again)</p>
+        <p>Resets a keyframe animation (so it's ready to begin again)</p>
     </div>
 <dl class="details">
 </dl>
@@ -423,7 +353,7 @@ relatedNames:
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Thu Sep 27 2012 15:52:20 GMT+0100 (BST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Tue Oct 16 2012 14:39:01 GMT+0100 (BST)
 </footer>
 
 
