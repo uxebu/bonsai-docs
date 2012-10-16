@@ -104,6 +104,10 @@ h3.inverted {
 	border:none;
 	-webkit-box-shadow:none;
 	-webkit-transition:none;
+	-ms-transition:none;
+	-moz-box-shadow:none;
+	-moz-transition:none;
+	box-shadow:none;
 }
 
 .reveal h1,
