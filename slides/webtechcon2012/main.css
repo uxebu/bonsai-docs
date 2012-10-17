@@ -4,7 +4,6 @@
 
 body {
 	background:rgb(17,25,38);
-	/*background:-webkit-radial-gradient(center, ellipse cover,  rgba(85,90,95,0.6) 0%,rgba(17,25,38,1) 100%);*/
 }
 
 /*********************************************
@@ -14,7 +13,7 @@ body {
 .reveal .slides {
 	position: absolute;
 	max-width: 1000px;
-	width: 90%;
+	width: 920px;
 	top: 43%;
 /*
 	margin-top:-380px;
@@ -185,26 +184,25 @@ li, p {
 	width:440px;
 	height:440px;
 }
+.pong {
+	border:1px solid white;
+}
 
-.listedCode {
+.code {
 	float:right;
 	margin-top:3%;
-	padding-left:15px;
 	text-align:left;
+	padding-left:15px;
 	width:440px; /* -15px */
 	height:440px;
-	/*line-height:46px;*/
 	font-size:30px;
 	background-color:#2c343e;
 	border:1px solid #343B44;
 	font-family:'inconsolata';
-	vertical-align: middle;
 	display:-webkit-box;
 	-webkit-box-align:center;
 }
-.pong {
-	border:1px solid white;
-}
+
 .unhighlight {
 	color:rgb(92, 91, 91);
 }
@@ -212,34 +210,23 @@ li, p {
 	color:white;
 
 }
-.listedCode li {
-	list-style-type: none;
-	line-height:1em;
-}
 
-.listedCode .bonsai-container {
-	margin: 2% 0 1% 0;
-	background-color:rgb(17,25,38);
-}
-
-.listedCode .comment {
+.code .comment {
 	color:rgb(156,156,156);
 }
-.listedCode .instance {
+.code .instance {
 	color:rgb(209, 192, 90);
 }
-.listedCode .inst-method {
+.code .inst-method {
 	color:rgb(85, 175, 196);
 }
-.listedCode .aString {
+.code .aString {
 	color:rgb(255, 95, 76);
 }
-.listedCode .attr {
-	color:rgb(255, 95, 76);
-}
-.listedCode .stage {
+.code .stage {
 	color:rgb(130, 200, 95);
 }
+
 .inlineCode {
 	padding:1px 10px;
 	background-color:rgb(44, 52, 62);
@@ -247,10 +234,4 @@ li, p {
 	display: inline-block;
 	line-height:1;
 	text-align:left;
-}
-
-.reveal .listedCode a, .reveal a:not(.image) .listedCode {
-	text-decoration: none;
-	color:black;
-	-webkit-transition:none;
 }

@@ -146,7 +146,7 @@
 				<!-- PONG //-->
 				<section>
 					<h2>Setup stage</h2>
-					<div class="listedCode" style="width:100%">
+					<div class="code" style="width:100%">
 						<span class="comment">&lt;!-- element where we place a graphics context //--></span>
 						<br>&lt;div id="stage">&lt;/div>
 						<br>
@@ -166,7 +166,7 @@
 						<li><span class="inlineCode">stage</span> is a Movie instance and globally available</li>
 						<li>whatever you add to <span class="inlineCode">stage</span> is going to be drawn</li>
 					</ul>
-					<div class="listedCode" style="height:auto; line-height:3em; width:100%">
+					<div class="code" style="height:auto; line-height:3em; width:100%">
 						new <span class="instance">Text</span>(<span class="aString">'Hello world'</span>).<span class="inst-method">addTo</span>(<span class="stage">stage</span>);
 					</div>
 				</section>
@@ -176,7 +176,7 @@
 					<div class="movie pong">
 						&nbsp;
 					</div>
-					<div class="listedCode">
+					<div class="code">
 						/* Pong */
 					</div>
 				</section>
@@ -184,7 +184,7 @@
 				<section data-state="draw-a-bitmap">
 					<h2>Draw a Bitmap</h2>
 					<div class="movie" style="background:white;"></div>
-					<div class="listedCode">
+					<div class="code">
 						new <span class="instance">Bitmap</span>(<span class="aString">'bg.jpg'</span>)<br>
 						&nbsp;.<span class="inst-method">addTo</span>(<span class="stage">stage</span>);
 					</div>
@@ -194,7 +194,7 @@
 					<section data-state="apply-a-filter">
 						<h2>Apply a Filter</h2>
 						<div class="movie pong"></div>
-						<div class="listedCode">
+						<div class="code">
 							new <span class="instance">Bitmap</span>(<span class="aString">'bg.jpg'</span>)
 							&nbsp;.<span class="inst-method">addTo</span>(<span class="stage">stage</span>)<br>
 							&nbsp;.<span class="inst-method">attr</span>(<span class="aString">'filters'</span>, [<br>
@@ -206,21 +206,21 @@
 					<section data-state="apply-a-blur-filter">
 						<h2>Blur</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="instance">filter</span>.<span class="inst-method">blur</span>(3)
 						</div>
 					</section>
 					<section data-state="apply-a-sepia-filter">
 						<h2>Sepia</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="instance">filter</span>.<span class="inst-method">sepia</span>(1)
 						</div>
 					</section>
 					<section data-state="apply-a-invert-filter">
 						<h2>Invert</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="instance">filter</span>.<span class="inst-method">invert</span>(2)
 						</div>
 					</section>
@@ -230,7 +230,7 @@
 					<section data-state="draw-a-simple-shapes">
 						<h2>Draw simple shapes</h2>
 						<div class="movie pong"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="comment">// top paddle</span><br>
 							new <span class="instance">Rect</span>(0, 0, 100, 30, 10)
 							<br>&nbsp;.<span class="inst-method">fill</span>(<span class="aString">'#0077FF'</span>)
@@ -245,7 +245,7 @@
 					<section data-state="draw-a-star">
 						<h2>More simple shapes</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							new <span class="instance">Star</span>(120, 120, 40, 6, 3)
 							<br><br>
 							new <span class="instance">Ellipse</span>(50, 50, 100, 50)
@@ -256,7 +256,7 @@
 					<section data-state="draw-a-path">
 						<h2>Path</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="comment">// SVG like syntax</span>
 							<br>new <span class="instance">Path</span>(<span class="aString">'M21,20...z'</span>)
 							<br><br>
@@ -274,7 +274,7 @@
 					<section data-state="apply-colors">
 						<h2>Apply colors</h2>
 						<div class="movie pong"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="comment">// key name</span>
 							<br>.<span class="inst-method">fill</span>(<span class="aString">'white'</span>)
 							<br><br>
@@ -288,7 +288,7 @@
 					<section data-state="color-function">
 						<h2>color function</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="instance">color</span>(<span class="aString">'red'</span>)
 							<br><span class="instance">color</span>(<span class="aString">'#F00'</span>)
 							<br><span class="instance">color</span>(<span class="aString">'#FF0000'</span>)
@@ -302,7 +302,7 @@
 					<section data-state="color-manipulation">
 						<h2>manipulate colors</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							var red = <span class="instance">color</span>(<span class="aString">'red'</span>);
 							<br>red.<span class="inst-method">lighter</span>(0.2)
 							<br>red.<span class="inst-method">darker</span>(0.2)
@@ -316,7 +316,7 @@
 					<section data-state="apply-gradient">
 						<h2>Apply gradients</h2>
 						<div class="movie pong"></div>
-						<div class="listedCode">
+						<div class="code">
 							var blue = <span class="instance">color</span>(<span class="aString">'#0077FF'</span>);
 							<br>var g = <span class="instance">gradient</span>.<span class="inst-method">linear</span>(180, [
 							<br>&nbsp;&nbsp;blue,
@@ -328,7 +328,7 @@
 					<section data-state="radial-gradient">
 						<h2>Radial Gradients</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="instance">gradient</span>.<span class="inst-method">radial</span>([
 							<br>&nbsp;&nbsp;<span class="aString">'yellow'</span>,
 							<br>&nbsp;&nbsp;<span class="aString">'red'</span>
@@ -341,7 +341,7 @@
 					<section data-state="change-position">
 						<h2>Change the position</h2>
 						<div class="movie pong"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="comment">// the blue paddle</span>
 							<br>cpPaddle.<span class="inst-method">attr</span>(<span class="aString">'x'</span>, 200);
 							<br><span class="comment">// the yellow paddle</span>
@@ -351,7 +351,7 @@
 					<section data-state="apply-other-transformations">
 						<h2>Scale &amp; Rotate</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							<span class="inst-method">attr</span>(<span class="aString">'scale'</span>, 2)
 							<br><span class="inst-method">attr</span>(<span class="aString">'rotate'</span>, Math.PI)
 						</div>
@@ -361,7 +361,7 @@
 				<section data-state="pointer-events">
 					<h2>Listen to pointer events</h2>
 					<div class="movie pong"></div>
-					<div class="listedCode">
+					<div class="code">
 						var f = function(e) {
 						<br>&nbsp;&nbsp;myPaddle.<span class="inst-method">attr</span>({
 						<br>&nbsp;&nbsp;&nbsp;x: e.stageX
@@ -375,7 +375,7 @@
 					<section data-state="animate-ball">
 						<h2>Animate ball</h2>
 						<div class="movie pong"></div>
-						<div class="listedCode">
+						<div class="code">
 							ball.<span class="inst-method">attr</span>({
 							<br>&nbsp;&nbsp;opacity: 0,
 							<br>&nbsp;&nbsp;scale: 0.1
@@ -390,7 +390,7 @@
 					<section data-state="keyframe-animation">
 						<h2>Keyframe Animation</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							new <span class="instance">KeyframeAnimation</span>(<span class="aString">'3s'</span>, {
 							<br>&nbsp;<span class="aString">'50%'</span>: {fillGradient: g1},
 							<br>&nbsp;<span class="aString">'100%'</span>: {fillGradient: g0}
@@ -402,7 +402,7 @@
 					<section data-state="morphto-animation">
 						<h2>Morphing</h2>
 						<div class="movie"></div>
-						<div class="listedCode">
+						<div class="code">
 							var earth = new <span class="instance">Path</span>(…);
 							<br>var ball = new <span class="instance">Path</span>(…);
 							<br>
@@ -414,7 +414,7 @@
 				<section data-state="tick-event">
 					<h2>Update screen every 16ms </h2>
 					<div class="movie pong"></div>
-					<div class="listedCode">
+					<div class="code">
 						<span class="stage">stage</span>.<span class="inst-method">on</span>(<span class="aString">'tick'</span>, function() {
 						<br>&nbsp;ball.<span class="inst-method">attr</span>({x: tx, y: ty});
 						<br>&nbsp;// plugin
@@ -427,7 +427,7 @@
 				<section data-state="apply-audio">
 					<h2>Apply audio</h2>
 					<div class="movie pong"></div>
-					<div class="listedCode">
+					<div class="code">
 						var a = new <span class="instance">Audio</span>(<span class="aString">'pong.mp3'</span>)
 						<br>&nbsp;.<span class="inst-method">addTo</span>(<span class="stage">stage</span>);
 						<br>
@@ -439,7 +439,7 @@
 				<section data-state="custom-messages">
 					<h2>Custom messages</h2>
 					<div class="movie pong"></div>
-					<div class="listedCode">
+					<div class="code">
 						<span class="comment">// your website</span>
 						<br>var movie = <span class="instance">bonsai</span>.<span class="inst-method">run</span>(…);
 						<br>movie.<span class="inst-method">sendMessage</span>(aMessage);
@@ -457,7 +457,7 @@
 					<section data-state="submovie-loading">
 						<h2>Submovie loading</h2>
 						<div class="movie pong"></div>
-						<div class="listedCode">
+						<div class="code">
 							i = new <span class="instance">Movie</span>(<span class="aString">'intro.js'</span>);
 							<br>p = new <span class="instance">Movie</span>(<span class="aString">'pong.js'</span>);
 							<br>
@@ -470,7 +470,7 @@
 					<section data-state="movie-timeline">
 						<h2>Movie's Timeline</h2>
 						<div class="movie pong"></div>
-						<div class="listedCode">
+						<div class="code">
 							new <span class="instance">Movie</span>()
 							<br>.<span class="inst-method">length</span>(240).<span class="inst-method">frames</span>({
 							<br>&nbsp;&nbsp;<span class="aString">'0%'</span>: function red(){…},
