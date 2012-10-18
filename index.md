@@ -24,7 +24,7 @@ square.animate('1.5s', {
 
 ### Bonsai playground
 
-If you want to try out the features of Bonsai, go ahead and [try out Orbit](http://orbit.bonsaijs.org/ "Orbit"), the editor for Bonsai.
+If you want to try out the features of Bonsai, go ahead and [try out Orbit](http://orbit.bonsaijs.org/ "Orbit"), the online editor for Bonsai.
 
 ### Lets get started
 
@@ -44,9 +44,10 @@ Before you start digging into the docs, take out your favourite Editor and check
     height: 400
   });
 </script>
+{% endhighlight %}
 
 The only thing to mention here is the fact that you provided your Bonsai code within the function body
-of the code property. This is the fast lane, usually you would put your Bonsai code into separate
+assigned to the code property. This is the fast lane, usually you would put your Bonsai code into separate
 files and you would do something like:
 
 {% highlight html %}
@@ -57,6 +58,7 @@ files and you would do something like:
     height: 400
   });
 </script>
+{% endhighlight %}
 
 ### Browser support
 
@@ -67,3 +69,20 @@ Bonsai in its current form comes packaged with an SVG renderer. The following br
  * Firefox >= 18
  * Opera >= 12
  * IE >= 9
+
+### How to use the docs
+
+The docs are split up in two parts:
+
+1. User docs, introductions and conecpts
+
+    This part of the documentation is helping you to get a better general
+    understanding of how Bonsai works. Take a look at the "Overview" section
+    to get a feeling for what is supported and to see some examples of Bonsai
+    in action
+
+2. API docs
+
+    The API docs are the source for detailed information regarding the API.
+    This is the place to be if you want to look up the nuts and bolts and
+    want to see in detail what the Bonsai API offers.
