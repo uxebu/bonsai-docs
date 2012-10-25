@@ -63,6 +63,19 @@ your Bonsai code into separate files and you would do something like:
 </script>
 {% endhighlight %}
 
+Or you chose the short form (passing `movie.js` as second parameter instead of the configuration object):
+
+{% highlight html %}
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+<div id="movie"></div>
+<script>
+  bonsai.run(document.getElementById('movie'), 'movie.js');
+</script>
+{% endhighlight %}
+
+Details which parameters can be passed in options and how you can configure the execution context can be found on the
+[Execution overview](/overview/Execution.html).
+
 ### Browser support
 
 Bonsai in its current form comes packaged with an SVG renderer. The following browsers/platforms are supported:
