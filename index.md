@@ -47,10 +47,13 @@ Before you start digging into the docs, take out your favourite Editor and check
 {% endhighlight %}
 
 The only thing to mention here is the fact that you provided your Bonsai code within the function body
-assigned to the code property. This is the fast lane, usually you would put your Bonsai code into separate
-files and you would do something like:
+assigned to the code property (Note: this function is executed in a different context and you can't access
+properties from the scope where `bonsai.run` was called). This is the fast lane, usually you would put
+your Bonsai code into separate files and you would do something like:
 
 {% highlight html %}
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+<div id="movie"></div>
 <script>
   bonsai.run(document.getElementById('movie'), {
     url: 'movie.js',

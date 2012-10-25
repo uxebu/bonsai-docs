@@ -12,7 +12,7 @@ The built version of Bonsai is taking care to select the best approach for a par
 
 * Worker-Environment spawned with Blob (latest Chrome, Firefox, Safari 6 and iOS 6)
 * Worker-Environment spawned with Data-URI (Opera 12)
-* Iframe-Environment spawned through <script>/*bonsaiCode*/</script> (older Chrome versions, Safari 5, IE 9/10. Note: IE10 throws a security error, if a Blob-URL is used as the Worker source)
+* Iframe-Environment spawned through `<script>/*bonsaiCode*/</script>` (older Chrome versions, Safari 5, IE 9/10. Note: IE10 throws a security error, if a Blob-URL is used as the Worker source)
 
 To just allow the bonsai-code to be executed in the iframe context you can do the following:
 
