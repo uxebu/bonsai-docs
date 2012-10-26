@@ -9,6 +9,12 @@ Bonsai movies can be executed in two execution contexts (we call it the runner):
   that don't support workers and it makes debugging Bonsai more easy.
 * Worker runner context -- loads JS and runs movie code within a Worker instance, providing a sandboxed environment, with theoretic performance improvements (no UI blocking for expensive operations) but potentially lacking debugability.
 
+**Note**: The runner context has limited access to browser functionality (e.g. no DOM access) because in most cases the Bonsai code is executed
+in a worker. Therefore you are limited to use the provided Bonsai API and the normal JS functions that are provided for
+a worker (see [Functions available for workers on MDN](https://developer.mozilla.org/en-US/docs/DOM/Worker/Functions_available_to_workers) for details).
+If you want to pass initial data to the runner context you can read about that at the bottom of this page or if you want to dynamically manipulate
+the DOM through Bonsai you should have a look at the [Communication overview](/overview/Communication.html).
+
 The built version of Bonsai is taking care to select the best approach for a particular browser (determined through 
 feature detection):
 
@@ -35,10 +41,10 @@ bonsai.setup({
 {% endhighlight %}
 
 There are some environments where we can't automatically create the worker environment through a Blob- or Data-URI 
-(e.g. iOS 5 and Safari 5). If you can accept to exclude browsers that don't support web workers you can limit the execution
-to the worker context and additionally feed it the original `bonsai.js` as runner URL to reach all browsers that have worker 
-support (Note: you need to load `bonsai.js` from the same domain, where the original page is served from, to avoid cross domain
-issues):
+(e.g. iOS 5 and Safari 5). In case you just want to use the worker context and if you can accept to exclude browsers that don't support 
+web workers you can limit the execution to the worker context and additionally feed it the original `bonsai.js` as runner 
+URL to reach all browsers that have worker support (Note: you need to load `bonsai.js` from the same domain, where the original
+page is served from, to avoid cross domain issues):
 
 {% highlight javascript %}
 bonsai.setup({
@@ -62,7 +68,6 @@ bonsai.run(
     height: 400
   }
 );
-</script>
 {% endhighlight %}
 
 Options you can pass to `bonsai.run()` include:
@@ -75,7 +80,9 @@ Options you can pass to `bonsai.run()` include:
  * `urls` (Array) -- Array of movie URLs to load (all relative to the optional `baseUrl`)
  * `url` (String) -- URL of movie (relative to the optional `baseUrl`)
  * `plugins` (Array) -- Array of plugin URLs to load (all relative to the optional `baseUrl`)
- * `code` (String) -- JavaScript code to run directly as a movie
+ * `code` (String|Function) -- JavaScript code to run directly as a movie (Note: if you pass code as a function 
+   this code will be stringified and executed in a different context and you can't access properties from the scope
+   where `bonsai.run` was called).
 
 There are three available signatures for loading/executing a single movie:
 
@@ -84,3 +91,29 @@ bonsai.run(element, movieUrl, { /* options */ });
 bonsai.run(element, { url: movieUrl /*, ... other options */ });
 bonsai.run(element, { code: '' /* string|function */ /*, ... other options */ });
 {% endhighlight %}
+
+You can also pass initial data through `bonsai.run` to the runner context:
+
+{% highlight javascript %}
+bonsai.run(
+  document.getElementById('movie'),
+  {
+    url: 'movie.js',
+    initialData1: { bonsai: 'tree' },
+    initialData2: true,
+    initialData3: 'bonsaiiiii'
+  }
+);
+{% endhighlight %}
+
+Which then can be accessed from the runner context (`movie.js` or JS code that was passed within `code`) like this:
+
+{% highlight javascript %}
+console.log(stage.options.initialData1); // { bonsai: 'tree'}
+console.log(stage.options.initialData2); // true
+console.log(stage.options.initialData3); // 'bonsaiiiii'
+console.log(stage.options.url); // 'movie.js'
+{% endhighlight %}
+
+For dynamically passing data from your page to the runner context or send data from it to the page you should have a
+look at [Communication overview](/overview/Communication.html).
