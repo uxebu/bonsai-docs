@@ -3,7 +3,7 @@ title: Execution
 layout: doc
 ---
 
-Bonsai movies can be executed in two execution contexts (we call it the runner):
+Bonsai movies can be executed in two execution contexts (we call them "runner contexts"):
 
 * iFrame runner context -- loads JS and runs movie code within an iframe, providing a sandboxed environment. It is used for browsers
   that don't support workers and it makes debugging Bonsai more easy.
@@ -32,7 +32,7 @@ So if you use the built version of Bonsai (e.g. from CDNJS), it will take care o
 </script>
 {% endhighlight %}
 
-There are cases where you want to force the Bonsai runner context to be the iFrame. You can achieve this behaviour like that:
+There are cases where you want to force the Bonsai runner context to be the iFrame. You can achieve this behaviour like so:
 
 {% highlight javascript %}
 bonsai.setup({
@@ -115,5 +115,5 @@ console.log(stage.options.initialData3); // 'bonsaiiiii'
 console.log(stage.options.url); // 'movie.js'
 {% endhighlight %}
 
-For dynamically passing data from your page to the runner context or send data from it to the page you should have a
+For dynamically passing data from your page to the runner context or sending data from it to the page you should have a
 look at [Communication overview](/overview/Communication.html).

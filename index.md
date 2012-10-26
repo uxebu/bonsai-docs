@@ -73,7 +73,7 @@ Or you chose the short form (passing `movie.js` as second parameter instead of t
 </script>
 {% endhighlight %}
 
-Details which parameters can be passed in options and how you can configure the execution context can be found on the
+Details of which parameters can be passed in options and how you can configure the execution context can be found in the
 [Execution overview](/overview/Execution.html).
 
 ### Browser support
