@@ -57,7 +57,7 @@ Here's an overview of how Bonsai operates:
 
 <img src="/assets/bonsai-overview.png" alt="Bonsai separated architecture, showing parent page and runner-context where the actual bonsai movie is run" />
 
-As seen before, Bonsai will reveal itself as simply `bonsai` on the parent page. The actual API (e.g. `Shape`, `stage.addChild()` etc.) will only be available within the specified context. The API revealed on the parent page currently allows loading of movies, like so:
+As seen before, Bonsai will reveal itself as simply `bonsai` on the parent page. The actual API (e.g. `Shape`, `stage.addChild()` etc.) will only be available within the specified context. The API revealed on the parent page allows loading of movies, like so:
 
 {% highlight javascript %}
 bonsai.run(
