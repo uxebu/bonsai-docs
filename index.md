@@ -24,7 +24,57 @@ square.animate('1.5s', {
 
 ### Bonsai playground
 
-If you want to try out the features of Bonsai, go ahead and [try out Orbit](http://orbit.bonsaijs.org/ "Orbit"), the editor for Bonsai.
+If you want to try out the features of Bonsai, go ahead and [try out Orbit](http://orbit.bonsaijs.org/ "Orbit"), the online editor for Bonsai.
+
+### Lets get started
+
+Before you start digging into the docs, take out your favourite Editor and check out following example:
+
+{% highlight html %}
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+<div id="movie"></div>
+<script>
+  bonsai.run(document.getElementById('movie'), {
+    code: function() {
+      new Rect(10, 10, 100, 100)
+        .addTo(stage)
+        .attr('fillColor', 'green');
+    },
+    width: 500,
+    height: 400
+  });
+</script>
+{% endhighlight %}
+
+The only thing to mention here is the fact that you provided your Bonsai code within the function body
+assigned to the code property (Note: this function is executed in a different context and you can't access
+properties from the scope where `bonsai.run` was called). This is the fast lane, usually you would put
+your Bonsai code into separate files and you would do something like:
+
+{% highlight html %}
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+<div id="movie"></div>
+<script>
+  bonsai.run(document.getElementById('movie'), {
+    url: 'movie.js',
+    width: 500,
+    height: 400
+  });
+</script>
+{% endhighlight %}
+
+Or you chose the short form (passing `movie.js` as second parameter instead of the configuration object):
+
+{% highlight html %}
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+<div id="movie"></div>
+<script>
+  bonsai.run(document.getElementById('movie'), 'movie.js');
+</script>
+{% endhighlight %}
+
+Details of which parameters can be passed in options and how you can configure the execution context can be found in the
+[Execution overview](/overview/Execution.html).
 
 ### Browser support
 
@@ -36,52 +86,19 @@ Bonsai in its current form comes packaged with an SVG renderer. The following br
  * Opera >= 12
  * IE >= 9
 
-### How to run a Bonsai movie
+### How to use the docs
 
-We currently offer two separate builds of bonsai, `bonsai.js` which is the worker-context-build and `bonsai.iframe.js` which is the iframe-context-build.
+The docs are split up in two parts:
 
- * iFrame context -- loads JS and runs movie code within an iframe, providing a sandboxed environment and very debuggable.
- * Worker context -- loads JS and runs movie code within a Worker instance, providing a sandboxed environment, with theoretic performance improvements (no UI blocking for expensive operations) but potentially lacking debugability.
+1. User docs, introductions and conecpts
 
-So, for development we usually recommend `bonsai.iframe.js`.
+    This part of the documentation is helping you to get a better general
+    understanding of how Bonsai works. Take a look at the "Overview" section
+    to get a feeling for what is supported and to see some examples of Bonsai
+    in action
 
-Here's an overview of how Bonsai operates:
+2. API docs
 
-<img src="/assets/bonsai-overview.png" alt="Bonsai separated architecture, showing parent page and runner-context where the actual bonsai movie is run" />
-
-Bonsai will reveal itself as simply `bonsai` on the parent page. The actual API (e.g. `Shape`, `stage.addChild()` etc.) will only be available within the specified context. The API revealed on the parent page currently only allows loading of movies, like so:
-
-{% highlight html %}
-<div id="movie"></div>
-
-<script src="bonsai.iframe.js"></script>
-<script>
-  bonsai.run(
-    document.getElementById('movie'),
-    'path/to/my_movie.js',
-    {
-      width: 500,
-      height: 400
-    }
-  );
-</script>
-{% endhighlight %}
-
-Options you can pass to `bonsai.run()` include:
-
- * `width` (Number) -- Pixel width of the movie
- * `height` (Number) -- Pixel height of the movie
- * `framerate` (Number) -- FPS (frames per second) of movie
- * `baseUrl` (String) -- Base URL used to resolve movie and plugin URLs
- * `assetBaseUrl` (String) -- Base URL used to resolve any assets loaded within movies
- * `urls` (Array) -- Array of movie URLs to load (all relative to the optional `baseUrl`)
- * `url` (String) -- URL of movie (relative to the optional `baseUrl`)
- * `plugins` (Array) -- Array of plugin URLs to load (all relative to the optional `baseUrl`)
- * `code` (String) -- JavaScript code to run directly as a movie
-
-There are two available signatures for loading a single movie:
-
-{% highlight javascript %}
-bonsai.run(element, movieUrl, { /* options */ });
-bonsai.run(element, { url: movieUrl /*, ... other options */ });
-{% endhighlight %}
+    The API docs are the source for detailed information regarding the API.
+    This is the place to be if you want to look up the nuts and bolts and
+    want to see in detail what the Bonsai API offers.
