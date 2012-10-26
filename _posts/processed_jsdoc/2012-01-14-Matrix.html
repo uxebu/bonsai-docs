@@ -23,7 +23,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>The Matrix class.</p>
+        The Matrix class.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -39,43 +39,45 @@ relatedNames:
                 <td class="name"><code>a</code></td>
             <td class="type">
                         number
+                         | 
+                        array
             </td>
-            <td class="description last"><p>Horizontal/x scale</p></td>
+            <td class="description last">Horizontal/x scale or array of a, b, c, d, tx, ty</td>
         </tr>
         <tr>
                 <td class="name"><code>b</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>Vertical/y skew</p></td>
+            <td class="description last">Vertical/y skew</td>
         </tr>
         <tr>
                 <td class="name"><code>c</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>Horizontal/x skew</p></td>
+            <td class="description last">Horizontal/x skew</td>
         </tr>
         <tr>
                 <td class="name"><code>d</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>Vertical/y scale</p></td>
+            <td class="description last">Vertical/y scale</td>
         </tr>
         <tr>
                 <td class="name"><code>tx</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>Horizontal/x translation</p></td>
+            <td class="description last">Horizontal/x translation</td>
         </tr>
         <tr>
                 <td class="name"><code>ty</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>Vertical/y translation</p></td>
+            <td class="description last">Vertical/y translation</td>
         </tr>
 	</tbody>
 </table>
@@ -90,7 +92,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Returns a clone of the matrix</p>
+        Returns a clone of the matrix
     </div>
 <dl class="details">
 </dl>
@@ -109,8 +111,8 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Concatenates a matrix with the current matrix.</p>
-<p>Effectively combines the geometric effects of the two matrices.</p>
+        Concatenates a matrix with the current matrix.
+Effectively combines the geometric effects of the two matrices.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -135,7 +137,7 @@ relatedNames:
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -151,10 +153,10 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Applies parameters for scaling, rotation, and translation.</p>
-<p>Using the createBox() method lets you obtain the same matrix as you
+        Applies parameters for scaling, rotation, and translation.
+Using the createBox() method lets you obtain the same matrix as you
 would if you applied the identity(), rotate(), scale(), and translate()
-methods in succession.</p>
+methods in succession.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -171,35 +173,35 @@ methods in succession.</p>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>The horizontal scale</p></td>
+            <td class="description last">The horizontal scale</td>
         </tr>
         <tr>
                 <td class="name"><code>scaleY</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>The vertical scale</p></td>
+            <td class="description last">The vertical scale</td>
         </tr>
         <tr>
                 <td class="name"><code>rotation</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>The rotation in radians</p></td>
+            <td class="description last">The rotation in radians</td>
         </tr>
         <tr>
                 <td class="name"><code>tx</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>The horizontal translation</p></td>
+            <td class="description last">The horizontal translation</td>
         </tr>
         <tr>
                 <td class="name"><code>tx</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>The vertical translation</p></td>
+            <td class="description last">The vertical translation</td>
         </tr>
 	</tbody>
 </table>
@@ -207,7 +209,7 @@ methods in succession.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -223,11 +225,11 @@ methods in succession.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Given a point in the pretransform coordinate space, returns the
-coordinates of that point after the transformation occurs.</p>
-<p>Unlike the standard transformation applied using the transformPoint()
+        Given a point in the pretransform coordinate space, returns the
+coordinates of that point after the transformation occurs.
+Unlike the standard transformation applied using the transformPoint()
 method, the deltaTransformPoint() method's transformation does not
-consider the translation parameters tx and ty.</p>
+consider the translation parameters tx and ty.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -244,7 +246,7 @@ consider the translation parameters tx and ty.</p>
             <td class="type">
                         <a href="Point.html">Point</a>
             </td>
-            <td class="description last"><p>The point to transform</p></td>
+            <td class="description last">The point to transform</td>
         </tr>
 	</tbody>
 </table>
@@ -265,15 +267,15 @@ consider the translation parameters tx and ty.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Sets each matrix property to a value that causes a null transformation.</p>
-<p>An object transformed by applying an identity matrix will be identical
-to the original.</p>
+        Sets each matrix property to a value that causes a null transformation.
+An object transformed by applying an identity matrix will be identical
+to the original.
     </div>
 <dl class="details">
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -289,15 +291,15 @@ to the original.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Performs the opposite transformation of the original matrix.</p>
-<p>You can apply an inverted matrix to an object to undo the transformation
-performed when applying the original matrix.</p>
+        Performs the opposite transformation of the original matrix.
+You can apply an inverted matrix to an object to undo the transformation
+performed when applying the original matrix.
     </div>
 <dl class="details">
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -313,7 +315,7 @@ performed when applying the original matrix.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Applies a rotation transformation to the Matrix object.</p>
+        Applies a rotation transformation to the Matrix object.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -330,7 +332,7 @@ performed when applying the original matrix.</p>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>The rotation angle in radians.</p></td>
+            <td class="description last">The rotation angle in radians.</td>
         </tr>
 	</tbody>
 </table>
@@ -338,7 +340,7 @@ performed when applying the original matrix.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -354,8 +356,8 @@ performed when applying the original matrix.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Applies a scaling transformation to the matrix.</p>
-<p>The x axis is multiplied by sx, and the y axis it is multiplied by sy.</p>
+        Applies a scaling transformation to the matrix.
+The x axis is multiplied by sx, and the y axis it is multiplied by sy.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -372,14 +374,14 @@ performed when applying the original matrix.</p>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>Multiplier for the x axis</p></td>
+            <td class="description last">Multiplier for the x axis</td>
         </tr>
         <tr>
                 <td class="name"><code>sy</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>Multiplier for the y axis</p></td>
+            <td class="description last">Multiplier for the y axis</td>
         </tr>
 	</tbody>
 </table>
@@ -387,7 +389,7 @@ performed when applying the original matrix.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -403,8 +405,8 @@ performed when applying the original matrix.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns the result of applying the geometric transformation represented
-by the Matrix object to the specified point.</p>
+        Returns the result of applying the geometric transformation represented
+by the Matrix object to the specified point.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -421,7 +423,7 @@ by the Matrix object to the specified point.</p>
             <td class="type">
                         <a href="Point.html">Point</a>
             </td>
-            <td class="description last"><p>The point to transform</p></td>
+            <td class="description last">The point to transform</td>
         </tr>
 	</tbody>
 </table>
@@ -442,7 +444,7 @@ by the Matrix object to the specified point.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Translates the matrix along the x and y axes.</p>
+        Translates the matrix along the x and y axes.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -459,14 +461,14 @@ by the Matrix object to the specified point.</p>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>The translation along the x axis</p></td>
+            <td class="description last">The translation along the x axis</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
                         number
             </td>
-            <td class="description last"><p>The translation along the y axis</p></td>
+            <td class="description last">The translation along the y axis</td>
         </tr>
 	</tbody>
 </table>
@@ -474,7 +476,7 @@ by the Matrix object to the specified point.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance.</p>
+    The instance.
 </div>
 <dl>
 	<dt>
@@ -491,7 +493,7 @@ by the Matrix object to the specified point.</p>
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Tue Oct 16 2012 14:50:24 GMT+0100 (BST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 16:47:05 GMT+0200 (MESZ)
 </footer>
 
 

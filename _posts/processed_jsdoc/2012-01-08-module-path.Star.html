@@ -3,9 +3,17 @@ title: 'Star'
 layout: doc
 categories: jsdoc Class
 relatedLinks:
+ - /overview/Color.html
+ - /overview/Shape.html
+ - /overview/Easing.html
  - /overview/SimpleShapes.html
+ - /overview/Animation.html
 relatedNames:
+ - Color
+ - Shape
+ - Easing
  - Simple Shapes
+ - Animation
 ---
 
 
@@ -24,7 +32,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Creates a star</p>
+        Creates a star
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -44,7 +52,7 @@ relatedNames:
             </td>
                 <td class="attributes">
                 </td>
-            <td class="description last"><p>The horizontal offset/translation of the star center.</p></td>
+            <td class="description last">The horizontal offset/translation of the star center.</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
@@ -53,7 +61,7 @@ relatedNames:
             </td>
                 <td class="attributes">
                 </td>
-            <td class="description last"><p>The vertical offset/translation of the star center.</p></td>
+            <td class="description last">The vertical offset/translation of the star center.</td>
         </tr>
         <tr>
                 <td class="name"><code>radius</code></td>
@@ -62,7 +70,7 @@ relatedNames:
             </td>
                 <td class="attributes">
                 </td>
-            <td class="description last"><p>The radius of the star</p></td>
+            <td class="description last">The radius of the star</td>
         </tr>
         <tr>
                 <td class="name"><code>rays</code></td>
@@ -71,7 +79,7 @@ relatedNames:
             </td>
                 <td class="attributes">
                 </td>
-            <td class="description last"><p>The number of rays of the star. Must be &gt; 3</p></td>
+            <td class="description last">The number of rays of the star. Must be > 3</td>
         </tr>
         <tr>
                 <td class="name"><code>factor</code></td>
@@ -81,10 +89,10 @@ relatedNames:
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last"><p>determines the star "pointiness".
+            <td class="description last">determines the star "pointiness".
    0: all rays start at (0, 0)
    1: the star looks like a regular polygon: 3 vertices are on a line.
-   If omitted, a regular star is created</p></td>
+   If omitted, a regular star is created</td>
         </tr>
 	</tbody>
 </table>
@@ -96,12 +104,1598 @@ relatedNames:
         <ul>
             <li><a href="module-path.SpecialAttrPath.html">module:path.SpecialAttrPath</a></li>
         </ul>
+        <h3 class="subsection-title">Members</h3>
+        <dl>
+<dt>
+    <h4 class="name" id="type"><span class="type-signature"></span>type<span class="type-signature"></span></h4>
+</dt>
+<dd>
+    <div class="description">
+        The type of the given instance.
+    </div>
+<dl class="details">
+</dl>
+</dd>
+        </dl>
+        <h3 class="subsection-title">Methods</h3>
+        <dl>
+<dt>
+    <h4 class="name" id="arc"><span class="type-signature"></span>arc</h4>
+</dt>
+<dd>
+    <div class="description">
+        Adds an arc segment to the list of contained segments.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Argument</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">The x-axis radius for the ellipse</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">The y-axis radius for the ellipse</td>
+        </tr>
+        <tr>
+                <td class="name"><code>radius</code></td>
+            <td class="type">
+                        Number
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">The radius of the ellipse</td>
+        </tr>
+        <tr>
+                <td class="name"><code>aStartAngle</code></td>
+            <td class="type">
+                        deg
+                         | 
+                        rad
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">Starting angle of arc in radians</td>
+        </tr>
+        <tr>
+                <td class="name"><code>aEndAngle</code></td>
+            <td class="type">
+                        deg
+                         | 
+                        rad
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">Ending angle of arc in radians</td>
+        </tr>
+        <tr>
+                <td class="name"><code>anticlockwise</code></td>
+            <td class="type">
+                        Boolean
+            </td>
+                <td class="attributes">
+                    &lt;optional><br>
+                </td>
+            <td class="description last">Whether you want the arc to be drawn 
+ anticlockwise or clockwise (Boolean)</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="arcBy"><span class="type-signature"></span>arcBy</h4>
+</dt>
+<dd>
+    <div class="description">
+        Adds an arc segment to the list of contained segments.
+It provides the same API like SVG does.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>rx</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">The relative x-axis radius for the ellipse</td>
+        </tr>
+        <tr>
+                <td class="name"><code>ry</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">The relative y-axis radius for the ellipse</td>
+        </tr>
+        <tr>
+                <td class="name"><code>xAxisRotation</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">The rotation angle in radians for the
+ ellipse's x-axis relative to the x-axis of the stage's {0,0}</td>
+        </tr>
+        <tr>
+                <td class="name"><code>largeArcFlag</code></td>
+            <td class="type">
+                        Boolean
+            </td>
+            <td class="description last">Defines the way in which the arc is drawn
+ from its starting point to its ending point. See
+ http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands for
+ details</td>
+        </tr>
+        <tr>
+                <td class="name"><code>sweepFlag</code></td>
+            <td class="type">
+                        Boolean
+            </td>
+            <td class="description last">Defines the way in which the arc is drawn
+ from its starting point to its ending point. See
+ http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands for
+ details</td>
+        </tr>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">Relative X-axis location of the end of the arc</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">Relative Y-axis location of the end of the arc</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="arcTo"><span class="type-signature"></span>arcTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Adds an arc to the list of contained segments.
+It provides the same API like SVG does.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>rx</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">The x-axis radius for the ellipse</td>
+        </tr>
+        <tr>
+                <td class="name"><code>ry</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">The y-axis radius for the ellipse</td>
+        </tr>
+        <tr>
+                <td class="name"><code>xAxisRotation</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">The rotation angle in radians for the
+ ellipse's x-axis relative to the x-axis of the stage's {0,0}</td>
+        </tr>
+        <tr>
+                <td class="name"><code>largeArcFlag</code></td>
+            <td class="type">
+                        Boolean
+            </td>
+            <td class="description last">Defines the way in which the arc is drawn
+ from its starting point to its ending point. See
+ http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands for
+ details</td>
+        </tr>
+        <tr>
+                <td class="name"><code>sweepFlag</code></td>
+            <td class="type">
+                        Boolean
+            </td>
+            <td class="description last">Defines the way in which the arc is drawn
+ from its starting point to its ending point. See
+ http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands for
+ details</td>
+        </tr>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">X-axis location of the end of the arc</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">Y-axis location of the end of the arc</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="clear"><span class="type-signature"></span>clear</h4>
+</dt>
+<dd>
+    <div class="description">
+        Clears all segments.
+    </div>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="clone"><span class="type-signature"></span>clone</h4>
+</dt>
+<dd>
+    <div class="description">
+        Returns a clone of the shape.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Argument</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>cloneOptions</code></td>
+            <td class="type">
+                        Object
+            </td>
+                <td class="attributes">
+                    &lt;optional><br>
+                </td>
+            <td class="description last">
+                <h6>Properties</h6>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Argument</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>attributes</code></td>
+            <td class="type">
+                        boolean
+            </td>
+                <td class="attributes">
+                    &lt;optional><br>
+                </td>
+            <td class="description last">Whether to clone attributes,
+   not just segments.</td>
+        </tr>
+	</tbody>
+</table>
+            </td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    A shape with identical segments to the instance.
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="closePath"><span class="type-signature"></span>closePath</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments, which describes a
+close path.
+    </div>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="curveBy"><span class="type-signature"></span>curveBy</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends an bezier-curve segment. Appends a segment at the end of the list of contained segments.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>cp1x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">(Relative) first control point x</td>
+        </tr>
+        <tr>
+                <td class="name"><code>cp1y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">(Relative) first control point y</td>
+        </tr>
+        <tr>
+                <td class="name"><code>cp2x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">(Relative) second control point x</td>
+        </tr>
+        <tr>
+                <td class="name"><code>cp2y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">(Relative) second control point y</td>
+        </tr>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">(Relative) x-value of the point</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">(Relative) y-value of the point</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+        <ul>
+            <li>http://www.w3.org/TR/SVG/paths.html#InterfaceSVGPathSegCurvetoCubicRel</li>
+        </ul>
+	</dd>
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="curveTo"><span class="type-signature"></span>curveTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends an bezier-curve segment. Appends a segment at the end of the list of contained segments.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>cp1x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">first control point x</td>
+        </tr>
+        <tr>
+                <td class="name"><code>cp1y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">first control point y</td>
+        </tr>
+        <tr>
+                <td class="name"><code>cp2x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">second control point x</td>
+        </tr>
+        <tr>
+                <td class="name"><code>cp2y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">second control point y</td>
+        </tr>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">x-value of the point</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">y-value of the point</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+        <ul>
+            <li>http://www.w3.org/TR/SVG/paths.html#InterfaceSVGPathSegCurvetoCubicAbs</li>
+        </ul>
+	</dd>
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="fill"><span class="type-signature"></span>fill</h4>
+</dt>
+<dd>
+    <div class="description">
+        Applies a fillColor, fillImage or fillGradient to the shape
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>fill</code></td>
+            <td class="type">
+                        String
+                         | 
+                        Number
+                         | 
+                        LinearGradient
+                         | 
+                        RadialGradient
+                         | 
+                        <a href="Bitmap.html">Bitmap</a>
+                         | 
+                        color.RGBAColor
+            </td>
+            <td class="description last">The fillColor (see `color.parse`), fillImage or fillGradient</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="getBoundingBox"><span class="type-signature"></span>getBoundingBox</h4>
+</dt>
+<dd>
+    <div class="description">
+        Returns dimensions/location of the shape
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Argument</th>
+		<th>Default</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>transform</code></td>
+            <td class="type">
+                        <a href="Matrix.html">Matrix</a>
+            </td>
+                <td class="attributes">
+                    &lt;optional><br>
+                </td>
+                <td class="default">
+                    null
+                </td>
+            <td class="description last">A transform to apply to all points
+   before computation.</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    an object with all box properties
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Object</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="horizontalLineBy"><span class="type-signature"></span>horizontalLineBy</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments, which describes a
+straight line from the last Point to the given relative Point.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">relative x-value</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="horizontalLineTo"><span class="type-signature"></span>horizontalLineTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments, which describes a
+straight line from the last Point to the given absolute Point.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">absolute x-value</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="lastPoint"><span class="type-signature"></span>lastPoint</h4>
+</dt>
+<dd>
+    <div class="description">
+        Returns the last point of the segments array or throws a warning if the
+segments array is empty.
+    </div>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The last point of the segments array.
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Point</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="lastSegment"><span class="type-signature"></span>lastSegment</h4>
+</dt>
+<dd>
+    <div class="description">
+        Returns the last element of the segments array or throws a warning if the
+segments array is empty.
+    </div>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The last segment of the segments array.
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Array</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="lineBy"><span class="type-signature"></span>lineBy</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments, which describes a
+straight line from the last Point to the given relative Point.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">relative x-value</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">relative y-value</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="lineTo"><span class="type-signature"></span>lineTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments, which describes a
+straight line from the last Point to the given absolute Point.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">absolute x-value</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">absolute y-value</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="morphSegmentsTo"><span class="type-signature"></span>morphSegmentsTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Morphs segments to that of another shapes
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Argument</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>that</code></td>
+            <td class="type">
+                        Path
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">The Path to morph to (only segments will morph)</td>
+        </tr>
+        <tr>
+                <td class="name"><code>duration</code></td>
+            <td class="type">
+                        Number
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">The duration of the morph animation. Available
+ formats are _s (seconds), _ms (milliseconds), _ (frames - no unit)</td>
+        </tr>
+        <tr>
+                <td class="name"><code>animOptions</code></td>
+            <td class="type">
+                        Object
+            </td>
+                <td class="attributes">
+                    &lt;optional><br>
+                </td>
+            <td class="description last">Additional options to pass to the animation,
+ e.g. `{easing: ..., onEnd: function(){...}}`</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="morphTo"><span class="type-signature"></span>morphTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Morphs segments to that of another shapes, along with other attrs
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Argument</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>that</code></td>
+            <td class="type">
+                        Path
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">The Path to morph to (all morphable attributes
+ will morph)</td>
+        </tr>
+        <tr>
+                <td class="name"><code>duration</code></td>
+            <td class="type">
+                        Number
+            </td>
+                <td class="attributes">
+                </td>
+            <td class="description last">The duration of the morph animation. Available
+ formats are _s (seconds), _ms (milliseconds), _ (frames - no unit)</td>
+        </tr>
+        <tr>
+                <td class="name"><code>animOptions</code></td>
+            <td class="type">
+                        Object
+            </td>
+                <td class="attributes">
+                    &lt;optional><br>
+                </td>
+            <td class="description last">Additional options to pass to the animation,
+ e.g. `{easing: ..., onEnd: function(){...}}`</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="moveBy"><span class="type-signature"></span>moveBy</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments and creates a new subpath.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">relative x-value</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">relative y-value</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="moveTo"><span class="type-signature"></span>moveTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments and creates a new subpath.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">absolute x-value</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">absolute y-value</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="path"><span class="type-signature"></span>path</h4>
+</dt>
+<dd>
+    <div class="description">
+        Sets the segments of the Path and returns the current Path instance.
+Or returns a path representation of all the contained segments of the Path when no parameter is given.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>path</code></td>
+            <td class="type">
+                        String
+            </td>
+            <td class="description last">A SVG Path (http://www.w3.org/TR/SVG/paths.html)</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    A path or the current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">String</span> |
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="pointAtLength"><span class="type-signature"></span>pointAtLength</h4>
+</dt>
+<dd>
+    <div class="description">
+        Returns a point at a certain length
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>length</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last"></td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+	<dt class="tag-see">See:</dt>
+	<dd class="tag-see">
+        <ul>
+            <li>pathLength</li>
+        </ul>
+	</dd>
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The x and y position
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Array</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="points"><span class="type-signature"></span>points</h4>
+</dt>
+<dd>
+    <div class="description">
+        Sets the segments of the Path and returns the current Path instance.
+Or returns a copy of all the contained segments of the Path when no parameter is given.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>param</code></td>
+            <td class="type">
+                        Array
+                         | 
+                        Number
+            </td>
+            <td class="description last">An array of points or a list of points</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    An array of points or the current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Array</span> |
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+        <h5>Example</h5>
+    {% highlight javascript %}myPath.points();
+myPath.points(x,y);
+myPath.points([x,y]);
+myPath.points(x, y, x, y, x, y);{% endhighlight %}
+</dd>
+<dt>
+    <h4 class="name" id="quadraticCurveBy"><span class="type-signature"></span>quadraticCurveBy</h4>
+</dt>
+<dd>
+    <div class="description">
+        Adds a quadratic bezier curve to the shape. Coordinates are relative
+(i.e. relate to the end of the previous path segment).
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>cpx</code></td>
+            <td class="type">
+                        number
+            </td>
+            <td class="description last">x value of the control point</td>
+        </tr>
+        <tr>
+                <td class="name"><code>cpy</code></td>
+            <td class="type">
+                        number
+            </td>
+            <td class="description last">y value of the control point</td>
+        </tr>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        number
+            </td>
+            <td class="description last">x value of the anchor point</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        number
+            </td>
+            <td class="description last">y value of the anchor point</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    the instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">this</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="quadraticCurveTo"><span class="type-signature"></span>quadraticCurveTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Adds a quadratic bezier curve to the shape. Coordinates are absolute
+(i.e. relate to the coordinate system of the shape).
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>cpx</code></td>
+            <td class="type">
+                        number
+            </td>
+            <td class="description last">x value of the control point</td>
+        </tr>
+        <tr>
+                <td class="name"><code>cpy</code></td>
+            <td class="type">
+                        number
+            </td>
+            <td class="description last">y value of the control point</td>
+        </tr>
+        <tr>
+                <td class="name"><code>x</code></td>
+            <td class="type">
+                        number
+            </td>
+            <td class="description last">x value of the anchor point</td>
+        </tr>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        number
+            </td>
+            <td class="description last">y value of the anchor point</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    the instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">this</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="segments"><span class="type-signature"></span>segments</h4>
+</dt>
+<dd>
+    <div class="description">
+        Sets the segments of the Path and returns the current Path instance.
+Or returns a copy of all the contained segments of the Path when no parameter is given.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>commands</code></td>
+            <td class="type">
+                        Array
+            </td>
+            <td class="description last">The commands</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    An Array of segments or the current Path instance.
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Array</span> |
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+        <h5>Example</h5>
+    {% highlight javascript %}myPath.segments();
+myPath.segments('moveTo', 0, 0);
+myPath.segments(['moveTo', 0, 0]);
+myPath.segments([ ['moveTo', 0, 0], ['lineTo', 10, 10] ]);{% endhighlight %}
+</dd>
+<dt>
+    <h4 class="name" id="stroke"><span class="type-signature"></span>stroke</h4>
+</dt>
+<dd>
+    <div class="description">
+        Applies a strokeColor or strokeGradient to the shape
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>fill</code></td>
+            <td class="type">
+                        String
+                         | 
+                        Number
+                         | 
+                        LinearGradient
+                         | 
+                        RadialGradient
+                         | 
+                        <a href="Bitmap.html">Bitmap</a>
+                         | 
+                        color.RGBAColor
+            </td>
+            <td class="description last">The fillColor (see `color.parse`), fillImage or fillGradient</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="toCurves"><span class="type-signature"></span>toCurves</h4>
+</dt>
+<dd>
+    <div class="description">
+        Converts segments to absolute bezier curve instructions (curveTo)
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Argument</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>requiredCurves</code></td>
+            <td class="type">
+                        Number
+            </td>
+                <td class="attributes">
+                    &lt;optional><br>
+                </td>
+            <td class="description last">Number of curves required</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="verticalLineBy"><span class="type-signature"></span>verticalLineBy</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments, which describes a
+straight line from the last Point to the given relative Point.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">relative y-value</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="verticalLineTo"><span class="type-signature"></span>verticalLineTo</h4>
+</dt>
+<dd>
+    <div class="description">
+        Appends a segment at the end of the list of segments, which describes a
+straight line from the last Point to the given absolute Point.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>y</code></td>
+            <td class="type">
+                        Number
+            </td>
+            <td class="description last">absolute y-value</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The current Path instance
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		<span class="param-type">Path</span> 
+	</dd>
+</dl>
+</dd>
+        </dl>
 </article>
 </section>  
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Tue Oct 16 2012 14:50:25 GMT+0100 (BST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 16:47:10 GMT+0200 (MESZ)
 </footer>
 
 

@@ -15,8 +15,8 @@ relatedNames:
     <h2>
     Stage
     </h2>
-        <div class="class-description"><p>A Stage instance is the root of your movie. There should never
- be a need to instantiate a new Stage from within a movie.</p></div>
+        <div class="class-description">A Stage instance is the root of your movie. There should never
+ be a need to instantiate a new Stage from within a movie.</div>
 </header>  
 <article>
     <div class="container-overview">
@@ -25,7 +25,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Constructs the movie root, i.e. the global <code>stage</code>.</p>
+        Constructs the movie root, i.e. the global `stage`.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -42,8 +42,8 @@ relatedNames:
             <td class="type">
                         Object
             </td>
-            <td class="description last"><p>The messageChannel object used to
- communicate with the renderer</p></td>
+            <td class="description last">The messageChannel object used to
+ communicate with the renderer</td>
         </tr>
 	</tbody>
 </table>
@@ -63,13 +63,13 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Destroys the stage</p>
+        Destroys the stage
     </div>
 <dl class="details">
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -85,7 +85,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Sends a <code>destroyAsset</code> message to the renderer</p>
+        Sends a `destroyAsset` message to the renderer
     </div>
 <dl class="details">
 </dl>
@@ -95,7 +95,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Freeze/destroy the loop</p>
+        Freeze/destroy the loop
     </div>
 <dl class="details">
 </dl>
@@ -105,7 +105,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Sends a <code>loadAsset</code> message to the renderer</p>
+        Sends a `loadAsset` message to the renderer
     </div>
 <dl class="details">
 </dl>
@@ -115,8 +115,8 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Loads a sub movie and runs it in the context of a new Movie object
-(should be provided by RunnerContext bootstrap)</p>
+        Loads a sub movie and runs it in the context of a new Movie object
+(should be provided by RunnerContext bootstrap)
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -132,17 +132,17 @@ relatedNames:
                 <td class="name"><code>movieUrl</code></td>
             <td class="type">
             </td>
-            <td class="description last"><p>URL of sub-movie (will use the dirname of the submovie as asset path)</p></td>
+            <td class="description last">URL of sub-movie (will use the dirname of the submovie as asset path)</td>
         </tr>
         <tr>
                 <td class="name"><code>callback</code></td>
             <td class="type">
                         Function
             </td>
-            <td class="description last"><p>A callback to be called when your movie has
+            <td class="description last">A callback to be called when your movie has
  loaded. The callback will be called with it's first argument signifying
- an error. So, if the first argument is <code>null</code> you can assume the movie
- was loaded successfully.</p></td>
+ an error. So, if the first argument is `null` you can assume the movie
+ was loaded successfully.</td>
         </tr>
 	</tbody>
 </table>
@@ -154,7 +154,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Sends data to the client.</p>
+        Sends data to the client.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -178,7 +178,7 @@ relatedNames:
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -194,7 +194,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Sends a message to the renderer / stage controller</p>
+        Sends a message to the renderer / stage controller
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -218,7 +218,7 @@ relatedNames:
                 <td class="default">
                     null
                 </td>
-            <td class="description last"><p>The message category</p></td>
+            <td class="description last">The message category</td>
         </tr>
         <tr>
                 <td class="name"><code>messageData</code></td>
@@ -236,7 +236,7 @@ relatedNames:
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The instance</p>
+    The instance
 </div>
 <dl>
 	<dt>
@@ -252,7 +252,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Set the background color of the stage</p>
+        Set the background color of the stage
     </div>
 <dl class="details">
 </dl>
@@ -262,7 +262,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Set the framerate of the movie</p>
+        Set the framerate of the movie
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -279,7 +279,7 @@ relatedNames:
             <td class="type">
                         Number
             </td>
-            <td class="description last"><p>frames per second</p></td>
+            <td class="description last">frames per second</td>
         </tr>
 	</tbody>
 </table>
@@ -291,7 +291,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Sets options on the stage</p>
+        Sets options on the stage
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -332,7 +332,7 @@ relatedNames:
                 <td class="default">
                     30
                 </td>
-            <td class="description last"><p>Playback speed of the movie</p></td>
+            <td class="description last">Playback speed of the movie</td>
         </tr>
         <tr>
                 <td class="name"><code>baseUrl</code></td>
@@ -345,7 +345,7 @@ relatedNames:
                 <td class="default">
                     '.'
                 </td>
-            <td class="description last"><p>The base URL to use to resolve urls.</p></td>
+            <td class="description last">The base URL to use to resolve urls.</td>
         </tr>
         <tr>
                 <td class="name"><code>pluginUrl</code></td>
@@ -358,7 +358,7 @@ relatedNames:
                 <td class="default">
                     '.'
                 </td>
-            <td class="description last"><p>The base URL to use to resolve plugin location.</p></td>
+            <td class="description last">The base URL to use to resolve plugin location.</td>
         </tr>
         <tr>
                 <td class="name"><code>plugins</code></td>
@@ -370,7 +370,7 @@ relatedNames:
                 </td>
                 <td class="default">
                 </td>
-            <td class="description last"><p>A list of plugin names to load.</p></td>
+            <td class="description last">A list of plugin names to load.</td>
         </tr>
 	</tbody>
 </table>
@@ -382,7 +382,7 @@ relatedNames:
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>the stage intance.</p>
+    the stage intance.
 </div>
 <dl>
 	<dt>
@@ -398,7 +398,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Set the technique for rendering, currently only supporting value, 'crispEdges'.</p>
+        Set the technique for rendering, currently only supporting value, 'crispEdges'.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -415,7 +415,7 @@ relatedNames:
             <td class="type">
                         String
             </td>
-            <td class="description last"><p>'crispEdges'</p></td>
+            <td class="description last">'crispEdges'</td>
         </tr>
 	</tbody>
 </table>
@@ -427,7 +427,7 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Unfreeze/initiate the loop</p>
+        Unfreeze/initiate the loop
     </div>
 <dl class="details">
 </dl>
@@ -438,7 +438,7 @@ relatedNames:
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Tue Oct 16 2012 14:50:25 GMT+0100 (BST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 16:47:12 GMT+0200 (MESZ)
 </footer>
 
 

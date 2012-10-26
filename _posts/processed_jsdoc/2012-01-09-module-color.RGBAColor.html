@@ -16,9 +16,9 @@ relatedNames:
         <span class="ancestors"><a href="module-color.html">color</a>.</span>
     RGBAColor
     </h2>
-        <div class="class-description"><p>This class is used internally by the color module. It can be used
+        <div class="class-description">This class is used internally by the color module. It can be used
  to represent a color consisting of Red, Green, Blue and Alpha values. It also
- provides methods to mutate the color and methods to spawn new colors.</p></div>
+ provides methods to mutate the color and methods to spawn new colors.</div>
 </header>  
 <article>
     <div class="container-overview">
@@ -27,8 +27,8 @@ relatedNames:
 </dt>
 <dd>
     <div class="description">
-        <p>Constructs a new RGBAColor instance with specified <code>r</code>, <code>g</code>, <code>b</code>, and <code>a</code>
-values.</p>
+        Constructs a new RGBAColor instance with specified `r`, `g`, `b`, and `a`
+values.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -45,28 +45,28 @@ values.</p>
             <td class="type">
                         Number
             </td>
-            <td class="description last"><p>Red (0..255)</p></td>
+            <td class="description last">Red (0..255)</td>
         </tr>
         <tr>
                 <td class="name"><code>g</code></td>
             <td class="type">
                         Number
             </td>
-            <td class="description last"><p>Green (0..255)</p></td>
+            <td class="description last">Green (0..255)</td>
         </tr>
         <tr>
                 <td class="name"><code>b</code></td>
             <td class="type">
                         Number
             </td>
-            <td class="description last"><p>Blue (0..255)</p></td>
+            <td class="description last">Blue (0..255)</td>
         </tr>
         <tr>
                 <td class="name"><code>a</code></td>
             <td class="type">
                         Number
             </td>
-            <td class="description last"><p>Alpha (0..1)</p></td>
+            <td class="description last">Alpha (0..1)</td>
         </tr>
 	</tbody>
 </table>
@@ -81,7 +81,7 @@ values.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Clones the color instance and optionally mutates properties</p>
+        Clones the color instance and optionally mutates properties
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -102,8 +102,8 @@ values.</p>
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last"><p>hash-map of properties/vals to mutate once
-cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
+            <td class="description last">hash-map of properties/vals to mutate once
+cloned. E.g. `{hue:.2, lightness:.3}`</td>
         </tr>
 	</tbody>
 </table>
@@ -111,7 +111,7 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>Cloned instance of color</p>
+    Cloned instance of color
 </div>
 <dl>
 	<dt>
@@ -127,7 +127,7 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns a darker color</p>
+        Returns a darker color
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -148,7 +148,7 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last"><p>Decreased by n lightness</p></td>
+            <td class="description last">Decreased by n lightness</td>
         </tr>
 	</tbody>
 </table>
@@ -160,7 +160,7 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Get one of r, g, b, a, h, s, l</p>
+        Get one of r, g, b, a, h, s, l
     </div>
 <dl class="details">
 </dl>
@@ -170,13 +170,13 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns the color in hsla() format as specified in the CSS spec</p>
+        Returns the color in hsla() format as specified in the CSS spec
     </div>
 <dl class="details">
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>HSLA representation</p>
+    HSLA representation
 </div>
 <dl>
 	<dt>
@@ -192,13 +192,13 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns the color in 32-bit int repr</p>
+        Returns the color in 32-bit int repr
     </div>
 <dl class="details">
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>Color as 32-bit int</p>
+    Color as 32-bit int
 </div>
 <dl>
 	<dt>
@@ -214,7 +214,7 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns a lighter color</p>
+        Returns a lighter color
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -235,7 +235,7 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last"><p>Increase by n lightness</p></td>
+            <td class="description last">Increase by n lightness</td>
         </tr>
 	</tbody>
 </table>
@@ -247,7 +247,7 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns the midpoint color between this color and whatever is passed</p>
+        Returns the midpoint color between this color and whatever is passed
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -268,7 +268,7 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
                          | 
                         Number
             </td>
-            <td class="description last"><p>The midpoint color</p></td>
+            <td class="description last">The midpoint color</td>
         </tr>
 	</tbody>
 </table>
@@ -280,8 +280,8 @@ cloned. E.g. <code>{hue:.2, lightness:.3}</code></p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns a color with randomised properties as per the passed
-properties array and range.</p>
+        Returns a color with randomised properties as per the passed
+properties array and range.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -300,17 +300,17 @@ properties array and range.</p>
                          | 
                         String
             </td>
-            <td class="description last"><p>The property/properties to be randomized</p></td>
+            <td class="description last">The property/properties to be randomized</td>
         </tr>
         <tr>
                 <td class="name"><code>range</code></td>
             <td class="type">
                         Number
             </td>
-            <td class="description last"><p>The range of the randomisation. 0..1 for hsla,
+            <td class="description last">The range of the randomisation. 0..1 for hsla,
    and 0..255 for rgba.  If passed, then the randomization will occur
    around the current value to the specified degree. If no range is passed
-   then the produced value could be anything (red = 0..255, alpha = 0..1 etc.)</p></td>
+   then the produced value could be anything (red = 0..255, alpha = 0..1 etc.)</td>
         </tr>
 	</tbody>
 </table>
@@ -318,7 +318,7 @@ properties array and range.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>Randomly produced color</p>
+    Randomly produced color
 </div>
 <dl>
 	<dt>
@@ -334,13 +334,13 @@ properties array and range.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns the color in rgb() format as specified in the CSS spec</p>
+        Returns the color in rgb() format as specified in the CSS spec
     </div>
 <dl class="details">
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>RGB representation</p>
+    RGB representation
 </div>
 <dl>
 	<dt>
@@ -356,13 +356,13 @@ properties array and range.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns the color in rgba() format as specified in the CSS spec</p>
+        Returns the color in rgba() format as specified in the CSS spec
     </div>
 <dl class="details">
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>RGBA representation</p>
+    RGBA representation
 </div>
 <dl>
 	<dt>
@@ -378,9 +378,9 @@ properties array and range.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Set one of r, g, b, a, h, s, l
+        Set one of r, g, b, a, h, s, l
 It allows the full forms too, since it only grabs charAt(0)
-E.g. red, alpha, hue, lightness etc.</p>
+E.g. red, alpha, hue, lightness etc.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -402,8 +402,8 @@ E.g. red, alpha, hue, lightness etc.</p>
             </td>
                 <td class="attributes">
                 </td>
-            <td class="description last"><p>Property to change (e.g. hue, or h) or a
-hash-map of properties andT values</p></td>
+            <td class="description last">Property to change (e.g. hue, or h) or a
+hash-map of properties andT values</td>
         </tr>
         <tr>
                 <td class="name"><code>val</code></td>
@@ -413,8 +413,8 @@ hash-map of properties andT values</p></td>
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last"><p>Value to change if prop is the property and NOT a
-hash-map</p></td>
+            <td class="description last">Value to change if prop is the property and NOT a
+hash-map</td>
         </tr>
 	</tbody>
 </table>
@@ -426,7 +426,7 @@ hash-map</p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Applies a colorMatrix</p>
+        Applies a colorMatrix
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -443,7 +443,7 @@ hash-map</p></td>
             <td class="type">
                         colorMatrix
             </td>
-            <td class="description last"><p>The value of the colorMatrix filter</p></td>
+            <td class="description last">The value of the colorMatrix filter</td>
         </tr>
 	</tbody>
 </table>
@@ -451,7 +451,7 @@ hash-map</p></td>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The current RGBAColor instance</p>
+    The current RGBAColor instance
 </div>
 <dl>
 	<dt>
@@ -467,13 +467,13 @@ hash-map</p></td>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns the color in 32-bit repr ('0x&lt;rr&gt;&lt;gg&gt;&lt;bb&gt;&lt;aa&gt;')</p>
+        Returns the color in 32-bit repr ('0x<rr><gg><bb><aa>')
     </div>
 <dl class="details">
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>Color as '0x&lt;rr&gt;&lt;gg&gt;&lt;bb&gt;&lt;aa&gt;'</p>
+    Color as '0x<rr><gg><bb><aa>'
 </div>
 <dl>
 	<dt>
@@ -490,7 +490,7 @@ hash-map</p></td>
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Tue Oct 16 2012 14:50:24 GMT+0100 (BST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 16:47:06 GMT+0200 (MESZ)
 </footer>
 
 

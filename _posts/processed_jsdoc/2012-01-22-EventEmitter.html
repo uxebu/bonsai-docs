@@ -18,7 +18,7 @@ relatedNames:
 </header>  
 <article>
     <div class="container-overview">
-            <div class="description"><p>This module contains mixin methods for handling events.</p></div>
+            <div class="description">This module contains mixin methods for handling events.</div>
 <dl class="details">
 </dl>
             <h3>Example</h3>
@@ -32,8 +32,8 @@ tools.mixin(MyClass.prototype, EventEmitter);{% endhighlight %}
 </dt>
 <dd>
     <div class="description">
-        <p>Registers a single listener for the specified event type(s).
-Listeners are executed with the <code>this</code> binding of the host object.</p>
+        Registers a single listener for the specified event type(s).
+Listeners are executed with the `this` binding of the host object.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -56,7 +56,7 @@ Listeners are executed with the <code>this</code> binding of the host object.</p
                 </td>
                 <td class="default">
                 </td>
-            <td class="description last"><p>The event type.</p></td>
+            <td class="description last">The event type.</td>
         </tr>
         <tr>
                 <td class="name"><code>context</code></td>
@@ -68,8 +68,8 @@ Listeners are executed with the <code>this</code> binding of the host object.</p
                 <td class="default">
                     null
                 </td>
-            <td class="description last"><p>The context to call the listener in.
- Defaults to the event emitter itself.</p></td>
+            <td class="description last">The context to call the listener in.
+ Defaults to the event emitter itself.</td>
         </tr>
         <tr>
                 <td class="name"><code>listener</code></td>
@@ -80,7 +80,7 @@ Listeners are executed with the <code>this</code> binding of the host object.</p
                 </td>
                 <td class="default">
                 </td>
-            <td class="description last"><p>The function called when the event occurs.</p></td>
+            <td class="description last">The function called when the event occurs.</td>
         </tr>
 	</tbody>
 </table>
@@ -88,7 +88,7 @@ Listeners are executed with the <code>this</code> binding of the host object.</p
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The host object.</p>
+    The host object.
 </div>
 <dl>
 	<dt>
@@ -109,7 +109,7 @@ object.addListener('blur focus', listener);{% endhighlight %}
 </dt>
 <dd>
     <div class="description">
-        <p>Executes all registered listeners of the specified event type.</p>
+        Executes all registered listeners of the specified event type.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -129,7 +129,7 @@ object.addListener('blur focus', listener);{% endhighlight %}
             </td>
                 <td class="attributes">
                 </td>
-            <td class="description last"><p>The event type.</p></td>
+            <td class="description last">The event type.</td>
         </tr>
         <tr>
                 <td class="name"><code>args1, ...</code></td>
@@ -139,7 +139,7 @@ object.addListener('blur focus', listener);{% endhighlight %}
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last"><p>Any number of arguments to pass to the listener.</p></td>
+            <td class="description last">Any number of arguments to pass to the listener.</td>
         </tr>
 	</tbody>
 </table>
@@ -147,7 +147,7 @@ object.addListener('blur focus', listener);{% endhighlight %}
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The host object.</p>
+    The host object.
 </div>
 <dl>
 	<dt>
@@ -163,8 +163,8 @@ object.addListener('blur focus', listener);{% endhighlight %}
 </dt>
 <dd>
     <div class="description">
-        <p>Executes all registered listeners of the specified event type after
-the current execution block completes (i.e. asynchronously)</p>
+        Executes all registered listeners of the specified event type after
+the current execution block completes (i.e. asynchronously)
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -184,7 +184,7 @@ the current execution block completes (i.e. asynchronously)</p>
             </td>
                 <td class="attributes">
                 </td>
-            <td class="description last"><p>The event type.</p></td>
+            <td class="description last">The event type.</td>
         </tr>
         <tr>
                 <td class="name"><code>args1, ...</code></td>
@@ -194,7 +194,7 @@ the current execution block completes (i.e. asynchronously)</p>
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last"><p>Any number of arguments to pass to the listener.</p></td>
+            <td class="description last">Any number of arguments to pass to the listener.</td>
         </tr>
 	</tbody>
 </table>
@@ -202,7 +202,7 @@ the current execution block completes (i.e. asynchronously)</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The host object.</p>
+    The host object.
 </div>
 <dl>
 	<dt>
@@ -218,8 +218,8 @@ the current execution block completes (i.e. asynchronously)</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Returns an array of event listeners for a given type that can be
-manipulated to add or remove listeners.</p>
+        Returns an array of event listeners for a given type that can be
+manipulated to add or remove listeners.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -236,7 +236,7 @@ manipulated to add or remove listeners.</p>
             <td class="type">
                         String
             </td>
-            <td class="description last"><p>The event type.</p></td>
+            <td class="description last">The event type.</td>
         </tr>
 	</tbody>
 </table>
@@ -244,7 +244,7 @@ manipulated to add or remove listeners.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The listeners array.</p>
+    The listeners array.
 </div>
 <dl>
 	<dt>
@@ -260,7 +260,7 @@ manipulated to add or remove listeners.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>An alias for <code>addListener</code>.</p>
+        An alias for `addListener`.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -277,14 +277,14 @@ manipulated to add or remove listeners.</p>
             <td class="type">
                         String
             </td>
-            <td class="description last"><p>The event type.</p></td>
+            <td class="description last">The event type.</td>
         </tr>
         <tr>
                 <td class="name"><code>listener</code></td>
             <td class="type">
                         Function
             </td>
-            <td class="description last"><p>The function called when the event occurs.</p></td>
+            <td class="description last">The function called when the event occurs.</td>
         </tr>
 	</tbody>
 </table>
@@ -292,7 +292,7 @@ manipulated to add or remove listeners.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The host object.</p>
+    The host object.
 </div>
 <dl>
 	<dt>
@@ -308,7 +308,7 @@ manipulated to add or remove listeners.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Registers a listener that will only be executed one time.</p>
+        Registers a listener that will only be executed one time.
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -331,7 +331,7 @@ manipulated to add or remove listeners.</p>
                 </td>
                 <td class="default">
                 </td>
-            <td class="description last"><p>The event type.</p></td>
+            <td class="description last">The event type.</td>
         </tr>
         <tr>
                 <td class="name"><code>context</code></td>
@@ -343,8 +343,8 @@ manipulated to add or remove listeners.</p>
                 <td class="default">
                     null
                 </td>
-            <td class="description last"><p>The context to call the listener in.
- Defaults to the event emitter itself.</p></td>
+            <td class="description last">The context to call the listener in.
+ Defaults to the event emitter itself.</td>
         </tr>
         <tr>
                 <td class="name"><code>listener</code></td>
@@ -355,7 +355,7 @@ manipulated to add or remove listeners.</p>
                 </td>
                 <td class="default">
                 </td>
-            <td class="description last"><p>The function called when the event occurs.</p></td>
+            <td class="description last">The function called when the event occurs.</td>
         </tr>
 	</tbody>
 </table>
@@ -363,7 +363,7 @@ manipulated to add or remove listeners.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The host object.</p>
+    The host object.
 </div>
 <dl>
 	<dt>
@@ -379,7 +379,7 @@ manipulated to add or remove listeners.</p>
 </dt>
 <dd>
     <div class="description">
-        <p>Unregisters all listeners or those for the specified event type(s).</p>
+        Unregisters all listeners or those for the specified event type(s).
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -400,8 +400,8 @@ manipulated to add or remove listeners.</p>
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last"><p>The event type. Unregisters all listeners if no
- event type is given.</p></td>
+            <td class="description last">The event type. Unregisters all listeners if no
+ event type is given.</td>
         </tr>
 	</tbody>
 </table>
@@ -409,7 +409,7 @@ manipulated to add or remove listeners.</p>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The host object.</p>
+    The host object.
 </div>
 <dl>
 	<dt>
@@ -432,7 +432,7 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
 </dt>
 <dd>
     <div class="description">
-        <p>Unregisters a single listener for the specified event type(s).</p>
+        Unregisters a single listener for the specified event type(s).
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -455,7 +455,7 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
                 </td>
                 <td class="default">
                 </td>
-            <td class="description last"><p>The event type.</p></td>
+            <td class="description last">The event type.</td>
         </tr>
         <tr>
                 <td class="name"><code>context</code></td>
@@ -467,7 +467,7 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
                 <td class="default">
                     null
                 </td>
-            <td class="description last"><p>The context the listener was registered with.</p></td>
+            <td class="description last">The context the listener was registered with.</td>
         </tr>
         <tr>
                 <td class="name"><code>listener</code></td>
@@ -478,7 +478,7 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
                 </td>
                 <td class="default">
                 </td>
-            <td class="description last"><p>The function to unregister.</p></td>
+            <td class="description last">The function to unregister.</td>
         </tr>
 	</tbody>
 </table>
@@ -486,7 +486,7 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
-    <p>The host object.</p>
+    The host object.
 </div>
 <dl>
 	<dt>
@@ -508,7 +508,7 @@ object.removeListener('blur focus', listener);{% endhighlight %}
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Tue Oct 16 2012 14:50:24 GMT+0100 (BST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 16:47:05 GMT+0200 (MESZ)
 </footer>
 
 
