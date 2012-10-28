@@ -46,12 +46,25 @@ For multitiple-finger interactions, you should bind to the following prefixxed e
  * `multi:pointermove`
  * `multi:drag`
 
-All `multi:` events will have a `touchId` in the passed event object, so you can
-keep track of the fingers currently on screen. i.e.
+All `multi:` events will have a `touchId` in the passed event object, which uniquely identifies the finger across 
+all touch sessions, so you can keep track of the fingers currently on screen. i.e.
 
 {% highlight javascript %}
 stage.on('multi:pointerdown', function(e) {
   e.touchId; // unique identifier for the current finger
+});
+{% endhighlight %}
+
+E.g. to track how many fingers are down, you can do the following:
+
+{% highlight javascript %}
+var down = 0;
+
+stage.on('multi:pointerdown', function(e) {
+  ++down
+  });
+stage.on('multi:pointerup', function(e) {
+  --down
 });
 {% endhighlight %}
 
