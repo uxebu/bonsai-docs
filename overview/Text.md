@@ -10,9 +10,9 @@ Bonsai's Text class can be used to display Text in the stage:
 new Text('Look at me').addTo(stage).attr({
   fontFamily: 'Arial, sans-serif',
   fontSize: '20',
-  fillColor: 'red',
-  strokeColor: 'yellow',
-  strokeWidth: 3
+  textFillColor: 'red',
+  textStrokeColor: 'yellow',
+  textStrokeWidth: 3
 });
 {% endhighlight %}
 
