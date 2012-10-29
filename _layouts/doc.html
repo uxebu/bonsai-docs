@@ -29,7 +29,7 @@
 		<h2 class="menuHeading">Overview</h2>
 		<ul>
 			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="{{site.baseurl}}/">Introduction</a></li>
-			{% for p in site.pages %}
+			{% for p in site.pages_sorted %}
 				{% unless p.title == 'Introduction' or p.title == '404 - not found' %}
 					<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 				{% endunless %}
