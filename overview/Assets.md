@@ -12,7 +12,7 @@ Bonsai currently supports five different asset types:
  * Video
 
 Note: All Asset classes will resolve the asset path using the `assetBaseUrl` that you
-can define when loading a movie ([more info on loading movies](/)). If it's not
+can define when loading a movie ([more info on loading movies](/Execution.html)). If it's not
 defined then it'll fallback on the `baseUrl`, and if that's not defined then it'll
 resolve the asset path against the page where the top-level movie is embedded.
 
