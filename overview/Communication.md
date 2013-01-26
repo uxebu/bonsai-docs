@@ -14,8 +14,7 @@ This is how you would communicate from/to the page to/from your Bonsai movie:
 <div id="movie"></div>
 <script>
   var movie = bonsai.run(
-    document.getElementById('movie'),
-    {
+    document.getElementById('movie'), {
       code: function() {
         // receive data from the other side
         var text = new Text().addTo(stage);

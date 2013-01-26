@@ -96,8 +96,7 @@ You can also pass initial data through `bonsai.run` to the runner context:
 
 {% highlight javascript %}
 bonsai.run(
-  document.getElementById('movie'),
-  {
+  document.getElementById('movie'), {
     url: 'movie.js',
     initialData1: { bonsai: 'tree' },
     initialData2: true,
