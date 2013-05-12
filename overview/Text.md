@@ -18,6 +18,7 @@ new Text('Look at me').addTo(stage).attr({
 
 ### Attributes
 
+ * `textAlign`: `left` or `center` or `right`. The horizontal alignment of the text
  * `textFillColor`: The color of the text
  * `textStrokeColor`: The color of the outline of the text
  * `textStrokeWidth`: The width of the outline of the text
