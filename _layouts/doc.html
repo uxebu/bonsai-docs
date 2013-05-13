@@ -31,26 +31,26 @@
 			<li><a {% if '/index.html' == page.url or '/' == page.url %}class="active"{% endif %} href="{{site.baseurl}}/">Introduction</a></li>
 			{% for p in site.pages %}
 				{% unless p.title == 'Introduction' or p.title == '404 - not found' %}
-					<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
+					<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}/{{p.url}}">{{p.title}}</a></li>
 				{% endunless %}
 			{% endfor %}
 		</ul>
 		<h2 class="menuHeading">API: Modules</h2>
 		<ul>
 			{% for p in site.categories.Module %}
-				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
+				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}/{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
 		<h2 class="menuHeading">API: Classes</h2>
 		<ul>
 			{% for p in site.categories.Class %}
-				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
+				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}/{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
 		<h2 class="menuHeading">API: Mixins</h2>
 		<ul>
 			{% for p in site.categories.Mixin %}
-				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
+				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}/{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
@@ -117,9 +117,9 @@
 		<br style="clear:both;"/>
 	</div>
 
-	<script src="{{site.baseurl}}/lib/ace/ace-noconflict.js"></script>
+	<script src="{{site.baseurl}}lib/ace/ace-noconflict.js"></script>
 	<script src="//cloud.github.com/downloads/uxebu/bonsai/bonsai-0.4.1.min.js"></script>
-	<script src="{{site.baseurl}}/assets/doc.js"></script>
+	<script src="{{site.baseurl}}assets/doc.js"></script>
 
 	<script>
 		doc.init();
