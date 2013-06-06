@@ -1,7 +1,7 @@
 ---
 title: 'Animation'
 layout: doc
-categories: jsdoc Class
+categories: [jsdoc,Class]
 relatedLinks:
  - /overview/Easing.html
  - /overview/Animation.html
@@ -22,11 +22,11 @@ relatedNames:
 <article>
     <div class="container-overview">
 <dt>
-    <h4 class="name" id="Animation"><span class="type-signature"></span>new Animation</h4>
+    <h4 class="name" id="Animation"><span class="type-signature"></span>new Animation<span class="signature">(clock, duration, <span class="optional">endValues</span>, <span class="optional">options</span>)</span><span class="type-signature"> &rarr; {Animation}</span></h4>
 </dt>
 <dd>
     <div class="description">
-        The animation class stuff
+        Simplified alias for KeyframeAnimation
     </div>
         <h5>Parameters:</h5>
 <table class="params">
@@ -42,7 +42,7 @@ relatedNames:
         <tr>
                 <td class="name"><code>clock</code></td>
             <td class="type">
-                        <a href="EventEmitter.html">EventEmitter</a>
+<span class="param-type"><a href="EventEmitter.html">EventEmitter</a></span>
             </td>
                 <td class="attributes">
                 </td>
@@ -52,9 +52,9 @@ relatedNames:
         <tr>
                 <td class="name"><code>duration</code></td>
             <td class="type">
-                        Number
-                         | 
-                        String
+<span class="param-type">Number</span>
+|
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -63,9 +63,9 @@ relatedNames:
  of the clock's total frames (e.g. '23%')</td>
         </tr>
         <tr>
-                <td class="name"><code>properties</code></td>
+                <td class="name"><code>endValues</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -75,14 +75,19 @@ relatedNames:
         <tr>
                 <td class="name"><code>options</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
                 </td>
-            <td class="description last">Additional options
-                <h6>Properties</h6>
-<table class="params">
+            <td class="description last">Additional options</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+        <h5 class="subsection-title">Properties:</h5>
+        <dl>
+<table class="props">
     <thead>
 	<tr>
 		<th>Name</th>
@@ -94,11 +99,11 @@ relatedNames:
 	</thead>
 	<tbody>
         <tr>
-                <td class="name"><code>easing</code></td>
+                <td class="name"><code>options.easing</code></td>
             <td class="type">
-                        String
-                         | 
-                        Function
+<span class="param-type">String</span>
+|
+<span class="param-type">Function</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -109,9 +114,9 @@ relatedNames:
  of a predefined or a custom function</td>
         </tr>
         <tr>
-                <td class="name"><code>isTimelineBound</code></td>
+                <td class="name"><code>options.isTimelineBound</code></td>
             <td class="type">
-                        Boolean
+<span class="param-type">Boolean</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -123,11 +128,11 @@ relatedNames:
  or play regardless of timeline's progress.</td>
         </tr>
         <tr>
-                <td class="name"><code>subjects</code></td>
+                <td class="name"><code>options.subjects</code></td>
             <td class="type">
-                        Array
-                         | 
-                        Object
+<span class="param-type">Array</span>
+|
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -138,11 +143,11 @@ relatedNames:
    the animation</td>
         </tr>
         <tr>
-                <td class="name"><code>strategy</code></td>
+                <td class="name"><code>options.strategy</code></td>
             <td class="type">
-                        string
-                         | 
-                        Object
+<span class="param-type">string</span>
+|
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -154,11 +159,11 @@ relatedNames:
    get and set properties on the subject.</td>
         </tr>
         <tr>
-                <td class="name"><code>delay</code></td>
+                <td class="name"><code>options.delay</code></td>
             <td class="type">
-                        Number
-                         | 
-                        String
+<span class="param-type">Number</span>
+|
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -170,9 +175,9 @@ relatedNames:
  frames or seconds</td>
         </tr>
         <tr>
-                <td class="name"><code>repeat</code></td>
+                <td class="name"><code>options.repeat</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -183,14 +188,14 @@ relatedNames:
             <td class="description last">The number of repetitions.</td>
         </tr>
 	</tbody>
-</table>
-            </td>
-        </tr>
-	</tbody>
-</table>
-<dl class="details">
+</table></dl>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="animation.js.html">runner/animation/animation.js</a>, <a href="animation.js.html#line7">line 7</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
+    <ul>
+            <li>
 <div class="param-desc">
     An Animation instance
 </div>
@@ -199,9 +204,21 @@ relatedNames:
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Animation</span> 
+<span class="param-type">Animation</span>
 	</dd>
 </dl>
+</li>
+            <li>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+<span class="param-type">KeyframeAnimation</span>
+	</dd>
+</dl>
+</li>
+        </ul>
 </dd>
     </div>
         <h3 class="subsection-title">Mixes In</h3>
@@ -213,7 +230,7 @@ relatedNames:
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 17:17:46 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jun 06 2013 10:17:06 GMT+0200 (CEST)
 </footer>
 
 

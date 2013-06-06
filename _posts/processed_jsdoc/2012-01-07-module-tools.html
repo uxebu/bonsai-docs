@@ -1,7 +1,7 @@
 ---
 title: 'tools'
 layout: doc
-categories: jsdoc Module
+categories: [jsdoc,Module]
 relatedLinks:
 
 relatedNames:
@@ -21,12 +21,15 @@ relatedNames:
             <div class="description">This module contains generic utility functions which are used heavily
 internally.</div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line19">line 19</a>
+    </li></ul></dd>
 </dl>
     </div>
         <h3 class="subsection-title">Methods</h3>
         <dl>
 <dt>
-    <h4 class="name" id="baseUri"><span class="type-signature">&lt;static> </span>baseUri</h4>
+    <h4 class="name" id="baseUri"><span class="type-signature">&lt;static> </span>baseUri<span class="signature">(document)</span><span class="type-signature"> &rarr; {string}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -47,13 +50,16 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>document</code></td>
             <td class="type">
-                        HTMLDocument
+<span class="param-type">HTMLDocument</span>
             </td>
             <td class="description last"></td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line30">line 30</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <dl>
@@ -61,12 +67,12 @@ guaranteed to have a trailing slash.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">string</span> 
+<span class="param-type">string</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="beget"><span class="type-signature">&lt;static> </span>beget</h4>
+    <h4 class="name" id="beget"><span class="type-signature">&lt;static> </span>beget<span class="signature">(prototype)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -85,13 +91,16 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>prototype</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
             <td class="description last">The [[Prototype]].</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line48">line 48</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -102,12 +111,12 @@ guaranteed to have a trailing slash.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="descriptorAccessor"><span class="type-signature">&lt;static> </span>descriptorAccessor</h4>
+    <h4 class="name" id="descriptorAccessor"><span class="type-signature">&lt;static> </span>descriptorAccessor<span class="signature">(get, set, <span class="optional">enumerable</span>, <span class="optional">configurable</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -127,7 +136,7 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>get</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -136,7 +145,7 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>set</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -145,7 +154,7 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>enumerable</code></td>
             <td class="type">
-                        boolean
+<span class="param-type">boolean</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -155,7 +164,7 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>configurable</code></td>
             <td class="type">
-                        boolean
+<span class="param-type">boolean</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -166,6 +175,9 @@ guaranteed to have a trailing slash.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line64">line 64</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -177,12 +189,12 @@ guaranteed to have a trailing slash.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="descriptorData"><span class="type-signature">&lt;static> </span>descriptorData</h4>
+    <h4 class="name" id="descriptorData"><span class="type-signature">&lt;static> </span>descriptorData<span class="signature">(value, <span class="optional">writable</span>, <span class="optional">enumerable</span>, <span class="optional">configurable</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -202,7 +214,7 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>value</code></td>
             <td class="type">
-                        mixed
+<span class="param-type">any</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -211,7 +223,7 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>writable</code></td>
             <td class="type">
-                        boolean
+<span class="param-type">boolean</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -221,7 +233,7 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>enumerable</code></td>
             <td class="type">
-                        boolean
+<span class="param-type">boolean</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -231,7 +243,7 @@ guaranteed to have a trailing slash.
         <tr>
                 <td class="name"><code>configurable</code></td>
             <td class="type">
-                        boolean
+<span class="param-type">boolean</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -242,6 +254,9 @@ guaranteed to have a trailing slash.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line84">line 84</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -253,12 +268,56 @@ guaranteed to have a trailing slash.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="forEach"><span class="type-signature">&lt;static> </span>forEach</h4>
+    <h4 class="name" id="extractUnit"><span class="type-signature">&lt;static> </span>extractUnit<span class="signature">(any)</span><span class="type-signature"> &rarr; {string}</span></h4>
+</dt>
+<dd>
+    <div class="description">
+        Parse a given unit string into the amount and unit
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>any</code></td>
+            <td class="type">
+<span class="param-type">any</span>
+            </td>
+            <td class="description last">Anything that can be converted to a string. E.g. '7deg', ['50%']</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line351">line 351</a>
+    </li></ul></dd>
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    unit
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+<span class="param-type">string</span>
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="forEach"><span class="type-signature">&lt;static> </span>forEach<span class="signature">(array, callback, thisArg)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -278,27 +337,30 @@ Callbacks may terminate the loop by explicitly returning `false`.
         <tr>
                 <td class="name"><code>array</code></td>
             <td class="type">
-                        Array
+<span class="param-type">Array</span>
             </td>
             <td class="description last">The array to iterate over.</td>
         </tr>
         <tr>
                 <td class="name"><code>callback</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
             <td class="description last">The function called per iteration.</td>
         </tr>
         <tr>
                 <td class="name"><code>thisArg</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
             <td class="description last">The `this` binding for the callback function.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line102">line 102</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -309,12 +371,12 @@ Callbacks may terminate the loop by explicitly returning `false`.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> 
+<span class="param-type">Array</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="forOwn"><span class="type-signature">&lt;static> </span>forOwn</h4>
+    <h4 class="name" id="forOwn"><span class="type-signature">&lt;static> </span>forOwn<span class="signature">(object, callback, thisArg)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -334,27 +396,30 @@ Callbacks may terminate the loop by explicitly returning `false`.
         <tr>
                 <td class="name"><code>object</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
             <td class="description last">The object to iterate over.</td>
         </tr>
         <tr>
                 <td class="name"><code>callback</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
             <td class="description last">The function executed per own property.</td>
         </tr>
         <tr>
                 <td class="name"><code>thisArg</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
             <td class="description last">The `this` binding for the callback function.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line125">line 125</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -365,12 +430,12 @@ Callbacks may terminate the loop by explicitly returning `false`.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="getter"><span class="type-signature">&lt;static> </span>getter</h4>
+    <h4 class="name" id="getter"><span class="type-signature">&lt;static> </span>getter<span class="signature">(propertyName)</span><span class="type-signature"> &rarr; {Function}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -391,13 +456,16 @@ respective context (`this`) on invokation.
         <tr>
                 <td class="name"><code>propertyName</code></td>
             <td class="type">
-                        string
+<span class="param-type">string</span>
             </td>
             <td class="description last">The name of the property to look up.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line146">line 146</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <dl>
@@ -405,12 +473,12 @@ respective context (`this`) on invokation.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Function</span> 
+<span class="param-type">Function</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="hitch"><span class="type-signature">&lt;static> </span>hitch</h4>
+    <h4 class="name" id="hitch"><span class="type-signature">&lt;static> </span>hitch<span class="signature">(thisArg, A)</span><span class="type-signature"> &rarr; {Function}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -430,7 +498,7 @@ respective context (`this`) on invokation.
         <tr>
                 <td class="name"><code>thisArg</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -440,9 +508,9 @@ respective context (`this`) on invokation.
         <tr>
                 <td class="name"><code>A</code></td>
             <td class="type">
-                        Function
-                         | 
-                        String
+<span class="param-type">Function</span>
+|
+<span class="param-type">string</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -462,6 +530,9 @@ respective context (`this`) on invokation.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line163">line 163</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -472,12 +543,12 @@ respective context (`this`) on invokation.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Function</span> 
+<span class="param-type">Function</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="indexOf"><span class="type-signature">&lt;static> </span>indexOf</h4>
+    <h4 class="name" id="indexOf"><span class="type-signature">&lt;static> </span>indexOf<span class="signature">(array, value, <span class="optional">fromIndex</span>)</span><span class="type-signature"> &rarr; {number}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -499,7 +570,7 @@ index it is found at else `-1`.
         <tr>
                 <td class="name"><code>array</code></td>
             <td class="type">
-                        Array
+<span class="param-type">Array</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -510,7 +581,7 @@ index it is found at else `-1`.
         <tr>
                 <td class="name"><code>value</code></td>
             <td class="type">
-                        Mixed
+<span class="param-type">any</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -521,7 +592,7 @@ index it is found at else `-1`.
         <tr>
                 <td class="name"><code>fromIndex</code></td>
             <td class="type">
-                        Number
+<span class="param-type">number</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -534,6 +605,9 @@ index it is found at else `-1`.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line192">line 192</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -544,12 +618,12 @@ index it is found at else `-1`.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Number</span> 
+<span class="param-type">number</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="isArray"><span class="type-signature">&lt;static> </span>isArray</h4>
+    <h4 class="name" id="isArray"><span class="type-signature">&lt;static> </span>isArray<span class="signature">(value)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -568,13 +642,16 @@ index it is found at else `-1`.
         <tr>
                 <td class="name"><code>value</code></td>
             <td class="type">
-                        Mixed
+<span class="param-type">any</span>
             </td>
             <td class="description last">The value to check.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line204">line 204</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -586,12 +663,12 @@ index it is found at else `-1`.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Boolean</span> 
+<span class="param-type">boolean</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="keys"><span class="type-signature">&lt;static> </span>keys</h4>
+    <h4 class="name" id="keys"><span class="type-signature">&lt;static> </span>keys<span class="signature">(object)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -610,13 +687,16 @@ index it is found at else `-1`.
         <tr>
                 <td class="name"><code>object</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
             <td class="description last">The object to iterate over.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line216">line 216</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -627,12 +707,12 @@ index it is found at else `-1`.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> 
+<span class="param-type">Array</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="map"><span class="type-signature">&lt;static> </span>map</h4>
+    <h4 class="name" id="map"><span class="type-signature">&lt;static> </span>map<span class="signature">(array, callback, thisArg)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -651,27 +731,30 @@ index it is found at else `-1`.
         <tr>
                 <td class="name"><code>array</code></td>
             <td class="type">
-                        Array
+<span class="param-type">Array</span>
             </td>
             <td class="description last">The array to iterate over.</td>
         </tr>
         <tr>
                 <td class="name"><code>callback</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
             <td class="description last">The function called per iteration.</td>
         </tr>
         <tr>
                 <td class="name"><code>thisArg</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
             <td class="description last">The `this` binding for the callback function.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line238">line 238</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -682,12 +765,12 @@ index it is found at else `-1`.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> 
+<span class="param-type">Array</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="mixin"><span class="type-signature">&lt;static> </span>mixin</h4>
+    <h4 class="name" id="mixin"><span class="type-signature">&lt;static> </span>mixin<span class="signature">(destination)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -708,7 +791,7 @@ Multiple source objects are supported.
         <tr>
                 <td class="name"><code>destination</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -717,7 +800,7 @@ Multiple source objects are supported.
         <tr>
                 <td class="name"><code>source, ..</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -727,6 +810,9 @@ Multiple source objects are supported.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line259">line 259</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -737,12 +823,12 @@ Multiple source objects are supported.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="offset"><span class="type-signature">&lt;static> </span>offset</h4>
+    <h4 class="name" id="offset"><span class="type-signature">&lt;static> </span>offset<span class="signature">(element)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -761,13 +847,16 @@ Multiple source objects are supported.
         <tr>
                 <td class="name"><code>element</code></td>
             <td class="type">
-                        Element
+<span class="param-type">Element</span>
             </td>
             <td class="description last">The DOM element.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line279">line 279</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -778,12 +867,59 @@ Multiple source objects are supported.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="reduce"><span class="type-signature">&lt;static> </span>reduce</h4>
+    <h4 class="name" id="parseAngle"><span class="type-signature">&lt;static> </span>parseAngle<span class="signature">(angle)</span><span class="type-signature"> &rarr; {number}</span></h4>
+</dt>
+<dd>
+    <div class="description">
+        Parses the angle string to radians
+https://developer.mozilla.org/en-US/docs/CSS/angle
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>angle</code></td>
+            <td class="type">
+<span class="param-type">number</span>
+|
+<span class="param-type">string</span>
+            </td>
+            <td class="description last">The angle/unit string</td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line365">line 365</a>
+    </li></ul></dd>
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The angle in radians
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+<span class="param-type">number</span>
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="reduce"><span class="type-signature">&lt;static> </span>reduce<span class="signature">(array, callback, accumulator)</span><span class="type-signature"> &rarr; {any}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -802,27 +938,30 @@ Multiple source objects are supported.
         <tr>
                 <td class="name"><code>array</code></td>
             <td class="type">
-                        Array
+<span class="param-type">Array</span>
             </td>
             <td class="description last">The array to iterate over.</td>
         </tr>
         <tr>
                 <td class="name"><code>callback</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
             <td class="description last">The function called per iteration.</td>
         </tr>
         <tr>
                 <td class="name"><code>accumulator</code></td>
             <td class="type">
-                        Mixed
+<span class="param-type">any</span>
             </td>
             <td class="description last">Initial value of the accumulator.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line304">line 304</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -833,12 +972,12 @@ Multiple source objects are supported.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Mixed</span> 
+<span class="param-type">any</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="removeValueFromArray"><span class="type-signature">&lt;static> </span>removeValueFromArray</h4>
+    <h4 class="name" id="removeValueFromArray"><span class="type-signature">&lt;static> </span>removeValueFromArray<span class="signature">(array, <span class="optional">value</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -860,7 +999,7 @@ Can also be used to remove gaps from an array.
         <tr>
                 <td class="name"><code>array</code></td>
             <td class="type">
-                        Array
+<span class="param-type">Array</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -883,6 +1022,9 @@ Can also be used to remove gaps from an array.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tools.js.html">tools.js</a>, <a href="tools.js.html#line329">line 329</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -893,7 +1035,7 @@ Can also be used to remove gaps from an array.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> 
+<span class="param-type">Array</span>
 	</dd>
 </dl>
 </dd>
@@ -903,7 +1045,7 @@ Can also be used to remove gaps from an array.
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 17:17:53 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jun 06 2013 10:17:08 GMT+0200 (CEST)
 </footer>
 
 

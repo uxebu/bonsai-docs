@@ -99,12 +99,17 @@ if (@relatedLinks) {
   $relatedNamesString = ' - ' . (join "\n - ", @relatedNames);
 }
 
+my $categoryString = '';
+if (@categories) {
+  $categoryString = '[' . (join ",", @categories) . ']'
+}
+
 # Add YAML Front matter config to the top of the file:
 $html = <<END;
 ---
 title: '$title'
 layout: doc
-categories: @categories
+categories: $categoryString
 relatedLinks:
 $relatedLinksString
 relatedNames:

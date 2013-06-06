@@ -1,7 +1,7 @@
 ---
 title: 'DisplayObject'
 layout: doc
-categories: jsdoc Class
+categories: [jsdoc,Class]
 relatedLinks:
  - /overview/Easing.html
  - /overview/Animation.html
@@ -21,7 +21,7 @@ relatedNames:
 <article>
     <div class="container-overview">
 <dt>
-    <h4 class="name" id="DisplayObject"><span class="type-signature"></span>new DisplayObject</h4>
+    <h4 class="name" id="DisplayObject"><span class="type-signature"></span>new DisplayObject<span class="signature">()</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -43,14 +43,14 @@ that's displayable.
         <tr>
                 <td class="name"><code>id</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The unique id of the DisplayObject instance.</td>
         </tr>
         <tr>
                 <td class="name"><code>__supportedAttributes__</code></td>
             <td class="type">
-                        __list__
+<span class="param-type">__list__</span>
             </td>
             <td class="description last">List of supported attribute names.
    These are the attribute names you can pass to the attr() method. Note
@@ -69,70 +69,70 @@ that's displayable.
         <tr>
                 <td class="name"><code>matrix</code></td>
             <td class="type">
-                        module:matrix.Matrix
+<span class="param-type">module:matrix.Matrix</span>
             </td>
             <td class="description last">The transformation matrix</td>
         </tr>
         <tr>
                 <td class="name"><code>opacity</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The opacity of the object.</td>
         </tr>
         <tr>
                 <td class="name"><code>origin</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The transformation origin</td>
         </tr>
         <tr>
                 <td class="name"><code>rotation</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The rotation in radians</td>
         </tr>
         <tr>
                 <td class="name"><code>scale</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">(Setter only) Sets scaleX and scaleY</td>
         </tr>
         <tr>
                 <td class="name"><code>scaleX</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The scale applied to the x-axis.</td>
         </tr>
         <tr>
                 <td class="name"><code>scaleY</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The scale applied to the y-axis.</td>
         </tr>
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Sets the matrix offset on the x-axis.</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Sets the matrix offset on the y-axis.</td>
         </tr>
         <tr>
                 <td class="name"><code>filters</code></td>
             <td class="type">
-                        array
+<span class="param-type">array</span>
             </td>
             <td class="description last">The list of filters applied to the DisplayObject</td>
         </tr>
@@ -142,6 +142,9 @@ that's displayable.
         </tr>
 	</tbody>
 </table></dl>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line294">line 294</a>
+    </li></ul></dd>
 </dl>
 </dd>
     </div>
@@ -158,7 +161,18 @@ that's displayable.
     <div class="description">
         The display list this display object is part of.
     </div>
+        <h5>Type:</h5>
+        <ul>
+            <li>
+<span class="param-type"><a href="DisplayList.html">DisplayList</a></span>
+|
+<span class="param-type">null</span>
+            </li>
+        </ul>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line475">line 475</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
@@ -171,13 +185,16 @@ This is used to send as part of the render message.
 Each inheriting primitive must override this.
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line483">line 483</a>
+    </li></ul></dd>
 </dl>
 </dd>
         </dl>
         <h3 class="subsection-title">Methods</h3>
         <dl>
 <dt>
-    <h4 class="name" id="_activate"><span class="type-signature">&lt;static> </span>_activate</h4>
+    <h4 class="name" id="_activate"><span class="type-signature">&lt;static> </span>_activate<span class="signature">()</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -185,10 +202,13 @@ Each inheriting primitive must override this.
 ancestors to the stage
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line489">line 489</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="_deactivate"><span class="type-signature">&lt;static> </span>_deactivate</h4>
+    <h4 class="name" id="_deactivate"><span class="type-signature">&lt;static> </span>_deactivate<span class="signature">()</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -196,10 +216,13 @@ ancestors to the stage
 ancestors from the stage.
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line532">line 532</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="addAfter"><span class="type-signature">&lt;static> </span>addAfter</h4>
+    <h4 class="name" id="addAfter"><span class="type-signature">&lt;static> </span>addAfter<span class="signature">(sibling)</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -221,13 +244,16 @@ for this method to work.
         <tr>
                 <td class="name"><code>sibling</code></td>
             <td class="type">
-                        <a href="DisplayObject.html">DisplayObject</a>
+<span class="param-type"><a href="DisplayObject.html">DisplayObject</a></span>
             </td>
             <td class="description last"></td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line779">line 779</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <dl>
@@ -235,12 +261,12 @@ for this method to work.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="addBefore"><span class="type-signature">&lt;static> </span>addBefore</h4>
+    <h4 class="name" id="addBefore"><span class="type-signature">&lt;static> </span>addBefore<span class="signature">(sibling)</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -262,13 +288,16 @@ for this method to work.
         <tr>
                 <td class="name"><code>sibling</code></td>
             <td class="type">
-                        <a href="DisplayObject.html">DisplayObject</a>
+<span class="param-type"><a href="DisplayObject.html">DisplayObject</a></span>
             </td>
             <td class="description last"></td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line795">line 795</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <dl>
@@ -276,12 +305,12 @@ for this method to work.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="addTo"><span class="type-signature">&lt;static> </span>addTo</h4>
+    <h4 class="name" id="addTo"><span class="type-signature">&lt;static> </span>addTo<span class="signature">(parent)</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -301,13 +330,16 @@ of all parent's children.
         <tr>
                 <td class="name"><code>parent</code></td>
             <td class="type">
-                        <a href="DisplayList.html">DisplayList</a>
+<span class="param-type"><a href="DisplayList.html">DisplayList</a></span>
             </td>
             <td class="description last"></td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line760">line 760</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <dl>
@@ -315,12 +347,12 @@ of all parent's children.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="animate"><span class="type-signature">&lt;static> </span>animate</h4>
+    <h4 class="name" id="animate"><span class="type-signature">&lt;static> </span>animate<span class="signature">(duration, properties, <span class="optional">options</span>)</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -340,9 +372,9 @@ of all parent's children.
         <tr>
                 <td class="name"><code>duration</code></td>
             <td class="type">
-                        Number
-                         | 
-                        String
+<span class="param-type">Number</span>
+|
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -353,7 +385,7 @@ of all parent's children.
         <tr>
                 <td class="name"><code>properties</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -362,7 +394,7 @@ of all parent's children.
         <tr>
                 <td class="name"><code>options</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -383,9 +415,9 @@ of all parent's children.
         <tr>
                 <td class="name"><code>easing</code></td>
             <td class="type">
-                        String
-                         | 
-                        Function
+<span class="param-type">String</span>
+|
+<span class="param-type">Function</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -398,9 +430,9 @@ of all parent's children.
         <tr>
                 <td class="name"><code>delay</code></td>
             <td class="type">
-                        Number
-                         | 
-                        String
+<span class="param-type">Number</span>
+|
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -414,7 +446,7 @@ of all parent's children.
         <tr>
                 <td class="name"><code>repeat</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -431,6 +463,9 @@ of all parent's children.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line874">line 874</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -441,12 +476,12 @@ of all parent's children.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="attr"><span class="type-signature">&lt;static> </span>attr</h4>
+    <h4 class="name" id="attr"><span class="type-signature">&lt;static> </span>attr<span class="signature">(<span class="optional">attr</span>, <span class="optional">value</span>)</span><span class="type-signature"> &rarr; {this|mixed}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -471,9 +506,9 @@ When called with two parameters: Sets a single attribute to a value.
         <tr>
                 <td class="name"><code>attr</code></td>
             <td class="type">
-                        string
-                         | 
-                        Object
+<span class="param-type">string</span>
+|
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -484,7 +519,7 @@ When called with two parameters: Sets a single attribute to a value.
         <tr>
                 <td class="name"><code>value</code></td>
             <td class="type">
-                        mixed
+<span class="param-type">mixed</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -495,6 +530,9 @@ When called with two parameters: Sets a single attribute to a value.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line582">line 582</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -505,12 +543,13 @@ When called with two parameters: Sets a single attribute to a value.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> |
-		<span class="param-type">mixed</span> 
+<span class="param-type">this</span>
+|
+<span class="param-type">mixed</span>
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}o.attr('foo', 1); // sets the 'foo' attribute
+    <pre class="prettyprint"><code>o.attr('foo', 1); // sets the 'foo' attribute
 o.attr('foo'); // gets the 'foo' attribute
 o.attr({foo: 1, bar: 'baz'}); // sets the 'foo' and 'bar' attributes
 o.attr(); // gets all attributes
@@ -526,7 +565,7 @@ Supported attributes are:
  - y: {number}{% endhighlight %}
 </dd>
 <dt>
-    <h4 class="name" id="blendMode"><span class="type-signature">&lt;static> </span>blendMode</h4>
+    <h4 class="name" id="blendMode"><span class="type-signature">&lt;static> </span>blendMode<span class="signature">(<span class="optional">blendMode</span>)</span><span class="type-signature"> &rarr; {this|<a href="DisplayObject.html">DisplayObject</a>|null}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -550,9 +589,9 @@ to its default blendMode (normal).
         <tr>
                 <td class="name"><code>blendMode</code></td>
             <td class="type">
-                        String
-                         | 
-                        null
+<span class="param-type">String</span>
+|
+<span class="param-type">null</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -562,6 +601,9 @@ to its default blendMode (normal).
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line737">line 737</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -573,20 +615,25 @@ to its default blendMode (normal).
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> |
-		<span class="param-type">DisplayObject</span> |
-		<span class="param-type">null</span> 
+<span class="param-type">this</span>
+|
+<span class="param-type"><a href="DisplayObject.html">DisplayObject</a></span>
+|
+<span class="param-type">null</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="composeRenderMessage"><span class="type-signature">&lt;static> </span>composeRenderMessage</h4>
+    <h4 class="name" id="composeRenderMessage"><span class="type-signature">&lt;static> </span>composeRenderMessage<span class="signature">()</span><span class="type-signature"> &rarr; {object}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Composes a message for the renderer
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line836">line 836</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -597,18 +644,21 @@ to its default blendMode (normal).
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">object</span> 
+<span class="param-type">object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="destroy"><span class="type-signature">&lt;static> </span>destroy</h4>
+    <h4 class="name" id="destroy"><span class="type-signature">&lt;static> </span>destroy<span class="signature">()</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Destroys a child: removes it from the parent and removes all listeners.
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line701">line 701</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -619,12 +669,63 @@ to its default blendMode (normal).
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="getBoundingBox"><span class="type-signature">&lt;static> </span>getBoundingBox</h4>
+    <h4 class="name" id="getAbsoluteBoundingBox"><span class="type-signature">&lt;static> </span>getAbsoluteBoundingBox<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+</dt>
+<dd>
+    <div class="description">
+        Computed the absolute bounding box relative to the top-most ancestor
+    </div>
+<dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line645">line 645</a>
+    </li></ul></dd>
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    an object with all box properties
+ (left, top, right, bottom, width, height)
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+<span class="param-type">Object</span>
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="getAbsoluteMatrix"><span class="type-signature">&lt;static> </span>getAbsoluteMatrix<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
+</dt>
+<dd>
+    <div class="description">
+        Gets the matrix of the DisplayObject combined with all ancestor matrices
+    </div>
+<dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line630">line 630</a>
+    </li></ul></dd>
+</dl>
+    <h5>Returns:</h5>
+<div class="param-desc">
+    The resulting matrix
+</div>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="getBoundingBox"><span class="type-signature">&lt;static> </span>getBoundingBox<span class="signature">(<span class="optional">transform</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -645,7 +746,7 @@ to its default blendMode (normal).
         <tr>
                 <td class="name"><code>transform</code></td>
             <td class="type">
-                        <a href="Matrix.html">Matrix</a>
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -659,32 +760,123 @@ to its default blendMode (normal).
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line657">line 657</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
     an object with all box properties
+ (left, top, right, bottom, width, height)
 </div>
 <dl>
 	<dt>
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="markUpdate"><span class="type-signature">&lt;static> </span>markUpdate</h4>
+    <h4 class="name" id="globalToLocal"><span class="type-signature">&lt;static> </span>globalToLocal<span class="signature">(point)</span><span class="type-signature"> &rarr; {<a href="Point.html">Point</a>}</span></h4>
+</dt>
+<dd>
+    <div class="description">
+        Transforms a point in global coordinate space to the local coordinate
+space of the display object.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>point</code></td>
+            <td class="type">
+<span class="param-type"><a href="Point.html">Point</a></span>
+            </td>
+            <td class="description last"></td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line681">line 681</a>
+    </li></ul></dd>
+</dl>
+    <h5>Returns:</h5>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+<span class="param-type"><a href="Point.html">Point</a></span>
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="localToGlobal"><span class="type-signature">&lt;static> </span>localToGlobal<span class="signature">(point)</span><span class="type-signature"> &rarr; {<a href="Point.html">Point</a>}</span></h4>
+</dt>
+<dd>
+    <div class="description">
+        Transforms a point in the local coordinate space of the display object to
+the global coordinate space.
+    </div>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>point</code></td>
+            <td class="type">
+<span class="param-type"><a href="Point.html">Point</a></span>
+            </td>
+            <td class="description last"></td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line692">line 692</a>
+    </li></ul></dd>
+</dl>
+    <h5>Returns:</h5>
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+<span class="param-type"><a href="Point.html">Point</a></span>
+	</dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="markUpdate"><span class="type-signature">&lt;static> </span>markUpdate<span class="signature">()</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
         Marks the current instance for an update
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line745">line 745</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="mask"><span class="type-signature">&lt;static> </span>mask</h4>
+    <h4 class="name" id="mask"><span class="type-signature">&lt;static> </span>mask<span class="signature">(<span class="optional">mask</span>)</span><span class="type-signature"> &rarr; {this|<a href="DisplayObject.html">DisplayObject</a>|null}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -707,9 +899,9 @@ Call the method with null or undefined as parameter to unset the mask.
         <tr>
                 <td class="name"><code>mask</code></td>
             <td class="type">
-                        <a href="DisplayObject.html">DisplayObject</a>
-                         | 
-                        null
+<span class="param-type"><a href="DisplayObject.html">DisplayObject</a></span>
+|
+<span class="param-type">null</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -719,6 +911,9 @@ Call the method with null or undefined as parameter to unset the mask.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line720">line 720</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -730,14 +925,16 @@ Call the method with null or undefined as parameter to unset the mask.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> |
-		<span class="param-type">DisplayObject</span> |
-		<span class="param-type">null</span> 
+<span class="param-type">this</span>
+|
+<span class="param-type"><a href="DisplayObject.html">DisplayObject</a></span>
+|
+<span class="param-type">null</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="remove"><span class="type-signature">&lt;static> </span>remove</h4>
+    <h4 class="name" id="remove"><span class="type-signature">&lt;static> </span>remove<span class="signature">(<span class="optional">removalStrategy</span>)</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -758,7 +955,7 @@ Call the method with null or undefined as parameter to unset the mask.
         <tr>
                 <td class="name"><code>removalStrategy</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -774,6 +971,9 @@ Call the method with null or undefined as parameter to unset the mask.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line810">line 810</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -784,12 +984,12 @@ Call the method with null or undefined as parameter to unset the mask.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="setOrigin"><span class="type-signature">&lt;static> </span>setOrigin</h4>
+    <h4 class="name" id="setOrigin"><span class="type-signature">&lt;static> </span>setOrigin<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -808,26 +1008,29 @@ Call the method with null or undefined as parameter to unset the mask.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last"></td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last"></td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
-	<dt class="tag-todo">To Do:</dt>
-	<dd class="tag-todo">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="display_object.js.html">runner/display_object.js</a>, <a href="display_object.js.html#line827">line 827</a>
+    </li></ul></dd>
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
         <ul>
             <li>Add support for sugar like 'center'</li>
         </ul>
-	</dd>
+    </dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -838,7 +1041,7 @@ Call the method with null or undefined as parameter to unset the mask.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
@@ -848,7 +1051,7 @@ Call the method with null or undefined as parameter to unset the mask.
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 17:17:45 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jun 06 2013 10:17:05 GMT+0200 (CEST)
 </footer>
 
 

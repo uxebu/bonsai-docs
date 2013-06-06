@@ -1,7 +1,7 @@
 ---
 title: 'JSDoc: Global'
 layout: doc
-categories: jsdoc
+categories: [jsdoc]
 relatedLinks:
 
 relatedNames:
@@ -23,7 +23,43 @@ relatedNames:
         <h3 class="subsection-title">Methods</h3>
         <dl>
 <dt>
-    <h4 class="name" id="request"><span class="type-signature"></span>request</h4>
+    <h4 class="name" id="handleTouchEvent"><span class="type-signature"></span>handleTouchEvent<span class="signature">(pointerEvent, targetId)</span><span class="type-signature"></span></h4>
+</dt>
+<dd>
+        <h5>Parameters:</h5>
+<table class="params">
+    <thead>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+        <tr>
+                <td class="name"><code>pointerEvent</code></td>
+            <td class="type">
+<span class="param-type">PointerEvent</span>
+            </td>
+            <td class="description last"></td>
+        </tr>
+        <tr>
+                <td class="name"><code>targetId</code></td>
+            <td class="type">
+<span class="param-type">number</span>
+            </td>
+            <td class="description last"></td>
+        </tr>
+	</tbody>
+</table>
+<dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="svg_event_handlers.js.html">renderer/svg/svg_event_handlers.js</a>, <a href="svg_event_handlers.js.html#line233">line 233</a>
+    </li></ul></dd>
+</dl>
+</dd>
+<dt>
+    <h4 class="name" id="request"><span class="type-signature"></span>request<span class="signature">(aRequest)</span><span class="type-signature"> &rarr; {<a href="AssetDisplayObject.html">AssetDisplayObject</a>|AssetRequest}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -31,7 +67,7 @@ relatedNames:
 Request and returns the current Video or Bitmap instance.
     </div>
         <h5>This:</h5>
-        <ul><li>{AssetDisplayObject}</li></ul>
+        <ul><li>{<a href="AssetDisplayObject.html">AssetDisplayObject</a>}</li></ul>
         <h5>Parameters:</h5>
 <table class="params">
     <thead>
@@ -45,15 +81,18 @@ Request and returns the current Video or Bitmap instance.
         <tr>
                 <td class="name"><code>aRequest</code></td>
             <td class="type">
-                        String
-                         | 
-                        Array
+<span class="param-type">String</span>
+|
+<span class="param-type">Array</span>
             </td>
             <td class="description last">The request needs to accomplish the requirements of AssetRequest</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="asset_display_object.js.html">runner/asset_display_object.js</a>, <a href="asset_display_object.js.html#line35">line 35</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -64,12 +103,13 @@ Request and returns the current Video or Bitmap instance.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">AssetDisplayObject</span> |
-		<span class="param-type">AssetRequest</span> 
+<span class="param-type"><a href="AssetDisplayObject.html">AssetDisplayObject</a></span>
+|
+<span class="param-type">AssetRequest</span>
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}myVideo.request();
+    <pre class="prettyprint"><code>myVideo.request();
 myVideo.request('../myMovie.mp4');
 myVideo.request('http://www.movieCenter.com/myMovie.mp4');
 myShape.request([
@@ -88,11 +128,11 @@ myBitmap.request();
 myBitmap.request('../myImage.jpg');{% endhighlight %}
 </dd>
 <dt>
-    <h4 class="name" id="request"><span class="type-signature"></span>request</h4>
+    <h4 class="name" id="request"><span class="type-signature"></span>request<span class="signature">(aRequest)</span><span class="type-signature"> &rarr; {<a href="Bitmap.html">Bitmap</a>|AssetRequest}</span></h4>
 </dt>
 <dd>
         <h5>This:</h5>
-        <ul><li>{Bitmap}</li></ul>
+        <ul><li>{<a href="Bitmap.html">Bitmap</a>}</li></ul>
         <h5>Parameters:</h5>
 <table class="params">
     <thead>
@@ -106,21 +146,24 @@ myBitmap.request('../myImage.jpg');{% endhighlight %}
         <tr>
                 <td class="name"><code>aRequest</code></td>
             <td class="type">
-                        String
-                         | 
-                        Array
+<span class="param-type">String</span>
+|
+<span class="param-type">Array</span>
             </td>
             <td class="description last">The request needs to accomplish the requirements of AssetRequest</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
-	<dt class="tag-see">See:</dt>
-	<dd class="tag-see">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="bitmap.js.html">runner/bitmap.js</a>, <a href="bitmap.js.html#line81">line 81</a>
+    </li></ul></dd>
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
         <ul>
             <li>AssetDisplayObject.request</li>
         </ul>
-	</dd>
+    </dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -131,8 +174,9 @@ myBitmap.request('../myImage.jpg');{% endhighlight %}
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Bitmap</span> |
-		<span class="param-type">AssetRequest</span> 
+<span class="param-type"><a href="Bitmap.html">Bitmap</a></span>
+|
+<span class="param-type">AssetRequest</span>
 	</dd>
 </dl>
 </dd>
@@ -142,7 +186,7 @@ myBitmap.request('../myImage.jpg');{% endhighlight %}
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 17:17:54 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jun 06 2013 10:17:05 GMT+0200 (CEST)
 </footer>
 
 
