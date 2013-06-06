@@ -75,7 +75,7 @@ $html =~ s/<script[\s\S]+?<\/script>//g; # remove scripts
 $html =~ s/<d[dt] class="tag-source">.+?<\/d[dt]>//g; # remove source/line-number detail
 
 # Highlight code the "jekyll way":
-$html =~ s/<pre class="sh_javascript"><code>/{% highlight javascript %}/g;
+$html =~ s/<pre class="prettyprint"><code>/{% highlight javascript %}/g;
 $html =~ s/<\/code><\/pre>/{% endhighlight %}/g;
 
 # Remove blank lines:

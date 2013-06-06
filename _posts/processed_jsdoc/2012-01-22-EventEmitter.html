@@ -25,7 +25,7 @@ relatedNames:
     </li></ul></dd>
 </dl>
             <h3>Example</h3>
-    <pre class="prettyprint"><code>// assign `EventEmitter` methods to `MyClass.prototype`
+    {% highlight javascript %}// assign `EventEmitter` methods to `MyClass.prototype`
 tools.mixin(MyClass.prototype, EventEmitter);{% endhighlight %}
     </div>
         <h3 class="subsection-title">Methods</h3>
@@ -105,7 +105,7 @@ Listeners are executed with the `this` binding of the host object.
 	</dd>
 </dl>
         <h5>Example</h5>
-    <pre class="prettyprint"><code>// register a listener for an event type
+    {% highlight javascript %}// register a listener for an event type
 object.addListener('blur', listener);
 // register a listener for multiple event types
 object.addListener('blur focus', listener);{% endhighlight %}
@@ -444,7 +444,7 @@ manipulated to add or remove listeners.
 	</dd>
 </dl>
         <h5>Example</h5>
-    <pre class="prettyprint"><code>// unregister all listeners
+    {% highlight javascript %}// unregister all listeners
 object.removeAllListeners();
 // unregister all listeners for an event type
 object.removeAllListeners('click');
@@ -524,7 +524,7 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
 	</dd>
 </dl>
         <h5>Example</h5>
-    <pre class="prettyprint"><code>// unregister a listener for an event type
+    {% highlight javascript %}// unregister a listener for an event type
 object.removeListener('blur', listener);
 // unregister a listener for multiple event types
 object.removeListener('blur focus', listener);{% endhighlight %}
