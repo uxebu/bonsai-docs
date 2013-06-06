@@ -101,7 +101,7 @@ if (@relatedLinks) {
 
 my $categoryString = '';
 if (@categories) {
-  $categoryString = '[' . (join ",", @categories) . ']'
+  $categoryString = '[' . (join ", ", @categories) . ']'
 }
 
 # Add YAML Front matter config to the top of the file:
