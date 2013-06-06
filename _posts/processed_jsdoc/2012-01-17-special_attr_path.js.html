@@ -12,7 +12,8 @@ relatedNames:
 <div id="main">
     <section>
         <article>
-            <pre class="prettyprint source"><code>define(['./path', '../../tools'], function(Path, tools) {
+            {% highlight javascript %}
+define(['./path', '../../tools'], function(Path, tools) {
   function makeAccessor(attrName, defaultValue) {
     var value = defaultValue;
     function set(newValue) {

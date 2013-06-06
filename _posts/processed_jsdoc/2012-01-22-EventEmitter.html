@@ -25,8 +25,10 @@ relatedNames:
     </li></ul></dd>
 </dl>
             <h3>Example</h3>
-    {% highlight javascript %}// assign `EventEmitter` methods to `MyClass.prototype`
-tools.mixin(MyClass.prototype, EventEmitter);{% endhighlight %}
+    {% highlight javascript %}
+// assign `EventEmitter` methods to `MyClass.prototype`
+tools.mixin(MyClass.prototype, EventEmitter);
+{% endhighlight %}
     </div>
         <h3 class="subsection-title">Methods</h3>
         <dl>
@@ -105,10 +107,12 @@ Listeners are executed with the `this` binding of the host object.
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}// register a listener for an event type
+    {% highlight javascript %}
+// register a listener for an event type
 object.addListener('blur', listener);
 // register a listener for multiple event types
-object.addListener('blur focus', listener);{% endhighlight %}
+object.addListener('blur focus', listener);
+{% endhighlight %}
 </dd>
 <dt>
     <h4 class="name" id="emit"><span class="type-signature">&lt;static> </span>emit<span class="signature">(type)</span><span class="type-signature"> &rarr; {Object}</span></h4>
@@ -444,12 +448,14 @@ manipulated to add or remove listeners.
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}// unregister all listeners
+    {% highlight javascript %}
+// unregister all listeners
 object.removeAllListeners();
 // unregister all listeners for an event type
 object.removeAllListeners('click');
 // unregister all listeners for multiple event types
-object.removeAllListeners('click mousedown touch');{% endhighlight %}
+object.removeAllListeners('click mousedown touch');
+{% endhighlight %}
 </dd>
 <dt>
     <h4 class="name" id="removeListener"><span class="type-signature">&lt;static> </span>removeListener<span class="signature">(type, <span class="optional">context</span>, listener)</span><span class="type-signature"> &rarr; {Object}</span></h4>
@@ -524,10 +530,12 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}// unregister a listener for an event type
+    {% highlight javascript %}
+// unregister a listener for an event type
 object.removeListener('blur', listener);
 // unregister a listener for multiple event types
-object.removeListener('blur focus', listener);{% endhighlight %}
+object.removeListener('blur focus', listener);
+{% endhighlight %}
 </dd>
         </dl>
 </article>

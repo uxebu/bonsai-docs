@@ -35,21 +35,24 @@
 				{% endunless %}
 			{% endfor %}
 		</ul>
+    {% for category in site.categories %}
+
+    {% endfor %}
 		<h2 class="menuHeading">API: Modules</h2>
 		<ul>
-			{% for p in site.categories.Module %}
+			{% for p in site.categories.module %}
 				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
 		<h2 class="menuHeading">API: Classes</h2>
 		<ul>
-			{% for p in site.categories.Class %}
+			{% for p in site.categories.class %}
 				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
 		<h2 class="menuHeading">API: Mixins</h2>
 		<ul>
-			{% for p in site.categories.Mixin %}
+			{% for p in site.categories.mixin %}
 				<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">{{p.title}}</a></li>
 			{% endfor %}
 		</ul>
