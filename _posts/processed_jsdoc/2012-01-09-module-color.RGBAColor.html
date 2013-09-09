@@ -1,7 +1,7 @@
 ---
 title: 'RGBAColor'
 layout: doc
-categories: jsdoc Class
+categories: [jsdoc, Class]
 relatedLinks:
  - /overview/Color.html
 relatedNames:
@@ -23,7 +23,7 @@ relatedNames:
 <article>
     <div class="container-overview">
 <dt>
-    <h4 class="name" id="RGBAColor"><span class="type-signature"></span>new RGBAColor</h4>
+    <h4 class="name" id="RGBAColor"><span class="type-signature"></span>new RGBAColor<span class="signature">(r, g, b, a)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -43,41 +43,44 @@ values.
         <tr>
                 <td class="name"><code>r</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">Red (0..255)</td>
         </tr>
         <tr>
                 <td class="name"><code>g</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">Green (0..255)</td>
         </tr>
         <tr>
                 <td class="name"><code>b</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">Blue (0..255)</td>
         </tr>
         <tr>
                 <td class="name"><code>a</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">Alpha (0..1)</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line41">line 41</a>
+    </li></ul></dd>
 </dl>
 </dd>
     </div>
         <h3 class="subsection-title">Methods</h3>
         <dl>
 <dt>
-    <h4 class="name" id="clone"><span class="type-signature"></span>clone</h4>
+    <h4 class="name" id="clone"><span class="type-signature"></span>clone<span class="signature">(<span class="optional">properties</span>)</span><span class="type-signature"> &rarr; {RGBAColor}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -97,7 +100,7 @@ values.
         <tr>
                 <td class="name"><code>properties</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -108,6 +111,9 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line299">line 299</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -118,12 +124,12 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">RGBAColor</span> 
+<span class="param-type">RGBAColor</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="darker"><span class="type-signature"></span>darker</h4>
+    <h4 class="name" id="darker"><span class="type-signature"></span>darker<span class="signature">(<span class="optional">n</span>)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -143,7 +149,7 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
         <tr>
                 <td class="name"><code>n</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -153,26 +159,35 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line186">line 186</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="get"><span class="type-signature"></span>get</h4>
+    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">()</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
         Get one of r, g, b, a, h, s, l
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line149">line 149</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="hsla"><span class="type-signature"></span>hsla</h4>
+    <h4 class="name" id="hsla"><span class="type-signature"></span>hsla<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Returns the color in hsla() format as specified in the CSS spec
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line335">line 335</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -183,18 +198,21 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">String</span> 
+<span class="param-type">String</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="int32"><span class="type-signature"></span>int32</h4>
+    <h4 class="name" id="int32"><span class="type-signature"></span>int32<span class="signature">()</span><span class="type-signature"> &rarr; {Number}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Returns the color in 32-bit int repr
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line349">line 349</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -205,12 +223,12 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Number</span> 
+<span class="param-type">Number</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="lighter"><span class="type-signature"></span>lighter</h4>
+    <h4 class="name" id="lighter"><span class="type-signature"></span>lighter<span class="signature">(<span class="optional">n</span>)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -230,7 +248,7 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
         <tr>
                 <td class="name"><code>n</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -240,10 +258,13 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line175">line 175</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="midpoint"><span class="type-signature"></span>midpoint</h4>
+    <h4 class="name" id="midpoint"><span class="type-signature"></span>midpoint<span class="signature">(c)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -262,21 +283,24 @@ cloned. E.g. `{hue:.2, lightness:.3}`</td>
         <tr>
                 <td class="name"><code>c</code></td>
             <td class="type">
-                        RGBAColor
-                         | 
-                        String
-                         | 
-                        Number
+<span class="param-type">RGBAColor</span>
+|
+<span class="param-type">String</span>
+|
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The midpoint color</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line197">line 197</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="randomize"><span class="type-signature"></span>randomize</h4>
+    <h4 class="name" id="randomize"><span class="type-signature"></span>randomize<span class="signature">(props, range)</span><span class="type-signature"> &rarr; {RGBAColor}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -296,16 +320,16 @@ properties array and range.
         <tr>
                 <td class="name"><code>props</code></td>
             <td class="type">
-                        Array
-                         | 
-                        String
+<span class="param-type">Array</span>
+|
+<span class="param-type">String</span>
             </td>
             <td class="description last">The property/properties to be randomized</td>
         </tr>
         <tr>
                 <td class="name"><code>range</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The range of the randomisation. 0..1 for hsla,
    and 0..255 for rgba.  If passed, then the randomization will occur
@@ -315,6 +339,9 @@ properties array and range.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line277">line 277</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -325,18 +352,21 @@ properties array and range.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">RGBAColor</span> 
+<span class="param-type">RGBAColor</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="rgb"><span class="type-signature"></span>rgb</h4>
+    <h4 class="name" id="rgb"><span class="type-signature"></span>rgb<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Returns the color in rgb() format as specified in the CSS spec
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line322">line 322</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -347,18 +377,21 @@ properties array and range.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">String</span> 
+<span class="param-type">String</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="rgba"><span class="type-signature"></span>rgba</h4>
+    <h4 class="name" id="rgba"><span class="type-signature"></span>rgba<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Returns the color in rgba() format as specified in the CSS spec
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line308">line 308</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -369,12 +402,12 @@ properties array and range.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">String</span> 
+<span class="param-type">String</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="set"><span class="type-signature"></span>set</h4>
+    <h4 class="name" id="set"><span class="type-signature"></span>set<span class="signature">(prop, <span class="optional">val</span>)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -396,9 +429,9 @@ E.g. red, alpha, hue, lightness etc.
         <tr>
                 <td class="name"><code>prop</code></td>
             <td class="type">
-                        String
-                         | 
-                        Object
+<span class="param-type">String</span>
+|
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -408,7 +441,7 @@ hash-map of properties andT values</td>
         <tr>
                 <td class="name"><code>val</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -419,10 +452,13 @@ hash-map</td>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line100">line 100</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="setColorMatrix"><span class="type-signature"></span>setColorMatrix</h4>
+    <h4 class="name" id="setColorMatrix"><span class="type-signature"></span>setColorMatrix<span class="signature">(colorMatrix)</span><span class="type-signature"> &rarr; {RGBAColor}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -441,13 +477,16 @@ hash-map</td>
         <tr>
                 <td class="name"><code>colorMatrix</code></td>
             <td class="type">
-                        colorMatrix
+<span class="param-type">colorMatrix</span>
             </td>
             <td class="description last">The value of the colorMatrix filter</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line215">line 215</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -458,18 +497,21 @@ hash-map</td>
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">RGBAColor</span> 
+<span class="param-type">RGBAColor</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="toString"><span class="type-signature"></span>toString</h4>
+    <h4 class="name" id="toString"><span class="type-signature"></span>toString<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Returns the color in 32-bit repr ('0x<rr><gg><bb><aa>')
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="color.js.html">color.js</a>, <a href="color.js.html#line363">line 363</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -480,7 +522,7 @@ hash-map</td>
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">String</span> 
+<span class="param-type">String</span>
 	</dd>
 </dl>
 </dd>
@@ -490,7 +532,7 @@ hash-map</td>
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 17:17:47 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jun 06 2013 10:17:06 GMT+0200 (CEST)
 </footer>
 
 

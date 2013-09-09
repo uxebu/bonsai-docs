@@ -1,7 +1,7 @@
 ---
 title: 'Circle'
 layout: doc
-categories: jsdoc Class
+categories: [jsdoc, Class]
 relatedLinks:
  - /overview/Color.html
  - /overview/Shape.html
@@ -28,7 +28,7 @@ relatedNames:
 <article>
     <div class="container-overview">
 <dt>
-    <h4 class="name" id="Circle"><span class="type-signature"></span>new Circle</h4>
+    <h4 class="name" id="Circle"><span class="type-signature"></span>new Circle<span class="signature">(x, y, radius)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -47,27 +47,30 @@ relatedNames:
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The x coordinate of the center of the circle</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The y coordinate of the center of the circle</td>
         </tr>
         <tr>
                 <td class="name"><code>radius</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The circle's radius</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="circle.js.html">runner/path/circle.js</a>, <a href="circle.js.html#line15">line 15</a>
+    </li></ul></dd>
 </dl>
 </dd>
     </div>
@@ -85,13 +88,20 @@ relatedNames:
         The type of the given instance.
     </div>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#type">module:path.SpecialAttrPath#type</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line900">line 900</a>
+    </li></ul></dd>
 </dl>
 </dd>
         </dl>
         <h3 class="subsection-title">Methods</h3>
         <dl>
 <dt>
-    <h4 class="name" id="arc"><span class="type-signature"></span>arc</h4>
+    <h4 class="name" id="arc"><span class="type-signature"></span>arc<span class="signature">(x, y, radius, aStartAngle, aEndAngle, <span class="optional">anticlockwise</span>)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -111,7 +121,7 @@ relatedNames:
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -120,7 +130,7 @@ relatedNames:
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -129,7 +139,7 @@ relatedNames:
         <tr>
                 <td class="name"><code>radius</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -138,9 +148,9 @@ relatedNames:
         <tr>
                 <td class="name"><code>aStartAngle</code></td>
             <td class="type">
-                        deg
-                         | 
-                        rad
+<span class="param-type">deg</span>
+|
+<span class="param-type">rad</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -149,9 +159,9 @@ relatedNames:
         <tr>
                 <td class="name"><code>aEndAngle</code></td>
             <td class="type">
-                        deg
-                         | 
-                        rad
+<span class="param-type">deg</span>
+|
+<span class="param-type">rad</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -160,7 +170,7 @@ relatedNames:
         <tr>
                 <td class="name"><code>anticlockwise</code></td>
             <td class="type">
-                        Boolean
+<span class="param-type">Boolean</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -171,6 +181,13 @@ relatedNames:
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#arc">module:path.SpecialAttrPath#arc</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line741">line 741</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -181,12 +198,12 @@ relatedNames:
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="arcBy"><span class="type-signature"></span>arcBy</h4>
+    <h4 class="name" id="arcBy"><span class="type-signature"></span>arcBy<span class="signature">(rx, ry, xAxisRotation, largeArcFlag, sweepFlag, x, y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -206,21 +223,21 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>rx</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The relative x-axis radius for the ellipse</td>
         </tr>
         <tr>
                 <td class="name"><code>ry</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The relative y-axis radius for the ellipse</td>
         </tr>
         <tr>
                 <td class="name"><code>xAxisRotation</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The rotation angle in radians for the
  ellipse's x-axis relative to the x-axis of the stage's {0,0}</td>
@@ -228,7 +245,7 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>largeArcFlag</code></td>
             <td class="type">
-                        Boolean
+<span class="param-type">Boolean</span>
             </td>
             <td class="description last">Defines the way in which the arc is drawn
  from its starting point to its ending point. See
@@ -238,7 +255,7 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>sweepFlag</code></td>
             <td class="type">
-                        Boolean
+<span class="param-type">Boolean</span>
             </td>
             <td class="description last">Defines the way in which the arc is drawn
  from its starting point to its ending point. See
@@ -248,20 +265,27 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">Relative X-axis location of the end of the arc</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">Relative Y-axis location of the end of the arc</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#arcBy">module:path.SpecialAttrPath#arcBy</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line723">line 723</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -272,12 +296,12 @@ It provides the same API like SVG does.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="arcTo"><span class="type-signature"></span>arcTo</h4>
+    <h4 class="name" id="arcTo"><span class="type-signature"></span>arcTo<span class="signature">(rx, ry, xAxisRotation, largeArcFlag, sweepFlag, x, y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -297,21 +321,21 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>rx</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The x-axis radius for the ellipse</td>
         </tr>
         <tr>
                 <td class="name"><code>ry</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The y-axis radius for the ellipse</td>
         </tr>
         <tr>
                 <td class="name"><code>xAxisRotation</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">The rotation angle in radians for the
  ellipse's x-axis relative to the x-axis of the stage's {0,0}</td>
@@ -319,7 +343,7 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>largeArcFlag</code></td>
             <td class="type">
-                        Boolean
+<span class="param-type">Boolean</span>
             </td>
             <td class="description last">Defines the way in which the arc is drawn
  from its starting point to its ending point. See
@@ -329,7 +353,7 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>sweepFlag</code></td>
             <td class="type">
-                        Boolean
+<span class="param-type">Boolean</span>
             </td>
             <td class="description last">Defines the way in which the arc is drawn
  from its starting point to its ending point. See
@@ -339,20 +363,27 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">X-axis location of the end of the arc</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">Y-axis location of the end of the arc</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#arcTo">module:path.SpecialAttrPath#arcTo</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line696">line 696</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -363,18 +394,25 @@ It provides the same API like SVG does.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="clear"><span class="type-signature"></span>clear</h4>
+    <h4 class="name" id="clear"><span class="type-signature"></span>clear<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Clears all segments.
     </div>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#clear">module:path.SpecialAttrPath#clear</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line790">line 790</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -385,12 +423,12 @@ It provides the same API like SVG does.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="clone"><span class="type-signature"></span>clone</h4>
+    <h4 class="name" id="clone"><span class="type-signature"></span>clone<span class="signature">(<span class="optional">cloneOptions</span>)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -410,7 +448,7 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>cloneOptions</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -430,7 +468,7 @@ It provides the same API like SVG does.
         <tr>
                 <td class="name"><code>attributes</code></td>
             <td class="type">
-                        boolean
+<span class="param-type">boolean</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -445,6 +483,13 @@ It provides the same API like SVG does.
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#clone">module:path.SpecialAttrPath#clone</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line339">line 339</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -455,12 +500,12 @@ It provides the same API like SVG does.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="closePath"><span class="type-signature"></span>closePath</h4>
+    <h4 class="name" id="closePath"><span class="type-signature"></span>closePath<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -468,6 +513,13 @@ It provides the same API like SVG does.
 close path.
     </div>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#closePath">module:path.SpecialAttrPath#closePath</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line489">line 489</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -478,12 +530,12 @@ close path.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="curveBy"><span class="type-signature"></span>curveBy</h4>
+    <h4 class="name" id="curveBy"><span class="type-signature"></span>curveBy<span class="signature">(cp1x, cp1y, cp2x, cp2y, x, y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -502,54 +554,61 @@ close path.
         <tr>
                 <td class="name"><code>cp1x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">(Relative) first control point x</td>
         </tr>
         <tr>
                 <td class="name"><code>cp1y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">(Relative) first control point y</td>
         </tr>
         <tr>
                 <td class="name"><code>cp2x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">(Relative) second control point x</td>
         </tr>
         <tr>
                 <td class="name"><code>cp2y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">(Relative) second control point y</td>
         </tr>
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">(Relative) x-value of the point</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">(Relative) y-value of the point</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
-	<dt class="tag-see">See:</dt>
-	<dd class="tag-see">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#curveBy">module:path.SpecialAttrPath#curveBy</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line615">line 615</a>
+    </li></ul></dd>
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
         <ul>
-            <li>http://www.w3.org/TR/SVG/paths.html#InterfaceSVGPathSegCurvetoCubicRel</li>
+            <li><a href="http://www.w3.org/TR/SVG/paths.html#InterfaceSVGPathSegCurvetoCubicRel">http://www.w3.org/TR/SVG/paths.html#InterfaceSVGPathSegCurvetoCubicRel</a></li>
         </ul>
-	</dd>
+    </dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -560,12 +619,12 @@ close path.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="curveTo"><span class="type-signature"></span>curveTo</h4>
+    <h4 class="name" id="curveTo"><span class="type-signature"></span>curveTo<span class="signature">(cp1x, cp1y, cp2x, cp2y, x, y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -584,54 +643,61 @@ close path.
         <tr>
                 <td class="name"><code>cp1x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">first control point x</td>
         </tr>
         <tr>
                 <td class="name"><code>cp1y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">first control point y</td>
         </tr>
         <tr>
                 <td class="name"><code>cp2x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">second control point x</td>
         </tr>
         <tr>
                 <td class="name"><code>cp2y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">second control point y</td>
         </tr>
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">x-value of the point</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">y-value of the point</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
-	<dt class="tag-see">See:</dt>
-	<dd class="tag-see">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#curveTo">module:path.SpecialAttrPath#curveTo</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line589">line 589</a>
+    </li></ul></dd>
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
         <ul>
-            <li>http://www.w3.org/TR/SVG/paths.html#InterfaceSVGPathSegCurvetoCubicAbs</li>
+            <li><a href="http://www.w3.org/TR/SVG/paths.html#InterfaceSVGPathSegCurvetoCubicAbs">http://www.w3.org/TR/SVG/paths.html#InterfaceSVGPathSegCurvetoCubicAbs</a></li>
         </ul>
-	</dd>
+    </dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -642,12 +708,12 @@ close path.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="fill"><span class="type-signature"></span>fill</h4>
+    <h4 class="name" id="fill"><span class="type-signature"></span>fill<span class="signature">(fill)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -666,23 +732,30 @@ close path.
         <tr>
                 <td class="name"><code>fill</code></td>
             <td class="type">
-                        String
-                         | 
-                        Number
-                         | 
-                        LinearGradient
-                         | 
-                        RadialGradient
-                         | 
-                        <a href="Bitmap.html">Bitmap</a>
-                         | 
-                        color.RGBAColor
+<span class="param-type">String</span>
+|
+<span class="param-type">Number</span>
+|
+<span class="param-type">LinearGradient</span>
+|
+<span class="param-type">RadialGradient</span>
+|
+<span class="param-type"><a href="Bitmap.html">Bitmap</a></span>
+|
+<span class="param-type">color.RGBAColor</span>
             </td>
             <td class="description last">The fillColor (see `color.parse`), fillImage or fillGradient</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#fill">module:path.SpecialAttrPath#fill</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line803">line 803</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -693,12 +766,12 @@ close path.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="getBoundingBox"><span class="type-signature"></span>getBoundingBox</h4>
+    <h4 class="name" id="getBoundingBox"><span class="type-signature"></span>getBoundingBox<span class="signature">(<span class="optional">transform</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -719,7 +792,7 @@ close path.
         <tr>
                 <td class="name"><code>transform</code></td>
             <td class="type">
-                        <a href="Matrix.html">Matrix</a>
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -733,6 +806,13 @@ close path.
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#getBoundingBox">module:path.SpecialAttrPath#getBoundingBox</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line1122">line 1122</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -743,12 +823,12 @@ close path.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="horizontalLineBy"><span class="type-signature"></span>horizontalLineBy</h4>
+    <h4 class="name" id="horizontalLineBy"><span class="type-signature"></span>horizontalLineBy<span class="signature">(x)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -768,13 +848,20 @@ straight line from the last Point to the given relative Point.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">relative x-value</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#horizontalLineBy">module:path.SpecialAttrPath#horizontalLineBy</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line573">line 573</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -785,12 +872,12 @@ straight line from the last Point to the given relative Point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="horizontalLineTo"><span class="type-signature"></span>horizontalLineTo</h4>
+    <h4 class="name" id="horizontalLineTo"><span class="type-signature"></span>horizontalLineTo<span class="signature">(x)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -810,13 +897,20 @@ straight line from the last Point to the given absolute Point.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">absolute x-value</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#horizontalLineTo">module:path.SpecialAttrPath#horizontalLineTo</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line561">line 561</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -827,12 +921,12 @@ straight line from the last Point to the given absolute Point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="lastPoint"><span class="type-signature"></span>lastPoint</h4>
+    <h4 class="name" id="lastPoint"><span class="type-signature"></span>lastPoint<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Point.html">Point</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -840,6 +934,13 @@ straight line from the last Point to the given absolute Point.
 segments array is empty.
     </div>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#lastPoint">module:path.SpecialAttrPath#lastPoint</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line857">line 857</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -850,12 +951,12 @@ segments array is empty.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Point</span> 
+<span class="param-type"><a href="Point.html">Point</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="lastSegment"><span class="type-signature"></span>lastSegment</h4>
+    <h4 class="name" id="lastSegment"><span class="type-signature"></span>lastSegment<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -863,6 +964,13 @@ segments array is empty.
 segments array is empty.
     </div>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#lastSegment">module:path.SpecialAttrPath#lastSegment</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line841">line 841</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -873,12 +981,12 @@ segments array is empty.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> 
+<span class="param-type">Array</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="lineBy"><span class="type-signature"></span>lineBy</h4>
+    <h4 class="name" id="lineBy"><span class="type-signature"></span>lineBy<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -898,20 +1006,27 @@ straight line from the last Point to the given relative Point.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">relative x-value</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">relative y-value</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#lineBy">module:path.SpecialAttrPath#lineBy</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line521">line 521</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -922,12 +1037,12 @@ straight line from the last Point to the given relative Point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="lineTo"><span class="type-signature"></span>lineTo</h4>
+    <h4 class="name" id="lineTo"><span class="type-signature"></span>lineTo<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -947,20 +1062,27 @@ straight line from the last Point to the given absolute Point.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">absolute x-value</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">absolute y-value</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#lineTo">module:path.SpecialAttrPath#lineTo</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line503">line 503</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -971,12 +1093,12 @@ straight line from the last Point to the given absolute Point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="morphSegmentsTo"><span class="type-signature"></span>morphSegmentsTo</h4>
+    <h4 class="name" id="morphSegmentsTo"><span class="type-signature"></span>morphSegmentsTo<span class="signature">(that, duration, <span class="optional">animOptions</span>)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -996,7 +1118,7 @@ straight line from the last Point to the given absolute Point.
         <tr>
                 <td class="name"><code>that</code></td>
             <td class="type">
-                        Path
+<span class="param-type"><a href="Path.html">Path</a></span>
             </td>
                 <td class="attributes">
                 </td>
@@ -1005,7 +1127,7 @@ straight line from the last Point to the given absolute Point.
         <tr>
                 <td class="name"><code>duration</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -1015,7 +1137,7 @@ straight line from the last Point to the given absolute Point.
         <tr>
                 <td class="name"><code>animOptions</code></td>
             <td class="type">
-                        Object
+<span class="param-type">Object</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -1026,64 +1148,17 @@ straight line from the last Point to the given absolute Point.
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#morphSegmentsTo">module:path.SpecialAttrPath#morphSegmentsTo</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line1000">line 1000</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="morphTo"><span class="type-signature"></span>morphTo</h4>
-</dt>
-<dd>
-    <div class="description">
-        Morphs segments to that of another shapes, along with other attrs
-    </div>
-        <h5>Parameters:</h5>
-<table class="params">
-    <thead>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Argument</th>
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	<tbody>
-        <tr>
-                <td class="name"><code>that</code></td>
-            <td class="type">
-                        Path
-            </td>
-                <td class="attributes">
-                </td>
-            <td class="description last">The Path to morph to (all morphable attributes
- will morph)</td>
-        </tr>
-        <tr>
-                <td class="name"><code>duration</code></td>
-            <td class="type">
-                        Number
-            </td>
-                <td class="attributes">
-                </td>
-            <td class="description last">The duration of the morph animation. Available
- formats are _s (seconds), _ms (milliseconds), _ (frames - no unit)</td>
-        </tr>
-        <tr>
-                <td class="name"><code>animOptions</code></td>
-            <td class="type">
-                        Object
-            </td>
-                <td class="attributes">
-                    &lt;optional><br>
-                </td>
-            <td class="description last">Additional options to pass to the animation,
- e.g. `{easing: ..., onEnd: function(){...}}`</td>
-        </tr>
-	</tbody>
-</table>
-<dl class="details">
-</dl>
-</dd>
-<dt>
-    <h4 class="name" id="moveBy"><span class="type-signature"></span>moveBy</h4>
+    <h4 class="name" id="moveBy"><span class="type-signature"></span>moveBy<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1102,20 +1177,27 @@ straight line from the last Point to the given absolute Point.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">relative x-value</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">relative y-value</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#moveBy">module:path.SpecialAttrPath#moveBy</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line471">line 471</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1126,12 +1208,12 @@ straight line from the last Point to the given absolute Point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="moveTo"><span class="type-signature"></span>moveTo</h4>
+    <h4 class="name" id="moveTo"><span class="type-signature"></span>moveTo<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1150,20 +1232,27 @@ straight line from the last Point to the given absolute Point.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">absolute x-value</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">absolute y-value</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#moveTo">module:path.SpecialAttrPath#moveTo</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line452">line 452</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1174,12 +1263,12 @@ straight line from the last Point to the given absolute Point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="path"><span class="type-signature"></span>path</h4>
+    <h4 class="name" id="path"><span class="type-signature"></span>path<span class="signature">(path)</span><span class="type-signature"> &rarr; {String|<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1199,13 +1288,20 @@ Or returns a path representation of all the contained segments of the Path when 
         <tr>
                 <td class="name"><code>path</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
             <td class="description last">A SVG Path (http://www.w3.org/TR/SVG/paths.html)</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#path">module:path.SpecialAttrPath#path</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line433">line 433</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1216,13 +1312,14 @@ Or returns a path representation of all the contained segments of the Path when 
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">String</span> |
-		<span class="param-type">Path</span> 
+<span class="param-type">String</span>
+|
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="pointAtLength"><span class="type-signature"></span>pointAtLength</h4>
+    <h4 class="name" id="pointAtLength"><span class="type-signature"></span>pointAtLength<span class="signature">(length)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1241,19 +1338,26 @@ Or returns a path representation of all the contained segments of the Path when 
         <tr>
                 <td class="name"><code>length</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last"></td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
-	<dt class="tag-see">See:</dt>
-	<dd class="tag-see">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#pointAtLength">module:path.SpecialAttrPath#pointAtLength</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line780">line 780</a>
+    </li></ul></dd>
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
         <ul>
             <li>pathLength</li>
         </ul>
-	</dd>
+    </dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1264,12 +1368,12 @@ Or returns a path representation of all the contained segments of the Path when 
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> 
+<span class="param-type">Array</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="points"><span class="type-signature"></span>points</h4>
+    <h4 class="name" id="points"><span class="type-signature"></span>points<span class="signature">(param)</span><span class="type-signature"> &rarr; {Array|<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1289,15 +1393,22 @@ Or returns a copy of all the contained segments of the Path when no parameter is
         <tr>
                 <td class="name"><code>param</code></td>
             <td class="type">
-                        Array
-                         | 
-                        Number
+<span class="param-type">Array</span>
+|
+<span class="param-type">Number</span>
             </td>
             <td class="description last">An array of points or a list of points</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#points">module:path.SpecialAttrPath#points</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line404">line 404</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1308,18 +1419,21 @@ Or returns a copy of all the contained segments of the Path when no parameter is
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> |
-		<span class="param-type">Path</span> 
+<span class="param-type">Array</span>
+|
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}myPath.points();
+    {% highlight javascript %}
+myPath.points();
 myPath.points(x,y);
 myPath.points([x,y]);
-myPath.points(x, y, x, y, x, y);{% endhighlight %}
+myPath.points(x, y, x, y, x, y);
+{% endhighlight %}
 </dd>
 <dt>
-    <h4 class="name" id="quadraticCurveBy"><span class="type-signature"></span>quadraticCurveBy</h4>
+    <h4 class="name" id="quadraticCurveBy"><span class="type-signature"></span>quadraticCurveBy<span class="signature">(cpx, cpy, x, y)</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1339,34 +1453,41 @@ myPath.points(x, y, x, y, x, y);{% endhighlight %}
         <tr>
                 <td class="name"><code>cpx</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">x value of the control point</td>
         </tr>
         <tr>
                 <td class="name"><code>cpy</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">y value of the control point</td>
         </tr>
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">x value of the anchor point</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">y value of the anchor point</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#quadraticCurveBy">module:path.SpecialAttrPath#quadraticCurveBy</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line663">line 663</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1377,12 +1498,12 @@ myPath.points(x, y, x, y, x, y);{% endhighlight %}
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="quadraticCurveTo"><span class="type-signature"></span>quadraticCurveTo</h4>
+    <h4 class="name" id="quadraticCurveTo"><span class="type-signature"></span>quadraticCurveTo<span class="signature">(cpx, cpy, x, y)</span><span class="type-signature"> &rarr; {this}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1402,34 +1523,41 @@ myPath.points(x, y, x, y, x, y);{% endhighlight %}
         <tr>
                 <td class="name"><code>cpx</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">x value of the control point</td>
         </tr>
         <tr>
                 <td class="name"><code>cpy</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">y value of the control point</td>
         </tr>
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">x value of the anchor point</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">y value of the anchor point</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#quadraticCurveTo">module:path.SpecialAttrPath#quadraticCurveTo</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line640">line 640</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1440,12 +1568,12 @@ myPath.points(x, y, x, y, x, y);{% endhighlight %}
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">this</span> 
+<span class="param-type">this</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="segments"><span class="type-signature"></span>segments</h4>
+    <h4 class="name" id="segments"><span class="type-signature"></span>segments<span class="signature">(commands)</span><span class="type-signature"> &rarr; {Array|<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1465,13 +1593,20 @@ Or returns a copy of all the contained segments of the Path when no parameter is
         <tr>
                 <td class="name"><code>commands</code></td>
             <td class="type">
-                        Array
+<span class="param-type">Array</span>
             </td>
             <td class="description last">The commands</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#segments">module:path.SpecialAttrPath#segments</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line368">line 368</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1482,18 +1617,21 @@ Or returns a copy of all the contained segments of the Path when no parameter is
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> |
-		<span class="param-type">Path</span> 
+<span class="param-type">Array</span>
+|
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}myPath.segments();
+    {% highlight javascript %}
+myPath.segments();
 myPath.segments('moveTo', 0, 0);
 myPath.segments(['moveTo', 0, 0]);
-myPath.segments([ ['moveTo', 0, 0], ['lineTo', 10, 10] ]);{% endhighlight %}
+myPath.segments([ ['moveTo', 0, 0], ['lineTo', 10, 10] ]);
+{% endhighlight %}
 </dd>
 <dt>
-    <h4 class="name" id="stroke"><span class="type-signature"></span>stroke</h4>
+    <h4 class="name" id="stroke"><span class="type-signature"></span>stroke<span class="signature">(fill)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1512,23 +1650,30 @@ myPath.segments([ ['moveTo', 0, 0], ['lineTo', 10, 10] ]);{% endhighlight %}
         <tr>
                 <td class="name"><code>fill</code></td>
             <td class="type">
-                        String
-                         | 
-                        Number
-                         | 
-                        LinearGradient
-                         | 
-                        RadialGradient
-                         | 
-                        <a href="Bitmap.html">Bitmap</a>
-                         | 
-                        color.RGBAColor
+<span class="param-type">String</span>
+|
+<span class="param-type">Number</span>
+|
+<span class="param-type">LinearGradient</span>
+|
+<span class="param-type">RadialGradient</span>
+|
+<span class="param-type"><a href="Bitmap.html">Bitmap</a></span>
+|
+<span class="param-type">color.RGBAColor</span>
             </td>
             <td class="description last">The fillColor (see `color.parse`), fillImage or fillGradient</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#stroke">module:path.SpecialAttrPath#stroke</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line821">line 821</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1539,12 +1684,12 @@ myPath.segments([ ['moveTo', 0, 0], ['lineTo', 10, 10] ]);{% endhighlight %}
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="toCurves"><span class="type-signature"></span>toCurves</h4>
+    <h4 class="name" id="toCurves"><span class="type-signature"></span>toCurves<span class="signature">(<span class="optional">requiredCurves</span>)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1564,7 +1709,7 @@ myPath.segments([ ['moveTo', 0, 0], ['lineTo', 10, 10] ]);{% endhighlight %}
         <tr>
                 <td class="name"><code>requiredCurves</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -1574,10 +1719,17 @@ myPath.segments([ ['moveTo', 0, 0], ['lineTo', 10, 10] ]);{% endhighlight %}
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#toCurves">module:path.SpecialAttrPath#toCurves</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line936">line 936</a>
+    </li></ul></dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="verticalLineBy"><span class="type-signature"></span>verticalLineBy</h4>
+    <h4 class="name" id="verticalLineBy"><span class="type-signature"></span>verticalLineBy<span class="signature">(y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1597,13 +1749,20 @@ straight line from the last Point to the given relative Point.
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">relative y-value</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#verticalLineBy">module:path.SpecialAttrPath#verticalLineBy</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line550">line 550</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1614,12 +1773,12 @@ straight line from the last Point to the given relative Point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="verticalLineTo"><span class="type-signature"></span>verticalLineTo</h4>
+    <h4 class="name" id="verticalLineTo"><span class="type-signature"></span>verticalLineTo<span class="signature">(y)</span><span class="type-signature"> &rarr; {<a href="Path.html">Path</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -1639,13 +1798,20 @@ straight line from the last Point to the given absolute Point.
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        Number
+<span class="param-type">Number</span>
             </td>
             <td class="description last">absolute y-value</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="module-path.SpecialAttrPath.html#verticalLineTo">module:path.SpecialAttrPath#verticalLineTo</a>
+    </li></dd>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="path.js.html">runner/path/path.js</a>, <a href="path.js.html#line538">line 538</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -1656,7 +1822,7 @@ straight line from the last Point to the given absolute Point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Path</span> 
+<span class="param-type"><a href="Path.html">Path</a></span>
 	</dd>
 </dl>
 </dd>
@@ -1666,7 +1832,7 @@ straight line from the last Point to the given absolute Point.
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 17:17:49 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jun 06 2013 10:17:07 GMT+0200 (CEST)
 </footer>
 
 

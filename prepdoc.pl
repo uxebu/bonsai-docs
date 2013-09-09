@@ -75,8 +75,8 @@ $html =~ s/<script[\s\S]+?<\/script>//g; # remove scripts
 $html =~ s/<d[dt] class="tag-source">.+?<\/d[dt]>//g; # remove source/line-number detail
 
 # Highlight code the "jekyll way":
-$html =~ s/<pre class="sh_javascript"><code>/{% highlight javascript %}/g;
-$html =~ s/<\/code><\/pre>/{% endhighlight %}/g;
+$html =~ s/<pre class="prettyprint.*?"><code>/{% highlight javascript %}\n/g;
+$html =~ s/<\/code><\/pre>/\n{% endhighlight %}/g;
 
 # Remove blank lines:
 $html =~ s/\n\s*(?=\n)//g;
@@ -99,12 +99,17 @@ if (@relatedLinks) {
   $relatedNamesString = ' - ' . (join "\n - ", @relatedNames);
 }
 
+my $categoryString = '';
+if (@categories) {
+  $categoryString = '[' . (join ", ", @categories) . ']'
+}
+
 # Add YAML Front matter config to the top of the file:
 $html = <<END;
 ---
 title: '$title'
 layout: doc
-categories: @categories
+categories: $categoryString
 relatedLinks:
 $relatedLinksString
 relatedNames:

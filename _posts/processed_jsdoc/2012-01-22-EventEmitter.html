@@ -1,7 +1,7 @@
 ---
 title: 'EventEmitter'
 layout: doc
-categories: jsdoc Mixin
+categories: [jsdoc, Mixin]
 relatedLinks:
 
 relatedNames:
@@ -20,15 +20,20 @@ relatedNames:
     <div class="container-overview">
             <div class="description">This module contains mixin methods for handling events.</div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line30">line 30</a>
+    </li></ul></dd>
 </dl>
             <h3>Example</h3>
-    {% highlight javascript %}// assign `EventEmitter` methods to `MyClass.prototype`
-tools.mixin(MyClass.prototype, EventEmitter);{% endhighlight %}
+    {% highlight javascript %}
+// assign `EventEmitter` methods to `MyClass.prototype`
+tools.mixin(MyClass.prototype, EventEmitter);
+{% endhighlight %}
     </div>
         <h3 class="subsection-title">Methods</h3>
         <dl>
 <dt>
-    <h4 class="name" id="addListener"><span class="type-signature">&lt;static> </span>addListener</h4>
+    <h4 class="name" id="addListener"><span class="type-signature">&lt;static> </span>addListener<span class="signature">(type, <span class="optional">context</span>, listener)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -50,7 +55,7 @@ Listeners are executed with the `this` binding of the host object.
         <tr>
                 <td class="name"><code>type</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -74,7 +79,7 @@ Listeners are executed with the `this` binding of the host object.
         <tr>
                 <td class="name"><code>listener</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -85,6 +90,9 @@ Listeners are executed with the `this` binding of the host object.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line59">line 59</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -95,17 +103,19 @@ Listeners are executed with the `this` binding of the host object.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}// register a listener for an event type
+    {% highlight javascript %}
+// register a listener for an event type
 object.addListener('blur', listener);
 // register a listener for multiple event types
-object.addListener('blur focus', listener);{% endhighlight %}
+object.addListener('blur focus', listener);
+{% endhighlight %}
 </dd>
 <dt>
-    <h4 class="name" id="emit"><span class="type-signature">&lt;static> </span>emit</h4>
+    <h4 class="name" id="emit"><span class="type-signature">&lt;static> </span>emit<span class="signature">(type)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -125,7 +135,7 @@ object.addListener('blur focus', listener);{% endhighlight %}
         <tr>
                 <td class="name"><code>type</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -134,7 +144,7 @@ object.addListener('blur focus', listener);{% endhighlight %}
         <tr>
                 <td class="name"><code>args1, ...</code></td>
             <td class="type">
-                        Mixed
+<span class="param-type">Mixed</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -144,6 +154,9 @@ object.addListener('blur focus', listener);{% endhighlight %}
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line113">line 113</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -154,12 +167,12 @@ object.addListener('blur focus', listener);{% endhighlight %}
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="emitAsync"><span class="type-signature">&lt;static> </span>emitAsync</h4>
+    <h4 class="name" id="emitAsync"><span class="type-signature">&lt;static> </span>emitAsync<span class="signature">(type)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -180,7 +193,7 @@ the current execution block completes (i.e. asynchronously)
         <tr>
                 <td class="name"><code>type</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -189,7 +202,7 @@ the current execution block completes (i.e. asynchronously)
         <tr>
                 <td class="name"><code>args1, ...</code></td>
             <td class="type">
-                        Mixed
+<span class="param-type">Mixed</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -199,6 +212,9 @@ the current execution block completes (i.e. asynchronously)
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line99">line 99</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -209,12 +225,12 @@ the current execution block completes (i.e. asynchronously)
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="listeners"><span class="type-signature">&lt;static> </span>listeners</h4>
+    <h4 class="name" id="listeners"><span class="type-signature">&lt;static> </span>listeners<span class="signature">(type)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -234,13 +250,16 @@ manipulated to add or remove listeners.
         <tr>
                 <td class="name"><code>type</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
             <td class="description last">The event type.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line174">line 174</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -251,12 +270,12 @@ manipulated to add or remove listeners.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Array</span> 
+<span class="param-type">Array</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="on"><span class="type-signature">&lt;static> </span>on</h4>
+    <h4 class="name" id="on"><span class="type-signature">&lt;static> </span>on<span class="signature">(type, listener)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -275,20 +294,23 @@ manipulated to add or remove listeners.
         <tr>
                 <td class="name"><code>type</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
             <td class="description last">The event type.</td>
         </tr>
         <tr>
                 <td class="name"><code>listener</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
             <td class="description last">The function called when the event occurs.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line282">line 282</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -299,12 +321,12 @@ manipulated to add or remove listeners.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="once"><span class="type-signature">&lt;static> </span>once</h4>
+    <h4 class="name" id="once"><span class="type-signature">&lt;static> </span>once<span class="signature">(type, <span class="optional">context</span>, listener)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -325,7 +347,7 @@ manipulated to add or remove listeners.
         <tr>
                 <td class="name"><code>type</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -349,7 +371,7 @@ manipulated to add or remove listeners.
         <tr>
                 <td class="name"><code>listener</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -360,6 +382,9 @@ manipulated to add or remove listeners.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line189">line 189</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -370,12 +395,12 @@ manipulated to add or remove listeners.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="removeAllListeners"><span class="type-signature">&lt;static> </span>removeAllListeners</h4>
+    <h4 class="name" id="removeAllListeners"><span class="type-signature">&lt;static> </span>removeAllListeners<span class="signature">(<span class="optional">type</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -395,7 +420,7 @@ manipulated to add or remove listeners.
         <tr>
                 <td class="name"><code>type</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                     &lt;optional><br>
@@ -406,6 +431,9 @@ manipulated to add or remove listeners.
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line265">line 265</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -416,19 +444,21 @@ manipulated to add or remove listeners.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}// unregister all listeners
+    {% highlight javascript %}
+// unregister all listeners
 object.removeAllListeners();
 // unregister all listeners for an event type
 object.removeAllListeners('click');
 // unregister all listeners for multiple event types
-object.removeAllListeners('click mousedown touch');{% endhighlight %}
+object.removeAllListeners('click mousedown touch');
+{% endhighlight %}
 </dd>
 <dt>
-    <h4 class="name" id="removeListener"><span class="type-signature">&lt;static> </span>removeListener</h4>
+    <h4 class="name" id="removeListener"><span class="type-signature">&lt;static> </span>removeListener<span class="signature">(type, <span class="optional">context</span>, listener)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -449,7 +479,7 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
         <tr>
                 <td class="name"><code>type</code></td>
             <td class="type">
-                        String
+<span class="param-type">String</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -472,7 +502,7 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
         <tr>
                 <td class="name"><code>listener</code></td>
             <td class="type">
-                        Function
+<span class="param-type">Function</span>
             </td>
                 <td class="attributes">
                 </td>
@@ -483,6 +513,9 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="event_emitter.js.html">event_emitter.js</a>, <a href="event_emitter.js.html#line213">line 213</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -493,14 +526,16 @@ object.removeAllListeners('click mousedown touch');{% endhighlight %}
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Object</span> 
+<span class="param-type">Object</span>
 	</dd>
 </dl>
         <h5>Example</h5>
-    {% highlight javascript %}// unregister a listener for an event type
+    {% highlight javascript %}
+// unregister a listener for an event type
 object.removeListener('blur', listener);
 // unregister a listener for multiple event types
-object.removeListener('blur focus', listener);{% endhighlight %}
+object.removeListener('blur focus', listener);
+{% endhighlight %}
 </dd>
         </dl>
 </article>
@@ -508,7 +543,7 @@ object.removeListener('blur focus', listener);{% endhighlight %}
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 17:17:46 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jun 06 2013 10:17:06 GMT+0200 (CEST)
 </footer>
 
 

@@ -1,7 +1,7 @@
 ---
 title: 'Matrix'
 layout: doc
-categories: jsdoc Class
+categories: [jsdoc, Class]
 relatedLinks:
 
 relatedNames:
@@ -19,7 +19,7 @@ relatedNames:
 <article>
     <div class="container-overview">
 <dt>
-    <h4 class="name" id="Matrix"><span class="type-signature"></span>new Matrix</h4>
+    <h4 class="name" id="Matrix"><span class="type-signature"></span>new Matrix<span class="signature">(a, b, c, d, tx, ty)</span><span class="type-signature"></span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -38,63 +38,69 @@ relatedNames:
         <tr>
                 <td class="name"><code>a</code></td>
             <td class="type">
-                        number
-                         | 
-                        array
+<span class="param-type">number</span>
+|
+<span class="param-type">array</span>
             </td>
             <td class="description last">Horizontal/x scale or array of a, b, c, d, tx, ty</td>
         </tr>
         <tr>
                 <td class="name"><code>b</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Vertical/y skew</td>
         </tr>
         <tr>
                 <td class="name"><code>c</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Horizontal/x skew</td>
         </tr>
         <tr>
                 <td class="name"><code>d</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Vertical/y scale</td>
         </tr>
         <tr>
                 <td class="name"><code>tx</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Horizontal/x translation</td>
         </tr>
         <tr>
                 <td class="name"><code>ty</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Vertical/y translation</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line9">line 9</a>
+    </li></ul></dd>
 </dl>
 </dd>
     </div>
         <h3 class="subsection-title">Methods</h3>
         <dl>
 <dt>
-    <h4 class="name" id="clone"><span class="type-signature"></span>clone</h4>
+    <h4 class="name" id="clone"><span class="type-signature"></span>clone<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
         Returns a clone of the matrix
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line41">line 41</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <dl>
@@ -102,12 +108,12 @@ relatedNames:
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Matrix</span> 
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="concat"><span class="type-signature"></span>concat</h4>
+    <h4 class="name" id="concat"><span class="type-signature"></span>concat<span class="signature">(m)</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -127,13 +133,16 @@ Effectively combines the geometric effects of the two matrices.
         <tr>
                 <td class="name"><code>m</code></td>
             <td class="type">
-                        <a href="Matrix.html">Matrix</a>
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
             </td>
             <td class="description last"></td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line53">line 53</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -144,12 +153,12 @@ Effectively combines the geometric effects of the two matrices.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Matrix</span> 
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="createBox"><span class="type-signature"></span>createBox</h4>
+    <h4 class="name" id="createBox"><span class="type-signature"></span>createBox<span class="signature">(scaleX, scaleY, rotation, tx, ty)</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -171,41 +180,44 @@ methods in succession.
         <tr>
                 <td class="name"><code>scaleX</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The horizontal scale</td>
         </tr>
         <tr>
                 <td class="name"><code>scaleY</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The vertical scale</td>
         </tr>
         <tr>
                 <td class="name"><code>rotation</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The rotation in radians</td>
         </tr>
         <tr>
                 <td class="name"><code>tx</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The horizontal translation</td>
         </tr>
         <tr>
-                <td class="name"><code>tx</code></td>
+                <td class="name"><code>ty</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The vertical translation</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line85">line 85</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -216,12 +228,12 @@ methods in succession.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Matrix</span> 
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="deltaTransformPoint"><span class="type-signature"></span>deltaTransformPoint</h4>
+    <h4 class="name" id="deltaTransformPoint"><span class="type-signature"></span>deltaTransformPoint<span class="signature">(point)</span><span class="type-signature"> &rarr; {<a href="Point.html">Point</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -244,13 +256,16 @@ consider the translation parameters tx and ty.
         <tr>
                 <td class="name"><code>point</code></td>
             <td class="type">
-                        <a href="Point.html">Point</a>
+<span class="param-type"><a href="Point.html">Point</a></span>
             </td>
             <td class="description last">The point to transform</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line127">line 127</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <dl>
@@ -258,12 +273,12 @@ consider the translation parameters tx and ty.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Point</span> 
+<span class="param-type"><a href="Point.html">Point</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="identify"><span class="type-signature"></span>identify</h4>
+    <h4 class="name" id="identity"><span class="type-signature"></span>identity<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -272,6 +287,9 @@ An object transformed by applying an identity matrix will be identical
 to the original.
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line142">line 142</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -282,12 +300,12 @@ to the original.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Matrix</span> 
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="invert"><span class="type-signature"></span>invert</h4>
+    <h4 class="name" id="invert"><span class="type-signature"></span>invert<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -296,6 +314,9 @@ You can apply an inverted matrix to an object to undo the transformation
 performed when applying the original matrix.
     </div>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line156">line 156</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -306,12 +327,12 @@ performed when applying the original matrix.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Matrix</span> 
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="rotate"><span class="type-signature"></span>rotate</h4>
+    <h4 class="name" id="rotate"><span class="type-signature"></span>rotate<span class="signature">(angle)</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -330,13 +351,16 @@ performed when applying the original matrix.
         <tr>
                 <td class="name"><code>angle</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The rotation angle in radians.</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line181">line 181</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -347,12 +371,12 @@ performed when applying the original matrix.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Matrix</span> 
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="scale"><span class="type-signature"></span>scale</h4>
+    <h4 class="name" id="scale"><span class="type-signature"></span>scale<span class="signature">(sx, sy)</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -372,20 +396,23 @@ The x axis is multiplied by sx, and the y axis it is multiplied by sy.
         <tr>
                 <td class="name"><code>sx</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Multiplier for the x axis</td>
         </tr>
         <tr>
                 <td class="name"><code>sy</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">Multiplier for the y axis</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line195">line 195</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -396,12 +423,12 @@ The x axis is multiplied by sx, and the y axis it is multiplied by sy.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Matrix</span> 
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="transformPoint"><span class="type-signature"></span>transformPoint</h4>
+    <h4 class="name" id="transformPoint"><span class="type-signature"></span>transformPoint<span class="signature">(point)</span><span class="type-signature"> &rarr; {<a href="Point.html">Point</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -421,13 +448,16 @@ by the Matrix object to the specified point.
         <tr>
                 <td class="name"><code>point</code></td>
             <td class="type">
-                        <a href="Point.html">Point</a>
+<span class="param-type"><a href="Point.html">Point</a></span>
             </td>
             <td class="description last">The point to transform</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line223">line 223</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <dl>
@@ -435,12 +465,12 @@ by the Matrix object to the specified point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Point</span> 
+<span class="param-type"><a href="Point.html">Point</a></span>
 	</dd>
 </dl>
 </dd>
 <dt>
-    <h4 class="name" id="translate"><span class="type-signature"></span>translate</h4>
+    <h4 class="name" id="translate"><span class="type-signature"></span>translate<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {<a href="Matrix.html">Matrix</a>}</span></h4>
 </dt>
 <dd>
     <div class="description">
@@ -459,20 +489,23 @@ by the Matrix object to the specified point.
         <tr>
                 <td class="name"><code>x</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The translation along the x axis</td>
         </tr>
         <tr>
                 <td class="name"><code>y</code></td>
             <td class="type">
-                        number
+<span class="param-type">number</span>
             </td>
             <td class="description last">The translation along the y axis</td>
         </tr>
 	</tbody>
 </table>
 <dl class="details">
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="matrix.js.html">runner/matrix.js</a>, <a href="matrix.js.html#line237">line 237</a>
+    </li></ul></dd>
 </dl>
     <h5>Returns:</h5>
 <div class="param-desc">
@@ -483,7 +516,7 @@ by the Matrix object to the specified point.
 		Type
 	</dt>
 	<dd>
-		<span class="param-type">Matrix</span> 
+<span class="param-type"><a href="Matrix.html">Matrix</a></span>
 	</dd>
 </dl>
 </dd>
@@ -493,7 +526,7 @@ by the Matrix object to the specified point.
 </div>
 <br clear="both">
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3</a> on Fri Oct 26 2012 17:17:46 GMT+0200 (MESZ)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Thu Jun 06 2013 10:17:06 GMT+0200 (CEST)
 </footer>
 
 
