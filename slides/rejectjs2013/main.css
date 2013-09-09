@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+/*1024x768*/
+
+body {
+	background:rgb(17,25,38);
+}
+
+/*********************************************
+ * SLIDES
+ *********************************************/
+
+.reveal .slides {
+	position: absolute;
+	max-width: 1000px;
+	width: 920px;
+	top: 43%;
+/*
+	margin-top:-380px;
+	max-width:1024px;
+	max-height:768px;
+	width:80%;
+	*/
+}
+
+h3.inverted {
+	margin:0 0 50px 0;
+	text-transform:none;
+}
+
+.bonsai-container {
+	overflow: auto;
+}
+/*
+  ">" selector is important because every "contenteditable-row" is enclosed
+  by a div in chrome.
+*/
+.bonsai-container>div {
+	width:46%;
+	padding:2%;
+	float:left;
+	height:600px;
+}
+.bonsai-stage {
+	padding-right:0;
+}
+.bonsai-code {
+	white-space:pre;
+	text-align:left;
+	overflow-y:scroll;
+	font-size:18px;
+	line-height:46px;
+	font-family:'inconsolata';
+	outline:none;
+}
+
+/*********************************************
+ * BONSAI EDITOR HIGHLIGHTING
+ *********************************************/
+
+.bonsai-code .keyword {
+	color:rgb(236,197,72);
+}
+
+.bonsai-code .bonsaiDisplayObjects {
+	color:rgb(255, 215, 2);
+	font-weight:bold;
+}
+
+.bonsai-code .bonsaiMethods {
+	color:rgb(70, 146, 0);
+	font-weight:bold;
+}
+
+.bonsai-code .bonsaiAttr {
+	color:rgb(102, 200, 255);
+	font-weight:bold;
+}
+
+.bonsai-code .bonsaiStage {
+	color:rgb(31, 219, 166);
+}
+
+/*********************************************
+ * BONSAI THEME
+ *********************************************/
+
+.theme-beige body {
+	color: #333;
+	background:none;
+}
+
+.runner-front .state-background {
+	background: rgb(97,177,66);
+}
+
+.renderer-front .state-background {
+	background: rgb(253,100,69);
+}
+
+.reveal section img {
+	background: none;
+	border:none;
+	-webkit-box-shadow:none;
+	-webkit-transition:none;
+	-ms-transition:none;
+	-moz-box-shadow:none;
+	-moz-transition:none;
+	box-shadow:none;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	color: white;
+	text-shadow: none;
+	text-transform: none;
+	margin-bottom:3%;
+	font-family:'freight-sans-pro';
+	font-style:normal;
+	font-weight:400;
+}
+
+li, p {
+	font-family:'freight-sans-pro';
+	font-style:normal;
+	font-weight:400;
+}
+
+.reveal h1 {
+	margin-top:30%;
+}
+.reveal h2 {
+	margin-top:5%;
+}
+
+.reveal a,
+.reveal a:hover,
+.reveal .controls .enabled,
+.reveal a:not(.image),
+.reveal .roll {
+	color:#26ab92;
+	-webkit-transition: none;
+	-webkit-perspective-origin:initial;
+}
+
+.reveal .progress span,
+.reveal .roll span:after {
+	background: #8b743d;
+}
+
+.reveal a.image:hover img {
+	border-color: #8b743d;
+}
+
+.reveal ul {
+	margin-bottom:3%;
+}
+.reveal ul {
+	line-height:1.5em;
+}
+
+.reveal pre {
+	line-height:46px;
+	font-family:'inconsolata';
+	text-align: center;
+}
+
+
+/*********************************************
+ * CODE HIGHLIGHTING
+ *********************************************/
+
+.reveal .section {
+	overflow: hidden;
+}
+
+.movie {
+	float:left;
+	margin-top:3%;
+	width:440px;
+	height:440px;
+	background:rgb(189, 36, 67);
+	border:1px solid rgb(189, 36, 67);
+}
+
+.infographic {
+	background:none;
+	border:none;
+	width:100%;
+	height:600px;
+	float:none;
+}
+
+.code {
+	float:right;
+	margin-top:3%;
+	text-align:left;
+	padding-left:15px;
+	width:440px; /* -15px */
+	height:440px;
+	font-size:30px;
+	background-color:#2c343e;
+	border:1px solid #343B44;
+	font-family:'inconsolata';
+	display:-webkit-box;
+	-webkit-box-align:center;
+}
+
+.unhighlight {
+	color:rgb(92, 91, 91);
+}
+.highlight {
+	color:white;
+
+}
+
+.code .comment {
+	color:rgb(156,156,156);
+}
+.code .instance {
+	color:rgb(209, 192, 90);
+}
+.code .inst-method {
+	color:rgb(85, 175, 196);
+}
+.code .aString {
+	color:rgb(255, 95, 76);
+}
+.code .stage {
+	color:rgb(130, 200, 95);
+}
+
+.inlineCode {
+	padding:1px 10px;
+	background-color:rgb(44, 52, 62);
+	border:1px solid rgb(133, 133, 133);
+	display: inline-block;
+	line-height:1;
+	text-align:left;
+}
