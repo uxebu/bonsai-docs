@@ -117,23 +117,16 @@
 					</ul>
 				</section>
 
+				<section data-state="bbox-demo">
+					<div class="movie infographic"></div>
+				</section>
+
 				<section data-state="star-demo">
 					<div class="movie infographic"></div>
 				</section>
 
 				<section data-state="pie-chart-demo">
 					<div class="movie infographic"></div>
-				</section>
-
-				<section>
-					<h2>Essential Features</h2>
-					<ul>
-						<li>Draw Shapes, Bitmaps and Text</li>
-						<li>Groups, Movieclips, Plugins</li>
-						<li>Animations, Filters, Mask</li>
-						<li>Load Fonts, Bitmaps, Audio, Video, (Sub-)Movies</li>
-						<li>Architecturally decoupled renderer and runner</li>
-					</ul>
 				</section>
 
 				<section>
@@ -564,6 +557,16 @@
 					</ul>
 				</section>
 
+				<section>
+					<h2>One Renderer per Runner</h2>
+					<img src="img/3.svg" />
+				</section>
+
+				<section>
+					<h2>Multiple Renderer</h2>
+					<img src="img/6.svg" />
+				</section>
+
 				<section data-state="renderer-front">
 					<img style="margin-top:20%;" src="img/renderer-front.svg" />
 				</section>
@@ -586,28 +589,11 @@
 					</ul>
 				</section>
 
-				<!--
-				<section>
-					<h1>Orbit</h1>
-					<p>A realtime Bonsai Editor</p>
-				</section>
-				//-->
-
-				<section>
-					<h2>One Renderer per Runner</h2>
-					<img src="img/3.svg" />
-				</section>
-
-				<section>
-					<h2>Multiple Renderer</h2>
-					<img src="img/6.svg" />
-				</section>
-
 				<section>
 					<h2>Benefits</h2>
 					<ul>
 						<li>Decoupled computation and logic from drawing</li>
-						<li>One Messaging Protocol for </li>
+						<li>Renderer agnostic</li>
 						<li>Renderer may block the main thread, not the Runner</li>
 						<li>Rich and simple API</li>
 						<li>Open Source</li>
@@ -938,6 +924,13 @@
 					});
 				}, false);
 
+				Reveal.addEventListener('bbox-demo', function(ev) {
+					bonsai.slideRun(getStageFromDataState(ev.type), function() {}, {
+						width: 500, height:500,
+						plugins: ['js/bbox_demo.js']
+					});
+				});
+
 				Reveal.addEventListener('star-demo', function(ev) {
 					bonsai.slideRun(getStageFromDataState(ev.type), function() {}, {
 						width: 500, height:500,
@@ -994,8 +987,7 @@
 							fontSize: 50,
 							x: 70,
 							y: 180,
-							textFillColor: 'white',
-							filters: filter.dropShadow(0, 0, 16, '#000')
+							textFillColor: 'white'
 						};
 						var intro = new Movie().addTo(stage);
 						var left = new Text('Uxebu').attr(style).addTo(intro);
